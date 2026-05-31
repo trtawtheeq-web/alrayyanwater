@@ -18,7 +18,7 @@ body {
 	font-size:16px;
 	box-sizing:border-box;
   color:#000;
-  background-image:url(images/body-bg.png);
+  background-image:url(../images/body-bg.png);
   /*background-repeat:repeat-x;*/
   background-position:center;
 }
@@ -115,7 +115,7 @@ li{list-style-type:none;}
     position:relative;
     left:0px;
     width:100%;
-    background: url(images/desert-img.jpg) no-repeat center top;
+    background: url(../images/desert-img.jpg) no-repeat center top;
     z-index:2;
     background-size:cover;
     overflow: visible;
@@ -127,7 +127,7 @@ li{list-style-type:none;}
     height:900px;
     min-height: 55vw;
     margin-top: -20vw;
-    background-image:url(images/vision-bg.png);
+    background-image:url(../images/vision-bg.png);
     background-size:cover;
     background-position:center 20%;
     overflow: hidden;
@@ -165,10 +165,10 @@ li{list-style-type:none;}
 .mission-leave img{width:100%; height:auto;}
 
 
-.bottle-sec{display:block; width:100%; position:relative; height:100%; margin-top:-400px; background-image:url(images/bottol.png); background-position:center top; background-size:cover; overflow:visible; background-repeat:no-repeat;}
+.bottle-sec{display:block; width:100%; position:relative; height:100%; margin-top:-400px; background-image:url(../images/bottol.png); background-position:center top; background-size:cover; overflow:visible; background-repeat:no-repeat;}
 
 
-.bottle-box{position:absolute; top:0px; left:0px; width:100%; height:100vw; position:relative; /*background-image:url(images/splash-bottle.png); background-position:center top;*/ background-size:cover;}
+.bottle-box{position:absolute; top:0px; left:0px; width:100%; height:100vw; position:relative; /*background-image:url(../images/splash-bottle.png); background-position:center top;*/ background-size:cover;}
 
 
 .goodlife-sec{display:block; width:100%; height:auto; margin-top:-15vw; position:relative; overflow:visible;}
@@ -185,7 +185,7 @@ li{list-style-type:none;}
 .rstory-content p{color:#42464a; font-size:18px; font-size:300;}
 
 
-.ourValues-sec{display:block; width:100%; height:auto; position:relative; background-image:url(images/building-bg.png); background-repeat:no-repeat; background-size:initial; background-position:center top; padding-top:122px; overflow:hidden;}
+.ourValues-sec{display:block; width:100%; height:auto; position:relative; background-image:url(../images/building-bg.png); background-repeat:no-repeat; background-size:initial; background-position:center top; padding-top:122px; overflow:hidden;}
 .ourValues-content{background:#213f99; width:100%; padding-bottom:50px;}
 .ourValues-content h1{margin:0; color:#fff; font-size:60px; font-weight:100; text-align:center; padding:50px 0px;}
 .ourValues-parent{display:block; width:100%; max-width:1024px; height:auto; position:relative; padding:0px 15px; margin:0 auto;}
@@ -196,7 +196,7 @@ li{list-style-type:none;}
 .ourValues-box p{margin:0px; color:#fff; font-weight:100; font-size:17px;}
 
 
-.thinkgreen-sec{display:block; width:100%; height:700px; position:relative; background-image:url(images/thinkgreen-bg.jpg); background-repeat:no-repeat; background-size:cover; background-position:right bottom; overflow:hidden;}
+.thinkgreen-sec{display:block; width:100%; height:700px; position:relative; background-image:url(../images/thinkgreen-bg.jpg); background-repeat:no-repeat; background-size:cover; background-position:right bottom; overflow:hidden;}
 .thinkgreen-table{display:table; width:100%; max-width:991px; height:570px; margin:0 auto; padding:0px 20px;}
 .thinkgreen-tablecell{display:table-cell; width:100%; height:100%; vertical-align:top; padding-top: 50px;}
 .thinkgreen-content{width:100%; max-width:480px;}
@@ -269,7 +269,7 @@ ul.drpdown li:last-child a{border-bottom:1px solid transparent;}
 .btn-mobmenu.whiteicon i.fa-bars{color:#fff;}
 
 
-.banner{display:block; width:100%; height:auto; position:relative; background-image:url(images/banner-1.jpg); background-repeat:no-repeat; background-size:cover; background-position:0px 0px;}
+.banner{display:block; width:100%; height:auto; position:relative; background-image:url(../images/banner-1.jpg); background-repeat:no-repeat; background-size:cover; background-position:0px 0px;}
 .banner:after{content:''; display:table; clear:both;}
 .banner-content{display:block; width:100%; height:770px; padding-top:85px; padding:85px 50px 0px 50px;}
 .banner-videobox{float:right; width:100%; max-width:600px; height:100%; display:table;}
@@ -333,7 +333,7 @@ ul.drpdown li:last-child a{border-bottom:1px solid transparent;}
 }
 
 .placeOrder-sec{
-  display:block; width:100%; min-height:500px; background-image:url(images/placeorder-bg.jpg); background-repeat:no-repeat; background-position:center center; background-size:cover; padding:50px 40px; background-color:#fff; overflow:hidden;
+  display:block; width:100%; min-height:500px; background-image:url(../images/placeorder-bg.jpg); background-repeat:no-repeat; background-position:center center; background-size:cover; padding:50px 40px; background-color:#fff; overflow:hidden;
 }
 .bottle-slide{width:100%; max-width:300px;}
 .bottol-Slidbox{width:100%; max-width:200px; height:auto; margin:0 auto;}
@@ -341,14 +341,14 @@ ul.drpdown li:last-child a{border-bottom:1px solid transparent;}
 .bottle-slide .slick-prev, .bottle-slide .slick-next{
   width:40px; height:50px; background-repeat:no-repeat; z-index:1;
 }
-.bottle-slide .slick-prev{left:0px; background-image:url(images/arrow-prev.png); background-position:left -7px; transition:300ms;}
-.bottle-slide .slick-next{right:0px; background-image:url(images/arrow-next.png); background-position:right -7px; transition:300ms;}
+.bottle-slide .slick-prev{left:0px; background-image:url(../images/arrow-prev.png); background-position:left -7px; transition:300ms;}
+.bottle-slide .slick-next{right:0px; background-image:url(../images/arrow-next.png); background-position:right -7px; transition:300ms;}
 .bottle-slide .slick-prev:before, .bottle-slide .slick-next:before{content:'';}
 .bottle-slide .slick-prev:hover{
-  opacity:1;width:40px; height:50px; background-repeat:no-repeat; background-position:right -7px;  background-image:url(images/arrow-prev.png);
+  opacity:1;width:40px; height:50px; background-repeat:no-repeat; background-position:right -7px;  background-image:url(../images/arrow-prev.png);
 }
 .bottle-slide .slick-next:hover{
-  opacity:1;width:40px; height:50px; background-repeat:no-repeat; background-position:left -7px; background-image:url(images/arrow-next.png);
+  opacity:1;width:40px; height:50px; background-repeat:no-repeat; background-position:left -7px; background-image:url(../images/arrow-next.png);
 }
 
 .bottle-content{display:table; width:100%; max-width:480px; height:400px;}
@@ -377,9 +377,9 @@ footer{display:block; width:100%; height:auto; padding:20px 35px 10px 35px; back
 
 .social-box{display:inline-block; width:100%; max-width:154px; height:42px; float:right; margin-top:-40px;}
 .social-box li{display:inline-block; width:40px; height:40px; margin:0px 4px; transition:300ms;}
-.social-box li.social-instagram{background-repeat:no-repeat; background-position:right 0;  background-image:url(images/icon-instagram.png);}
-.social-box li.social-youtube{background-repeat:no-repeat; background-position:right 0;  background-image:url(images/icon-youtube.png);}
-.social-box li.social-facebook{background-repeat:no-repeat; background-position:right 0;  background-image:url(images/icon-facebook.png);}
+.social-box li.social-instagram{background-repeat:no-repeat; background-position:right 0;  background-image:url(../images/icon-instagram.png);}
+.social-box li.social-youtube{background-repeat:no-repeat; background-position:right 0;  background-image:url(../images/icon-youtube.png);}
+.social-box li.social-facebook{background-repeat:no-repeat; background-position:right 0;  background-image:url(../images/icon-facebook.png);}
 .social-box li:hover{background-position:right -40px;}
 .social-box li a{display:block; width:100%; height:100%;}
 .copyright{display:block; text-align:right; color:#7a7979; font-weight:100; font-size:14px; margin-top:10px; margin-bottom:0px;}
@@ -406,13 +406,13 @@ a.more-medium:hover{background:#213f99; color:#fff;}
 .drop {
   height:300px; width:300px;  /*border-radius:50%;*/ margin:0px auto; position:relative; top:40px; z-index:2;
   /*background-color:transparent; box-shadow:0px 0px 5px rgba(0,0,0,0.5);*/
-  /*mask-image: url(images/desert-img.jpg);*/
-/*  background-image:url(images/desert-img.jpg);
+  /*mask-image: url(../images/desert-img.jpg);*/
+/*  background-image:url(../images/desert-img.jpg);
   background-repeat:no-repeat;
   background-position:center bottom;*/
 }
 /*.drop:before {content:""; position:absolute; height:180px; width:180px; top:-20px; left:60px; background-color:transparent; border-radius:4px 4px 4px 4px; -webkit-transform:scaleY(1.4) rotate(45deg); box-shadow:0px 0px 5px rgba(0,0,0,0.5);
-  background-image:url(images/desert-img.jpg);
+  background-image:url(../images/desert-img.jpg);
   background-repeat:no-repeat;
   background-position:center bottom;
 }*/
@@ -427,7 +427,7 @@ a.more-medium:hover{background:#213f99; color:#fff;}
 }
 
 .alpha-target {
-  mask-image: url(images/drop-shap.png);
+  mask-image: url(../images/drop-shap.png);
   mask-mode: alpha;
   mask-repeat: no-repeat;
   mask-size: 80%;
@@ -461,7 +461,7 @@ a.more-medium:hover{background:#213f99; color:#fff;}
 .aboutText2{width:100%; padding-left:180px; text-align:left; float:right; padding-right:27px;}
 .aboutText2 p{margin:0px; font-size:16px; font-weight:400; color:#333;}
 
-.about-story{width:100%; min-height:620px; background: url(images/story-bg.jpg) no-repeat center top; position:relative; margin-top:-70px; padding-top:50px; background-size:cover; overflow:hidden;}
+.about-story{width:100%; min-height:620px; background: url(../images/story-bg.jpg) no-repeat center top; position:relative; margin-top:-70px; padding-top:50px; background-size:cover; overflow:hidden;}
 .story-intro{position:relative; margin:100px 0px; font-size:60px; font-weight:100; color:#23a1da; text-align:center; text-transform:uppercase; line-height:54px;}
 .story-intro span{display:block; color:#1dab56;}
 .story-tab{display:block; width:100%; position:relative; margin-top:100px;}
@@ -501,13 +501,13 @@ a.more-medium:hover{background:#213f99; color:#fff;}
   box-shadow:0px 0px 15px rgba(0,0,0,0.1);
   z-index:10; overflow:hidden;
 }
-.dropbox-imgzoom{width:calc(100% + 15px); height:calc(100% + 65px); background-image:url(images/desert-imgnnn.jpg); background-size:initial;
+.dropbox-imgzoom{width:calc(100% + 15px); height:calc(100% + 65px); background-image:url(../images/desert-imgnnn.jpg); background-size:initial;
   transform:rotate(-45deg) translate(25px, -57px) scale(1);
   -webkit-transform:rotate(-45deg) translate(25px, -57px) scale(1);
   -ms-transform:rotate(-45deg) translate(25px, -57px) scale(1);
   background-repeat:repeat-y;}
 
-.drop-mejor{position:absolute; top:280px; left:50%; width:135px; height:205px; margin-left:50px; background-image:url(images/drop-mejor.png); background-size:initial; background-position:center center; background-repeat:no-repeat; z-index:11; text-align:center; padding-top:100px;}
+.drop-mejor{position:absolute; top:280px; left:50%; width:135px; height:205px; margin-left:50px; background-image:url(../images/drop-mejor.png); background-size:initial; background-position:center center; background-repeat:no-repeat; z-index:11; text-align:center; padding-top:100px;}
 .drop-mejor h1{margin:0px; color:#213f99; font-weight:700;}
 .drop-mejor h4{margin:0px; color:#213f99; font-weight:600;}
 
@@ -2464,7 +2464,7 @@ a.more-medium:hover{background:#213f99; color:#fff;}
 
 
 .bubbleSmall {
-  background: url(images/thinkgreen-bg-bubble.jpg) no-repeat center center fixed;
+  background: url(../images/thinkgreen-bg-bubble.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -2518,7 +2518,7 @@ a.more-medium:hover{background:#213f99; color:#fff;}
 }
 
 .bubbleMedium {
-  background: url(images/thinkgreen-bg-bubble.jpg) no-repeat center center fixed;
+  background: url(../images/thinkgreen-bg-bubble.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -2573,7 +2573,7 @@ a.more-medium:hover{background:#213f99; color:#fff;}
 }
 
 .bubbleLarge {
-  background: url(images/thinkgreen-bg-bubble.jpg) no-repeat center center fixed;
+  background: url(../images/thinkgreen-bg-bubble.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -2788,17 +2788,17 @@ a.more-medium:hover{background:#213f99; color:#fff;}
 
 
 /**************** Lif Style Page Css ****************/
-.lifestyle-banner{width:100%; height:700px; position:relative; background-image: url('images/lifestyle-banner.jpg'); overflow:hidden;}
+.lifestyle-banner{width:100%; height:700px; position:relative; background-image: url('../images/lifestyle-banner.jpg'); overflow:hidden;}
 
 .mouse-bg {left:0; right:0; bottom:0; top:0; position:absolute; width:calc(100% + 30px); height:calc(100% + 30px); background-position:center center; background-size:cover;}
 #sky-layer {
-  background-image: url('images/lifestyle-sky.jpg');  transform:translate(-30px, -30px);
+  background-image: url('../images/lifestyle-sky.jpg');  transform:translate(-30px, -30px);
 }
 #nature-layer {
-  background-image: url('images/lifestyle-nature.png');
+  background-image: url('../images/lifestyle-nature.png');
 }
 #girl-layer {
-  background-image: url('images/lifestyle-banner-girl.png');
+  background-image: url('../images/lifestyle-banner-girl.png');
 }
 
 .yourHealth{display:block; width:100%; height:auto; background:#fff; padding:50px 15px;}
@@ -2809,7 +2809,7 @@ a.more-medium:hover{background:#213f99; color:#fff;}
 .health-leaves{position:relative; top:-5px; width:70px; height:auto;}
 .yourHealth-text p{margin:0px; font-size:18px; font-weight:400; color:#42464a;}
 
-.dehydration-sec{display:block; width:100%; min-height:800px; padding-top:80px; position:relative; background-image:url(images/dehydration-bg.jpg); background-repeat:no-repeat; background-color:#fff; background-position:center top; background-size:initial;}
+.dehydration-sec{display:block; width:100%; min-height:800px; padding-top:80px; position:relative; background-image:url(../images/dehydration-bg.jpg); background-repeat:no-repeat; background-color:#fff; background-position:center top; background-size:initial;}
 .dehydration-content{display:block; width:100%; max-width:767px; margin:0px auto; text-align:center; padding:0px 15px;}
 .dehydration-text1{display:inline-block; width:100%; max-width:460px; margin-bottom:20px; overflow:hidden;}
 .dehydration-text1 h1{margin:0px; color:#213f99; text-transform:uppercase; font-size:58px; font-weight:100; line-height:50px; height:50px; overflow:hidden;
@@ -2851,7 +2851,7 @@ a.more-medium:hover{background:#213f99; color:#fff;}
   -ms-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
-.dehydration-intro{display:block; width:100%; height:auto; position:relative; margin-top:20px; /*background-image:url(images/dehydration-repeat.png); background-repeat:repeat-y;*/ padding-bottom:50px;}
+.dehydration-intro{display:block; width:100%; height:auto; position:relative; margin-top:20px; /*background-image:url(../images/dehydration-repeat.png); background-repeat:repeat-y;*/ padding-bottom:50px;}
 .dehydration-description{width:100%; max-width:1024px; height:665px; position:relative; margin:0 auto;}
 .human-body{position:absolute; left:50%; top:0px; width:230px; height:auto; margin-left:-115px;}
 .human-body img{width:100%; height:auto;}
@@ -2880,10 +2880,10 @@ a.more-medium:hover{background:#213f99; color:#fff;}
 .body-desc-cont{display:table-cell; width:100%; height:100%; vertical-align:middle;}
 .body-desc-cont h4{margin:0px; color:#1896d3; font-weight:600; font-size:15px;}
 
-.thepower-sec{display:block; width:100%; height:696px; background-image:url(images/power-water.jpg); background-repeat:no-repeat; background-size:initial; background-position:center center; overflow:hidden; position:relative;}
+.thepower-sec{display:block; width:100%; height:696px; background-image:url(../images/power-water.jpg); background-repeat:no-repeat; background-size:initial; background-position:center center; overflow:hidden; position:relative;}
 .thepower-bottle{position:absolute; width:100%; max-width:230px; right:250px; bottom:-285px; z-index:1;}
 .thepower-bottle img{width:100%; height:auto;}
-.thepower-drop{position:absolute; left:0; top:0; width:100%; height:100%; background:url(images/power-water-drop.png) no-repeat fixed 57% center; z-index:1;}
+.thepower-drop{position:absolute; left:0; top:0; width:100%; height:100%; background:url(../images/power-water-drop.png) no-repeat fixed 57% center; z-index:1;}
 .thepower-content{display:block; width:100%; max-width:560px; height:auto; margin:0px auto; text-align:center; position:relative; margin-top:60px; z-index:2;}
 .thepower-content h1{margin:0px; color:#213f99; text-transform:uppercase; font-size:54px; font-weight:100; line-height:54px; display:inline-block; width:280px;}
 .thepower-content p{margin:0px; color:#213f99; font-size:17px;}
@@ -2929,7 +2929,7 @@ a.more-medium:hover{background:#213f99; color:#fff;}
 .Gfront-5 {right:335px;}
 
 
-.drinkmore-sec{display:block; width:100%; height:auto; background-image:url(images/drink-more.jpg); background-repeat:no-repeat; background-size:initial; background-position:right bottom; overflow:hidden; position:relative; padding-top:70px;}
+.drinkmore-sec{display:block; width:100%; height:auto; background-image:url(../images/drink-more.jpg); background-repeat:no-repeat; background-size:initial; background-position:right bottom; overflow:hidden; position:relative; padding-top:70px;}
 .drinkmore-content{display:table; width:100%; max-width:767px; height:540px; position:relative; margin:0 auto;}
 .drinkmore-contentin{display:table-cell; width:100%; height:100%; vertical-align:middle;}
 .tip-image{width:100px; height:auto;}
@@ -2965,7 +2965,7 @@ a.more-medium:hover{background:#213f99; color:#fff;}
 .drinkmore-tabText{display:block; width:100%; max-width:680px; padding:20px 15px; margin:0 auto;}
 .drinkmore-tabText p{margin:0px; color:#fff; font-weight:100;}
 
-.naturally-balanced{display:block; width:100%; height:580px; background-image:url(images/naturally-balanced.jpg); background-repeat:no-repeat; background-size:initial; background-position:center bottom; overflow:hidden;}
+.naturally-balanced{display:block; width:100%; height:580px; background-image:url(../images/naturally-balanced.jpg); background-repeat:no-repeat; background-size:initial; background-position:center bottom; overflow:hidden;}
 .naturally-box{display:block; width:100%; max-width:991px; height:auto; margin:0 auto;}
 .naturally-box:after{content:''; display:table; clear:both;}
 .hanging-bottle{width:100%; max-width:260px; height:auto; position:relative;}
@@ -2982,7 +2982,7 @@ a.more-medium:hover{background:#213f99; color:#fff;}
   position: relative;
   width: 960px;
   height: 801px;
-  background-image: url("images/waterfall/waterfall.jpg");
+  background-image: url("../images/waterfall/waterfall.jpg");
   border:1px solid red;
 }
 
@@ -2995,7 +2995,7 @@ a.more-medium:hover{background:#213f99; color:#fff;}
   top: 87px;
   width: 221px;
   height: 620px;
-  background: url("images/waterfall/waterfall-loop.png") 0 0 repeat-y;
+  background: url("../images/waterfall/waterfall-loop.png") 0 0 repeat-y;
   -moz-animation: waterfallloop 5s infinite linear;
   -webkit-animation: waterfallloop 5s infinite linear;
   -ms-animation: waterfallloop 5s infinite linear;
@@ -3024,10 +3024,10 @@ a.more-medium:hover{background:#213f99; color:#fff;}
 .waterfall-mask {
   width: 960px;
   height: 801px;
-  background: url("images/waterfall/waterfall-mask.png") 367px 87px no-repeat;
+  background: url("../images/waterfall/waterfall-mask.png") 367px 87px no-repeat;
 }
 
-.healthyHabit-sec{display:block; width:100%; height:570px; position:relative; background-image:url(images/healthy-habit.png); background-repeat:no-repeat; background-size:cover; background-position:right center; overflow:hidden;}
+.healthyHabit-sec{display:block; width:100%; height:570px; position:relative; background-image:url(../images/healthy-habit.png); background-repeat:no-repeat; background-size:cover; background-position:right center; overflow:hidden;}
 .healthyHabit-box{display:block; width:100%; max-width:991px; height:auto; margin:0 auto;}
 .healthyHabit-box:after{content:''; display:table; clear:both;}
 .baby-withglass{width:100%; max-width:480px; height:auto; }
@@ -3350,7 +3350,7 @@ a.more-medium:hover{background:#213f99; color:#fff;}
 .lightbluegray{background:#d9ecf8;}
 .lightwhite{background:rgba(255,255,255,0.5);}
 
-.product-banner-water{width:100%; height:800px; position:relative; background-image:url(images/product-banner-water.png); background-repeat:no-repeat; background-position:center top; background-color: #f7fbfc; }
+.product-banner-water{width:100%; height:800px; position:relative; background-image:url(../images/product-banner-water.png); background-repeat:no-repeat; background-position:center top; background-color: #f7fbfc; }
 .product-banner:before{content:''; position:absolute; left:0px; bottom:0px; right:0px; height:45%; z-index:1;}
 .banner-box{display:block; width:100%; max-width:991px; margin:0 auto; padding:150px 15px 0px 15px; position:relative; z-index:2;}
 .banner-toptext{display:block; width:100%; max-width:480px; margin-top:40px;}
@@ -3378,7 +3378,7 @@ a.more-medium:hover{background:#213f99; color:#fff;}
 .natural-water-content p{margin:0px; color:#42464a; font-size:18px; font-weight:400;}
 .natural-water-bottle{display:block; width:100%; height:auto;}
 .natural-water-bottle img{width:100%; height:auto;}
-.tissue-sec{display:block; width: 100%; height:auto; background-image:url(images/tissue-bg.png); background-repeat:no-repeat; background-size:initial;background-position: center center; background-color: #f7fbfc;}
+.tissue-sec{display:block; width: 100%; height:auto; background-image:url(../images/tissue-bg.png); background-repeat:no-repeat; background-size:initial;background-position: center center; background-color: #f7fbfc;}
 .tissue-box{display:block; width:100%; max-width:991px; margin:0 auto; padding:100px 15px 50px 15px;}
 .tissue-imgbox{display:inline-block; width:100%; max-width:480px; height:auto;}
 .tissue-imgbox img{width:100%; height:auto;}
@@ -3405,7 +3405,7 @@ a.more-medium:hover{background:#213f99; color:#fff;}
 .more-white{color:#fff!important;}
 /*Gallery Css*/
 .pd6{padding:6px!important; }
-.banner-gallery{display: block; width: 100%;height:100%; background-image:url(images/gallery-banner.png);background-repeat: no-repeat;
+.banner-gallery{display: block; width: 100%;height:100%; background-image:url(../images/gallery-banner.png);background-repeat: no-repeat;
 background-size:initial;background-position: center -18px;background-color: #fff;}
 .banner-content-innerpage{display: block;width: 100%;padding: 85px 50px 0px 50px;}
 .banner-content2{max-width:1024px;margin:100px auto 0px;}
