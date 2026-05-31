@@ -1,0 +1,402 @@
+@media(min-width:1367px){
+.vision-sec: {height: 70vw;}
+.bottle-sec, .bottle-box {height:90vw; }
+.desert-block {height: 80vw; top:-160px;}
+.rstory1 {margin-top: -17vw; margin-bottom: 18vw;}
+}
+
+@media(min-width:1200px) and (max-width:1366px){
+.bottle-sec, .bottle-box {height:90vw; }
+.desert-block {height: 80vw; top:-140px;}
+.rstory1 {margin-top: -18vw; margin-bottom: 16vw;}
+}
+
+@media (max-width:1199px) {
+  .menu ul li a{padding:30px 30px;}
+  .bottle-sec, .bottle-box {height:90vw;}
+  .about-intro{font-size:44px; line-height:44px;}
+  .desert-block {height: 80vw; top:-80px;}
+  .rstory1 {margin-top: -15vw; margin-bottom: 16vw;}
+}
+
+
+@media (max-width: 1024px) {
+  .menu-bg{padding:0px;}
+  .logo{max-width:180px; margin-left:15px; margin-top:15px;}
+  .menu ul li a{padding:30px 15px; font-size:15px;}
+  .footer-menu{display:none;}
+  .social-box{margin-top:0px;}
+  .fcol-1{width:15%;}
+  .fcol-2{width:23%;}
+  .fcol-3{width:20%;}
+  .fcol-4{width:20%;}
+  .fcol-5{width:22%;}
+  .footer-menubox h4 a{color:#a3a7ac; font-weight:100;}
+  .dehydration-intro{height:600px; overflow:hidden;}
+  .dehydration-description{transform:scale(0.8); -webkit-transform:scale(0.8); -ms-transform:scale(0.8); transform-origin: top center;}
+  .thepower-bottle{right:70px;}
+  .aboutText-block{position:relative; top:auto; left:auto; transform:none; margin:590px auto 0px auto; max-width:950px; padding:20px;}
+  .aboutText1{padding:0px;}
+  .aboutText2{padding:0px;}
+  .visionMission.vision{left:40px;}
+  .visionMission.mission{right:40px;}
+  .bottle-sec, .bottle-box {height:90vw; }
+  .desert-block {height: 80vw; top: -80px;}
+  .rstory1 {margin-top: -15vw; margin-bottom: 15vw;}
+}
+
+
+@media (max-width: 991px) {
+  .place-order{width:100%; max-width:480px; display:block; margin:0 auto;}
+  .place-order:after{content:''; display:table; clear:both;}
+  .place-ordermap{float:right; max-width: 250px;}
+  .place-ordertext{float:right; margin-top:130px; max-width:230px;}
+  .place-ordertext h1{font-size:40px; line-height:34px;}
+  .placeOrder-sec .col-md-8{margin-bottom:20px;}
+  .nav-story>li{width:120px; height:120px; border-radius:120px; margin:0px 10px;}
+  .nav-story>li>a{width:120px; height:120px; border-radius:120px;}
+  .nav-story>li>a:before{border-radius:120px;}
+  .nav-story>li.active>a:before{
+    border-radius:120px;  border-bottom-color: #fff; border-left-color: #fff;
+  }
+  .nav-story>li.active>a:after{
+    content:''; position:absolute; left:50%; bottom:-26px; width:0px; height:0px; margin-left:-14px;
+  }
+  .nav-story>li>a>img{width:100%; height:100%; border-radius:120px;}
+  .aboutText2{padding-right:0px;}
+  .product-banner{height:620px;}
+  .product-banner-water{height:620px;}
+  .banner-box{padding:60px 15px 0px 15px;}
+  .banner-product-slider{margin-top:100px;}
+  .product-Slidbox-text{height:auto; min-height:220px; padding:0px;}
+  .banner-bottle{padding-top:40px;}
+  .banner-product-slide{padding:0px 40px;}
+  /*Arabic CSS*/
+  body.arabic .ourValues-img{top:0px; width:60px;}
+  body.arabic .ourValues-box{}
+  .desert-block {height: 80vw; top: -40px;}
+  .rstory1 {margin-top: -13vw; margin-bottom: 15vw;}
+}
+
+
+@media (max-width:767px) {
+  .logo{max-width:130px; margin-left:15px; margin-top:15px;}
+  .btn-mobmenu{display:block;}
+  .btn-mobmenu:hover{color:#ddd;}
+  .menu{position:fixed; width:100%; height:100vh; background:#235c93; top:0px; right:0px; padding-top:55px; padding-right:0px; overflow:hidden; overflow-y:auto; transition:400ms; transform:translateX(100%); -webkit-transform:translateX(100%); -ms-transform:translateX(100%); z-index:1;}
+  .menu.mobmenushow{transform:translate(0%); -webkit-transform:translateX(0%); -ms-transform:translateX(0%);}
+  .menu ul li{display:block; width:100%; position:relative;}
+  .menu ul li a{display:block; width:100%; color:#fff; padding:10px 50px; font-size:24px; font-weight:100;}
+  .menu ul li span.fa{display:none;}
+  .menu ul li a.ainclass{text-align:center; color:#fff; padding:0px;}
+  .menu ul li:hover a ~ ul.drpdown{display:none;}
+  .plus-minus{display:block; position:absolute; top:5px; right:0; color:#fff; width:40px; height:40px; text-align:center; line-height:40px; cursor:pointer;}
+  ul.drpdown{position:relative; left:auto; right:0; top:0; width:100%;}
+  ul.drpdown li a{padding:8px 20px; border-bottom:1px solid #3a0d0d;}
+  .menu ul li a:hover, .menu ul li a.active{
+  -webkit-text-fill-color: #fff;
+-webkit-text-stroke-width: 0px;
+-webkit-text-stroke-color: #fff;}
+  .banner{height:auto; min-height:650px; background-color:#fff; background-image:url(images/banner-mobile-1.jpg); background-size:100%;}
+  .banner-content{height:auto; padding:15px;}
+  .banner-videobox{display:block; float:none; margin:0 auto; margin-top:250px; max-width:100%;}
+  .banner-videoboxin{display:block;}
+  .video-carousel .carousel-inner .item{padding:0px 105px;}
+  .video-element{display:block; margin:0 auto;}
+  .video-carousel .carousel-control.right{right:50px;}
+  .video-carousel .carousel-control.left{display:block; left:50px;}
+  .videobox h2{font-size:26px; padding-right:20px;}
+  .video-leaves{right:-85px; top:-60px; width:130px;}
+  .video-carousel .video-arrow{width:35px; height: auto;}
+  .bottol-Slidbox{max-width:160px;}
+  .bottle-content h2{font-size:24px;}
+
+  .placeOrder-sec{padding:20px 15px; background-size:100%  100%;}
+  .place-order{width:100%; max-width:400px; display:block; margin:0 auto;}
+  .place-order:after{content:''; display:table; clear:both;}
+  .bottle-content{height:auto; padding-top:50px;}
+  .place-ordermap{float:right; max-width: 200px;}
+  .place-ordertext{float:right; margin-top:110px; max-width:200px;}
+  .place-ordertext h1{font-size:32px; line-height:30px;}
+  .placeOrder-sec .col-md-8{margin-bottom:20px;}
+  footer{padding:20px 15px 10px 15px;}
+  .fcol-1{width:33.33%;}
+  .fcol-2{width:33.33%;}
+  .fcol-3{width:33.33%;}
+  .fcol-4{width:33.33%;}
+  .fcol-5{width:33.33%;}
+  .footer-menubox h4{font-size:17px;}
+  .social-box{float:none; margin-top:15px;}
+  .copyright{text-align:left;}
+  .nav-story>li{width:100%; height:auto; border-radius:0px; margin:0; margin-top:-35px;}
+  .nav-story>li>a{width:120px; height:120px; border-radius:120px; display:block; margin:0 auto;}
+  .story-description{position:relative; left:auto; width:100%; background:#529e3b; margin-top:-75px; margin-bottom:50px; padding-top:85px;}
+  .story-contentbox{padding:15px;}
+  .about-intro{font-size:44px; line-height:44px; width:300px; width: 100%}
+
+  .lifestyle-banner{height:480px;}
+  .yourHealth-text h1{font-size:44px;}
+  .yourHealth-text h2{font-size:30px;}
+  .health-leaves{width:55px;}
+  .dehydration-text1 h1{font-size:40px; height:40px; line-height:40px;}
+  .human-body{width:200px; height:auto; margin-left:-100px;}
+  .dehydration-description .body-desc{height:70px;}
+  .dehydration-description{transform:scale(0.7); -webkit-transform:scale(0.7); -ms-transform:scale(0.7);}
+  .dehydration-intro {height:435px; padding-bottom:30px;}
+  .body-desc .body-icon{width:70px; height:70px;}
+  .desc-bottom .body-icon{left:50%; margin-left:-35px;}
+  .desc-left{padding-left:80px; text-align:left;}
+  .desc-right{padding-right:80px; text-align:right;}
+  .desc-bottom{padding-top:80px;}
+  .dehydration-description.in-view .body-desc.desc1{margin-left:60px; margin-top:-295px;}
+  .dehydration-description.in-view .body-desc.desc2 {margin-left: 90px;margin-top: -195px;}
+  .dehydration-description.in-view .body-desc.desc3 {width:210px; margin-left:110px; margin-top:-100px;}
+  .dehydration-description.in-view .body-desc.desc4 {margin-left:90px; margin-top:-5px;}
+  .dehydration-description.in-view .body-desc.desc5 {margin-left:60px; margin-top:85px;}
+  .dehydration-description.in-view .body-desc.desc6 {width:90px; margin-top:145px;}
+  .dehydration-description.in-view .body-desc.desc7 {width:170px; margin-left:-235px; margin-top:85px;}
+  .dehydration-description.in-view .body-desc.desc8 {width:155px; margin-left:-255px; margin-top:-5px;}
+  .dehydration-description.in-view .body-desc.desc9{width:160px; margin-left:-280px; margin-top:-100px;}
+  .dehydration-description.in-view .body-desc.desc10{margin-left:-265px; margin-top: -195px;}
+  .dehydration-description.in-view .body-desc.desc11{margin-left:-205px; margin-top:-295px;}
+  .body-desc-cont h4{font-size:16px;}
+
+  .gallery-content{padding:5px 0px;}
+  .banner-content2{margin-top:30px;}
+  h2.banner-heading1{font-size:30px;}
+  .banner-content-innerpage{padding: 85px 15px 0px 15px;}
+  .gallery-content .right-sec .filter-sec{padding:7px 10px;text-align:center;}
+  .gallery-content .right-sec .tab-list li{padding:7px 10px;}
+  .gallery-content .right-sec .top-tab{min-height:54px;font-size: 20px;}
+  .gallery-content .left-sec{margin:0 0 20px;}
+  .gallery-images-sec{padding:15px;}
+  .gallery-images-sec .gallery-heading{font-size: 22px;}
+  .fa.gallery-angle{bottom: -2px;font-size: 24px;}
+  .news-detail-box {padding:10px 0px;}
+  .map-top-content{right: 10px;padding: 15px;max-width: 300px;box-shadow: 0 0 5px #ddd;}
+  .available-job{padding-left:0px;}
+  .thepower-content{padding:0px 15px;}
+  .thepower-bottle{right:20px; max-width:190px; bottom:-180px;}
+  .water-glass{max-width:175px; height:300px;}
+  .nav-drinkmore{text-align:center;}
+  .nav-drinkmore>li{margin:0 3px;}
+  .water-glass-content{max-width:410px; margin:0 auto;}
+  .hanging-textbox h1{font-size:32px;}
+  .hanging-textbox h2{font-size:32px;}
+
+  .aboutText1{padding:5px 0px;}
+  .aboutText2{padding:5px 0px;}
+  .vision-sec{padding:0px 15px; padding-top: 70px; margin-top: -40px;}
+  .bottle-sec{margin-top:-300px; transform:translateX(-275px); -webkit-transform:translateX(-275px); -ms-transform:translateX(-275px);}
+  .bottle-sec, .bottle-box {height:100vw; }
+
+  .visionMission{width:100%; max-width:700px; height:auto; position:relative; left:auto; top:auto; text-align:left; padding:15px 30px 40px 15px; border-radius:0px 200px 200px 0px; float:right;}
+  .visionMission.vision{left:auto; top:auto; margin-top:80px; padding-left:40px;}
+  .visionMission.mission{right:auto; top:auto; margin-top:50px; padding-left:40px;}
+  .vision-leave{width:100px; top:-70px; right:15px;}
+  .mission-leave {bottom:-30px; right:0px; width:100px;}
+  .ourValues-box:last-child{margin-bottom:0px;}
+  .ourValues-content h1{padding:35px 0px}
+
+  .product-banner{height:auto;}
+  .product-banner-water{height:auto;}
+  .banner-product-Slidbox{padding-left:80px;}
+  .banner-product-slider{margin-top:10px;}
+  .banner-toptext{text-align:center;}
+  .banner-toptext h1{font-size:24px;}
+  .banner-toptext h2{font-size:24px;}
+  .product-Slidbox-text h3{font-size:14px;}
+  .product-Slidbox-text h3 span{font-size:30px;}
+  .product-order-content{margin-bottom:20px;}
+  .product-order-mapbox{text-align:center;}
+  .juice-sec{padding-top:15px;}
+  .juice-content h2{font-size:32px;}
+  .juice-content h1{font-size:32px;}
+  .juice-content-mob{display:none;}
+  .ourValues-box h2{font-size:26px; margin-bottom:10px; }
+  .ourValues-box {margin-bottom: 20px !important}
+
+  /*Arabic CSS*/
+  body.arabic .btn-mobmenu{right:auto; left:0px;}
+  body.arabic .menu{right:auto; left:0;
+    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+  }
+  body.arabic .menu.mobmenushow{transform:translate(0%); -webkit-transform:translateX(0%); -ms-transform:translateX(0%);}
+  body.arabic .social-box{max-width:100%; text-align:right;}
+  body.arabic .social-box li{float:right;}
+  body.arabic .social-box{text-align:right;}
+  body.arabic .copyright {text-align:right;}
+  body.arabic .bottle-sec{transform:none; background-position:center top;}
+  body.arabic .bottle-box{background-position:-320px top;}
+  body.arabic .drinkmore-content{max-width:320px;}
+  body.arabic .water-glass-content{max-width:320px;}
+  body.arabic .water-glass-heading{padding-left:0px;}
+  body.arabic .water-glass-heading h1{font-size:30px;}
+  body.arabic .water-glass-heading h2{font-size:34px;}
+  body.arabic .agebox h3{font-size:28px;}
+  /*body.arabic .baby-withglass{float:left;}*/
+  body.arabic .healthyHabit-box .col-sm-6{width:50%; float:left;}
+  body.arabic .healthyHabit-sec{height:auto;}
+  body.arabic .healthyHabit-table{height:auto; padding-top:30px; padding-bottom:30px;}
+  body.arabic .healthyHabit-content h1{font-size:26px;}
+  body.arabic .healthyHabit-content p{font-size:14px; margin-bottom:0px;}
+  body.arabic .drinkmore-content{margin:0 45%;}
+  body.arabic .fa.gallery-angle{bottom:-10px;}
+  .desert-block {height: 80vw; top: -30px;}
+  .rstory1 {margin-top: -11vw; margin-bottom: 0vw;}
+}
+
+@media (max-width:600px) {
+  .video-carousel .carousel-inner .item{padding:0px 70px;}
+  .video-carousel .carousel-control.right{right:10px;}
+  .video-carousel .carousel-control.left{display:block; left:10px;}
+  .video-leaves{right:-65px;}
+  .bottle-content{padding-top:10px;}
+  .bottol-Slidbox {max-width:130px;}
+  .naturally-balanced{height:auto;}
+  .hanging-textbox{height:auto; padding:20px 0px;}
+  .banner-box .col-xs-8{width:100%;}
+  .banner-box .col-xs-4{display:none;}
+  .thinkgreen-sec{height:750px;}
+  .thinkgreen-content h1{font-size:35px; margin-bottom:5px;}
+  .thinkgreen-content h1 span{font-size:45px;}
+  /*Arabic CSS*/
+  body.arabic .video-carousel .carousel-inner .item{padding:0px 30px 0px 70px;}
+  body.arabic .video-leaves{left:-70px;}
+  body.arabic .video-carousel .carousel-control.left{left:25px;}
+  body.arabic .healthyHabit-box .col-sm-6{width:100%; float:left;}
+  .desert-block {height: 80vw; top: 0px;}
+  .rstory1 {margin-top: -6vw; margin-bottom: -2vw;}
+}
+
+@media (max-width:480px) {
+  .banner-content{padding:5px;}
+  .videobox h2{font-size:22px;}
+  .video-carousel .carousel-inner .item{padding:0px 30px;}
+  .video-carousel .carousel-control.right{right:0px; width:35px;}
+  .video-carousel .carousel-control.left{display:block; left:0px; width:35px;}
+  .video-carousel .video-arrow{width:25px;}
+  .video-carousel .right.carousel-control .video-arrow{left:auto; right:0;}
+  .video-leaves{width:100px; right:-30px;}
+  .playpouse{width:60px; height:60px; margin-top:-30px; margin-left:-30px;}
+  .playpouse i.fa{font-size:30px; line-height:60px;}
+  .bottle-content h2{font-size:20px; margin-bottom:5px;}
+  .bottle-content p{font-weight:300;}
+  .bottle-slide .slick-prev, .bottle-slide .slick-next{width:20px;}
+  .placeOrder-sec .col-xs-5, .placeOrder-sec .col-xs-7{width:100%;}
+  .place-ordertext{ margin-top:50px; max-width:170px;}
+  .place-ordermap{max-width:120px;}
+  .bottle-slide{margin:auto;}
+  .place-order{max-width:290px;}
+  .fcol-1{width:50%;}
+  .fcol-2{width:50%;}
+  .fcol-3{width:50%;}
+  .fcol-4{width:50%;}
+  .fcol-5{width:50%;}
+
+  .yourHealth{padding:50px 5px;}
+  .yourHealth-text h1{font-size:36px;}
+  .dehydration-text1 h1{font-size:32px; height:30px; line-height:30px;}
+  .yourHealth-text h2{font-size:22px; font-weight:400; margin-top:10px;}
+  .health-leaves{width:45px;}
+  .dehydration-text3 h2{font-size:24px; height:55px;}
+  .thepower-bottle {right:10px; max-width:150px; bottom:-100px;}
+  .water-glass-heading{padding-right:40px;}
+  .water-glass-heading h1{font-size:28px;}
+  .water-glass-heading h2{font-size:24px;}
+  .water-glass-heading strong{font-size:80px; line-height: 60px;}
+  .agebox{margin-top:20px;}
+  .dropdown-age{width:140px; height:41px;}
+  .btn-age{padding:6px 25px 6px 15px; font-size:18px;}
+  .btn-age .fa-angle-down{font-size:24px; top:8px; right:12px;}
+  .dropdown-menu-age{border-radius:10px;}
+  .dropdown-menu-age>li>a{font-size:18px;}
+  .numberofGlass{transform:scale(0.8) translate(35px, 0px); height:140px;}
+  .Gback-1 {right:0px;}
+  .Gback-2 {right:65px;}
+  .Gback-3 {right:130px;}
+  .Gback-4 {right:195px;}
+  .Gback-5 {right:260px;}
+  .Gfront-1 {right:20px;}
+  .Gfront-2 {right:95px;}
+  .Gfront-3 {right:170px;}
+  .Gfront-4 {right:240px;}
+  .Gfront-5 {right:310px;}
+
+  .drinkmore-content{padding-top:10px; padding-left:80px;}
+  .tip-image{width:70px; left:5px;}
+  .drinkmore-content h1{font-size:30px;}
+  .drinkmore-content h2{font-size:30px;}
+
+  .gallery-content .right-sec .top-tab{padding-left:0px;min-height:auto;}
+ .gallery-content .right-sec .filter-sec{position: relative;top: auto;left: auto; width: 100%; border-right: 0; padding: 0px 10px;   border-bottom: 1px solid;line-height: 37px;}
+ .gallery-content .right-sec .tab-list li{padding:0px;font-size: 18px;width: 23%;}
+ .gallery-content .right-sec .top-tab{padding:5px 0px;}
+ .nav-drinkmore>li{width:85px; height:85px; border-radius:85px; margin:0 5px;}
+ .nav-drinkmore>li>a{width:85px; height:85px; border-radius:85px;}
+ .nav-drinkmore>li>a>img{padding:8px;}
+ .nav-drinkmore>li>a>span{display:none;}
+ .drinkmore-tab-content{margin-top:-45px; padding-top:25px;}
+  .visionMission{width:100%; max-width:610px; height:auto; position:relative; left:auto; top:auto; text-align:left; padding:15px 30px 40px 15px; border-radius:5px; float:none;}
+  .visionMission.vision{margin-top:80px; padding-left:15px;}
+  .visionMission.mission{margin-top:20px; padding-left:15px;}
+  .story-intro{margin:70px 0px; font-size:48px; line-height:48px;}
+  .ourValues-box{padding-right:0px; padding-left:65px;}
+  .ourValues-img{width:60px;}
+
+  .thinkgreen-sec{height:900px;}
+  .thinkgreen-sec{background-position: 85% 0px;}
+  .thinkgreen-tablecell{padding-top: 0px;}
+
+  .thinkgreen-table{height:auto; padding:20px 20px;}
+  .thinkgreen-content h1{font-size:30px; margin-bottom:10px;}
+  .thinkgreen-content h1 span{font-size:40px;}
+  .tissue-box{padding-top:30px; padding-bottom:30px; text-align:center;}
+  .tissue-imgbox{max-width:320px;}
+  .tissue-texbox h1{font-size:32px;}
+  .tissue-texbox h2{font-size:32px;}
+
+  /*Arabic CSS*/
+  body.arabic .video-carousel .carousel-inner .item{padding:0px 0px 0px 70px;}
+  body.arabic .drinkmore-content{max-width:220px; margin:0px 33%;}
+  body.arabic .water-glass-heading h1{font-size:26px;}
+  body.arabic .water-glass-heading h2{font-size:30px;}
+  body.arabic .water-glass-content{max-width:280px;}
+  body.arabic .drinkmore-sec {background-position: center center;}
+  body.arabic .drinkmore-content{padding-left:0px; height:300px;}
+  body.arabic .nav-drinkmore>li>a>span{display:none;}
+  body.arabic .gallery-content .right-sec .top-tab{padding-right:0px;}
+  body.arabic .gallery-content .right-sec .filter-sec{border:none; border-bottom:1px solid #255d90;}
+  body.arabic .gallery-image-inner .col-xs-6{width:100%;}
+  .human-body{width:180px;}
+  .desc-left{padding-left:75px; text-align:left;}
+  .desc-right{padding-right:75px; text-align:right;}
+  .desc-bottom{padding-top:75px;}
+  .dehydration-description.in-view .body-desc.desc1{margin-left:25px; margin-top:-305px;}
+  .dehydration-description.in-view .body-desc.desc2{margin-left:55px; margin-top:-220px;}
+  .dehydration-description.in-view .body-desc.desc3{width:170px; margin-left:55px; margin-top:-130px;}
+  .dehydration-description.in-view .body-desc.desc4{margin-left:55px; margin-top:-40px;}
+  .dehydration-description.in-view .body-desc.desc5{width:190px; margin-left:35px; margin-top:45px;}
+  .dehydration-description.in-view .body-desc.desc6{width:90px; margin-top:105px; margin-left:-58px;}
+  .dehydration-description.in-view .body-desc.desc7{width:165px; margin-left:-225px; margin-top:45px;}
+  .dehydration-description.in-view .body-desc.desc8{width:150px; margin-left:-220px; margin-top:-40px;}
+  .dehydration-description.in-view .body-desc.desc9{width:145px; margin-left:-225px; margin-top:-130px; word-break:break-all;}
+  .dehydration-description.in-view .body-desc.desc10{width:155px; margin-left:-230px; margin-top:-220px; word-break:break-all;}
+  .dehydration-description.in-view .body-desc.desc11{width:130px; margin-left:-180px; margin-top:-305px;}
+  .naturally-box .col-xs-5{display:none;}
+  .naturally-box .col-xs-7{width:100%;}
+  .dropbox-zoom{width:220px; height:220px; margin-left:-110px; top:250px;}
+  .drop-mejor{left:40%; transform:scale(0.8); -webkit-transform:scale(0.8); -ms-transform:scale(0.8);}
+  .desert-block {height: 80vw; top: 30px;}
+  .rstory1 {margin-top: 2vw; margin-bottom: -10vw;}
+}
+
+@media (max-width:360px) {
+  .video-carousel .video-arrow{margin-top:-80px;}
+  .banner-videobox{margin-top:180px;}
+  .agebox h3{top:12px; font-size:16px;}
+  .desert-block {height: 80vw; top:60px;}
+  .rstory1 {margin-top: 20vw; margin-bottom: -10vw;}
+}
