@@ -59,7 +59,7 @@ export default function AddToCartPopup({ product, variant, onClose }: AddToCartP
       <div className="flex items-center justify-center gap-0 mb-3">
         <button
           onClick={(e) => { e.stopPropagation(); incrementQty(); }}
-          className="w-9 h-9 flex items-center justify-center text-gray-600 hover:text-[#2d7a4f] text-lg font-medium transition-colors"
+          className="w-9 h-9 flex items-center justify-center text-gray-600 hover:text-[#0ea5e9] text-lg font-medium transition-colors"
         >
           +
         </button>
@@ -68,7 +68,7 @@ export default function AddToCartPopup({ product, variant, onClose }: AddToCartP
         </span>
         <button
           onClick={(e) => { e.stopPropagation(); decrementQty(); }}
-          className="w-9 h-9 flex items-center justify-center text-gray-600 hover:text-[#2d7a4f] text-lg font-medium transition-colors"
+          className="w-9 h-9 flex items-center justify-center text-gray-600 hover:text-[#0ea5e9] text-lg font-medium transition-colors"
         >
           -
         </button>
@@ -80,8 +80,8 @@ export default function AddToCartPopup({ product, variant, onClose }: AddToCartP
         disabled={added}
         className={`w-full h-10 rounded-lg font-medium text-sm text-white transition-all ${
           added
-            ? 'bg-green-500'
-            : 'bg-[#2d7a4f] hover:bg-[#246840]'
+            ? 'bg-sky-500'
+            : 'bg-[#0ea5e9] hover:bg-[#0369a1]'
         }`}
       >
         {added

@@ -52,7 +52,7 @@ export default function StorePage() {
         <StoreHeader />
         <div className="min-h-screen flex items-center justify-center">
           <div className="text-center">
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#1a5276] mx-auto mb-4"></div>
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#0ea5e9] mx-auto mb-4"></div>
             <p className="text-gray-500">{t('store.loading')}</p>
           </div>
         </div>
@@ -91,7 +91,7 @@ export default function StorePage() {
           <select
             value={sortBy}
             onChange={(e) => setSortBy(e.target.value as SortOption)}
-            className="text-xs sm:text-sm border border-gray-300 rounded-lg px-2 sm:px-3 py-1.5 sm:py-2 bg-white focus:outline-none focus:border-[#1a5276]"
+            className="text-xs sm:text-sm border border-gray-300 rounded-lg px-2 sm:px-3 py-1.5 sm:py-2 bg-white focus:outline-none focus:border-[#0ea5e9]"
           >
             <option value="featured">{t('store.featured')}</option>
             <option value="price-asc">{t('store.priceLow')}</option>
@@ -122,7 +122,7 @@ export default function StorePage() {
           <div className="text-center mt-6 sm:mt-8">
             <button
               onClick={() => setShowCount(prev => prev + 30)}
-              className="px-6 sm:px-8 py-2.5 sm:py-3 bg-[#1a5276] text-white rounded-lg font-medium text-sm sm:text-base hover:bg-[#2980b9] transition-colors"
+              className="px-6 sm:px-8 py-2.5 sm:py-3 bg-[#0ea5e9] text-white rounded-lg font-medium text-sm sm:text-base hover:bg-[#0284c7] transition-colors"
             >
               {t('store.showMore')}
             </button>

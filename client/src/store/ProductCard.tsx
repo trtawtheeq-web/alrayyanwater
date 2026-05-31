@@ -115,7 +115,7 @@ export default function ProductCard({ product }: ProductCardProps) {
               style={{ transitionDelay: '50ms' }}
               title={t('product.quickView')}
             >
-              <svg className="w-5 h-5 text-[#1a5276]" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+              <svg className="w-5 h-5 text-[#0ea5e9]" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
                 <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
               </svg>
@@ -126,7 +126,7 @@ export default function ProductCard({ product }: ProductCardProps) {
               style={{ transitionDelay: '100ms' }}
               title={t('product.addToCart')}
             >
-              <svg className="w-5 h-5 text-[#1a5276]" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+              <svg className="w-5 h-5 text-[#0ea5e9]" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
               </svg>
             </button>
@@ -141,7 +141,7 @@ export default function ProductCard({ product }: ProductCardProps) {
                 onClick={handleQuickView}
                 className="w-11 h-11 bg-white rounded-full shadow-lg flex items-center justify-center active:bg-gray-100"
               >
-                <svg className="w-5 h-5 text-[#1a5276]" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+                <svg className="w-5 h-5 text-[#0ea5e9]" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
                   <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
@@ -150,7 +150,7 @@ export default function ProductCard({ product }: ProductCardProps) {
                 onClick={handleCartPopup}
                 className="w-11 h-11 bg-white rounded-full shadow-lg flex items-center justify-center active:bg-gray-100"
               >
-                <svg className="w-5 h-5 text-[#1a5276]" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+                <svg className="w-5 h-5 text-[#0ea5e9]" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
                 </svg>
               </button>
@@ -201,12 +201,12 @@ export default function ProductCard({ product }: ProductCardProps) {
                 <span className="text-[9px] sm:text-sm text-gray-400 line-through">
                   {parseFloat(variant.compareAtPrice!).toFixed(1)} <span className="text-[8px] sm:text-xs">ر.ق</span>
                 </span>
-                <span className="text-[12px] sm:text-base font-bold text-[#1a5276]">
+                <span className="text-[12px] sm:text-base font-bold text-[#0ea5e9]">
                   {originalPrice.toFixed(1)} <span className="text-[9px] sm:text-xs font-normal">ر.ق</span>
                 </span>
               </>
             ) : (
-              <span className="text-[12px] sm:text-base font-bold text-[#1a5276]">
+              <span className="text-[12px] sm:text-base font-bold text-[#0ea5e9]">
                 {originalPrice.toFixed(1)} <span className="text-[9px] sm:text-xs font-normal">ر.ق</span>
               </span>
             )}

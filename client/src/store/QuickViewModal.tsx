@@ -128,12 +128,12 @@ export default function QuickViewModal({ product, onClose }: QuickViewModalProps
                   <span className="text-xs sm:text-base text-gray-400 line-through">
                     {compareAtPrice.toFixed(1)} {lang === 'ar' ? 'ر.ق' : 'QAR'}
                   </span>
-                  <span className="text-lg sm:text-2xl font-bold text-[#2d7a4f]">
+                  <span className="text-lg sm:text-2xl font-bold text-[#0ea5e9]">
                     {originalPrice.toFixed(1)} <span className="text-[11px] sm:text-base font-normal">{lang === 'ar' ? 'ر.ق' : 'QAR'}</span>
                   </span>
                 </>
               ) : (
-                <span className="text-lg sm:text-2xl font-bold text-[#2d7a4f]">
+                <span className="text-lg sm:text-2xl font-bold text-[#0ea5e9]">
                   {originalPrice.toFixed(1)} <span className="text-[11px] sm:text-base font-normal">{lang === 'ar' ? 'ر.ق' : 'QAR'}</span>
                 </span>
               )}
@@ -156,7 +156,7 @@ export default function QuickViewModal({ product, onClose }: QuickViewModalProps
               <div className="flex items-center border border-gray-300 rounded-full overflow-hidden">
                 <button
                   onClick={incrementQty}
-                  className="w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center text-[#2d7a4f] hover:bg-gray-50 transition-colors text-base sm:text-lg font-medium"
+                  className="w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center text-[#0ea5e9] hover:bg-gray-50 transition-colors text-base sm:text-lg font-medium"
                 >
                   +
                 </button>
@@ -165,7 +165,7 @@ export default function QuickViewModal({ product, onClose }: QuickViewModalProps
                 </span>
                 <button
                   onClick={decrementQty}
-                  className="w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center text-[#2d7a4f] hover:bg-gray-50 transition-colors text-base sm:text-lg font-medium"
+                  className="w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center text-[#0ea5e9] hover:bg-gray-50 transition-colors text-base sm:text-lg font-medium"
                 >
                   -
                 </button>
@@ -173,14 +173,14 @@ export default function QuickViewModal({ product, onClose }: QuickViewModalProps
             </div>
 
             {/* Total Price */}
-            <div className="text-xs sm:text-base font-semibold text-[#2d7a4f] mb-3 sm:mb-6">
+            <div className="text-xs sm:text-base font-semibold text-[#0ea5e9] mb-3 sm:mb-6">
               {lang === 'ar' ? 'السعر الإجمالي' : 'Total Price'} : {totalPrice} {lang === 'ar' ? 'ر.ق' : 'QAR'}
             </div>
 
             {/* Action buttons */}
             <div className="flex items-center gap-2 sm:gap-3 mt-auto">
               {/* Wishlist */}
-              <button className="w-9 h-9 sm:w-11 sm:h-11 border border-gray-300 rounded-lg flex items-center justify-center text-[#2d7a4f] hover:bg-gray-50 transition-colors shrink-0">
+              <button className="w-9 h-9 sm:w-11 sm:h-11 border border-gray-300 rounded-lg flex items-center justify-center text-[#0ea5e9] hover:bg-gray-50 transition-colors shrink-0">
                 <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
                 </svg>
@@ -192,8 +192,8 @@ export default function QuickViewModal({ product, onClose }: QuickViewModalProps
                 disabled={added}
                 className={`flex-1 h-9 sm:h-11 rounded-lg font-medium text-xs sm:text-sm text-white transition-all ${
                   added
-                    ? 'bg-green-500'
-                    : 'bg-[#2d7a4f] hover:bg-[#246840]'
+                    ? 'bg-sky-500'
+                    : 'bg-[#0ea5e9] hover:bg-[#0369a1]'
                 }`}
               >
                 {added

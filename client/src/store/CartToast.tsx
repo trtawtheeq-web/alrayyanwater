@@ -50,7 +50,7 @@ export default function CartToast({ show, onHide }: CartToastProps) {
     >
       {/* Checkmark */}
       <div className="w-7 h-7 bg-white rounded-full flex items-center justify-center shrink-0">
-        <svg className="w-4 h-4 text-[#2d7a4f]" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={3}>
+        <svg className="w-4 h-4 text-[#0ea5e9]" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={3}>
           <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
         </svg>
       </div>

@@ -93,7 +93,7 @@ export default function CartDrawer() {
                       {hasCompare && (
                         <span className="text-xs text-gray-400 line-through">{comparePrice.toFixed(1)} ر.ق</span>
                       )}
-                      <span className="text-sm font-bold text-[#2d7a4f]">{itemPrice.toFixed(1)} ر.ق</span>
+                      <span className="text-sm font-bold text-[#0ea5e9]">{itemPrice.toFixed(1)} ر.ق</span>
                     </div>
 
                     {/* Quantity controls */}
@@ -139,14 +139,14 @@ export default function CartDrawer() {
           <div className="border-t border-gray-100 p-4 space-y-3">
             <div className="flex items-center justify-between">
               <span className="font-bold text-gray-900">{t('cart.subtotal')}</span>
-              <span className="font-bold text-[#2d7a4f] text-lg">{total.toFixed(2)} QAR</span>
+              <span className="font-bold text-[#0ea5e9] text-lg">{total.toFixed(2)} QAR</span>
             </div>
             <button
               onClick={() => {
                 setCartDrawerOpen(false);
                 navigate('/summary-payment');
               }}
-              className="w-full py-3 bg-[#2d7a4f] text-white rounded-lg font-medium hover:bg-[#358a5b] transition-colors"
+              className="w-full py-3 bg-[#0ea5e9] text-white rounded-lg font-medium hover:bg-[#0284c7] transition-colors"
             >
               {t('cart.checkout')}
             </button>
@@ -155,7 +155,7 @@ export default function CartDrawer() {
                 setCartDrawerOpen(false);
                 navigate('/store/cart');
               }}
-              className="w-full py-2 text-sm text-[#2d7a4f] hover:underline"
+              className="w-full py-2 text-sm text-[#0ea5e9] hover:underline"
             >
               {lang === 'ar' ? 'عرض السلة' : 'View Cart'}
             </button>

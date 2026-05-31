@@ -36,7 +36,7 @@ export default function ProductPage() {
             <p className="text-gray-500 mb-4">{lang === 'ar' ? 'المنتج غير موجود' : 'Product not found'}</p>
             <button
               onClick={() => navigate('/store')}
-              className="px-6 py-2 bg-[#2d7a4f] text-white rounded-lg hover:bg-[#358a5b]"
+              className="px-6 py-2 bg-[#0ea5e9] text-white rounded-lg hover:bg-[#0284c7]"
             >
               {t('product.backToStore')}
             </button>
@@ -68,11 +68,11 @@ export default function ProductPage() {
       <div className="max-w-7xl mx-auto px-2 sm:px-4 py-3 sm:py-8">
         {/* Breadcrumb */}
         <nav className="flex items-center gap-1 text-[11px] sm:text-sm text-gray-500 mb-2 sm:mb-6">
-          <button onClick={() => navigate('/store')} className="hover:text-[#2d7a4f] flex-shrink-0">
+          <button onClick={() => navigate('/store')} className="hover:text-[#0ea5e9] flex-shrink-0">
             {t('header.home')}
           </button>
           <span>/</span>
-          <button onClick={() => navigate(`/store/collection/${product.productType}`)} className="hover:text-[#2d7a4f] flex-shrink-0">
+          <button onClick={() => navigate(`/store/collection/${product.productType}`)} className="hover:text-[#0ea5e9] flex-shrink-0">
             {product.productType}
           </button>
           <span>/</span>
@@ -112,12 +112,12 @@ export default function ProductPage() {
                     <span className="text-xs sm:text-lg text-gray-400 line-through">
                       {compareAtPrice.toFixed(1)} <span className="text-[8px] sm:text-xs">ر.ق</span>
                     </span>
-                    <span className="text-lg sm:text-2xl font-bold text-[#2d7a4f]">
+                    <span className="text-lg sm:text-2xl font-bold text-[#0ea5e9]">
                       {originalPrice.toFixed(1)} <span className="text-[10px] sm:text-sm font-normal">ر.ق</span>
                     </span>
                   </>
                 ) : (
-                  <span className="text-lg sm:text-2xl font-bold text-[#2d7a4f]">
+                  <span className="text-lg sm:text-2xl font-bold text-[#0ea5e9]">
                     {originalPrice.toFixed(1)} <span className="text-[10px] sm:text-sm font-normal">ر.ق</span>
                   </span>
                 )}
@@ -141,8 +141,8 @@ export default function ProductPage() {
                         onClick={() => setSelectedVariant(i)}
                         className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg text-xs sm:text-sm border transition-colors ${
                           selectedVariant === i
-                            ? 'border-[#2d7a4f] bg-[#2d7a4f] text-white'
-                            : 'border-gray-300 text-gray-700 hover:border-[#2d7a4f]'
+                            ? 'border-[#0ea5e9] bg-[#0ea5e9] text-white'
+                            : 'border-gray-300 text-gray-700 hover:border-[#0ea5e9]'
                         }`}
                       >
                         {v.title}
@@ -178,8 +178,8 @@ export default function ProductPage() {
                 disabled={added}
                 className={`w-full py-2.5 sm:py-3 rounded-lg text-sm sm:text-base font-medium transition-all duration-200 ${
                   added
-                    ? 'bg-green-500 text-white'
-                    : 'bg-[#2d7a4f] text-white hover:bg-[#358a5b] active:scale-[0.98]'
+                    ? 'bg-sky-500 text-white'
+                    : 'bg-[#0ea5e9] text-white hover:bg-[#0284c7] active:scale-[0.98]'
                 }`}
               >
                 {added ? (
