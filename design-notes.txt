@@ -1,0 +1,37 @@
+تصميم getit.qa/collections/get-mazzraty-qatar
+================================================
+
+الهيدر:
+- بانر أخضر أعلى "Free shipping for orders over QAR 250"
+- شعار getit.qa أعلى يسار
+- بحث أعلى يمين
+- SIGN IN + CART أعلى يمين
+- قائمة تنقل: HOME, OFFER ZONE, GROCERY & FRESH FOODS, BABY & KIDS, WOMEN'S, MEN'S, HOUSEHOLD & STATIONERY, APPLIANCES & FURNITURE, MOBILES & ELECTRONICS, INDUSTRIAL PRODUCTS
+
+صفحة المجموعة:
+- عنوان كبير "MAZZRATY" وسط
+- Breadcrumb: HOME / MAZZRATY
+- وصف: "MAZZRATY : A Range of Qatar's Naturally Trusted Dairy Products"
+- وصف فرعي: "Shop for a quality range of fresh and tasty milk, yoghurt, juice and laban online."
+- VIEW AS (grid/list), SHOW (30 items per page), BY TYPE (Featured)
+- Grid: 5 أعمدة على الديسكتوب
+- كل منتج: صورة كبيرة + اسم + سعر QAR + زر ADD TO CART أخضر
+- خلفية بيضاء نظيفة
+- 30 منتج
+
+الألوان:
+- أخضر: #00b300 (بانر + أزرار)
+- أبيض: خلفية
+- أسود: نصوص
+- رمادي فاتح: حدود
+
+العملة: QAR (ريال قطري)
+
+بنية كارد المنتج:
+- product-top: صورة + Quick View + Add to Cart (زر أخضر)
+- product-bottom: عنوان المنتج + سعر (QAR X.XX)
+- Grid: col-xs-6 col-sm-4 (2 أعمدة موبايل، 3 تابلت، 5 ديسكتوب)
+- زر Add to Cart أخضر يظهر عند hover
+- صورة كبيرة مربعة
+- اسم المنتج أسفل الصورة
+- السعر بالريال القطري
