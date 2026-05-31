@@ -117,8 +117,8 @@ export default function AmerChat() {
           {/* Avatar Image */}
           <div className={`transition-all duration-300 ${hasNewAdminMessage ? "ring-2 ring-[#1a5276] ring-offset-2 rounded-full" : ""}`}>
             <img
-              src="/alkalive-assets/alkalive-logo.png"
-              alt="ألكالايف"
+              src="/rayyan-site/images/logo.png"
+              alt="الريان"
               className="object-contain rounded-full shadow-lg bg-white p-1"
               style={{ width: '40px', height: '40px', maxWidth: '40px', maxHeight: '40px' }}
             />
@@ -134,12 +134,12 @@ export default function AmerChat() {
             <div style={{ background: '#1a5276' }} className="text-white p-4 flex items-center justify-between">
               <div className="flex items-center gap-3">
                 <img
-                  src="/alkalive-assets/alkalive-logo.png"
-                  alt="ألكالايف"
+                  src="/rayyan-site/images/logo.png"
+                  alt="الريان"
                   className="w-10 h-10 object-contain bg-white rounded-full p-1"
                 />
                 <div>
-                  <h3 className="font-bold text-sm">ألكالايف</h3>
+                  <h3 className="font-bold text-sm">الريان</h3>
                   <p className="text-xs text-white/80">خدمة العملاء</p>
                 </div>
               </div>
@@ -158,11 +158,11 @@ export default function AmerChat() {
               {messages.length === 0 ? (
                 <div className="text-center text-gray-500 mt-8">
                   <img
-                    src="/alkalive-assets/alkalive-logo.png"
-                    alt="ألكالايف"
+                    src="/rayyan-site/images/logo.png"
+                    alt="الريان"
                     className="w-16 h-16 mx-auto mb-4 opacity-50"
                   />
-                  <p>مرحباً بك في ألكالايف</p>
+                  <p>مرحباً بك في الريان</p>
                   <p className="text-sm">كيف يمكننا مساعدتك؟</p>
                 </div>
               ) : (

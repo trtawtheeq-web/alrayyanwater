@@ -19,38 +19,21 @@ const translations: Record<string, Record<Lang, string>> = {
   },
   'header.home': { ar: 'الرئيسية', en: 'HOME' },
   'header.allProducts': { ar: 'جميع المنتجات', en: 'ALL PRODUCTS' },
-  'header.yogurt': { ar: 'زبادي', en: 'YOGURT' },
-  'header.milk': { ar: 'حليب', en: 'MILK' },
-  'header.laban': { ar: 'لبن', en: 'LABAN' },
-  'header.juice': { ar: 'عصائر', en: 'JUICE' },
-  'header.chicken': { ar: 'دجاج', en: 'CHICKEN' },
-  'header.cheese': { ar: 'أجبان', en: 'CHEESE' },
-  'header.eggs': { ar: 'بيض', en: 'EGGS' },
-  'header.butter': { ar: 'زبدة', en: 'BUTTER' },
-  'header.ghee': { ar: 'سمنة', en: 'GHEE' },
-  'header.labneh': { ar: 'لبنة', en: 'LABNEH' },
-  'header.desserts': { ar: 'حلويات', en: 'DESSERTS' },
-  'header.vegetables': { ar: 'خضار', en: 'VEGETABLES' },
-  'header.fruits': { ar: 'فواكه', en: 'FRUITS' },
-  'header.herbs': { ar: 'أعشاب', en: 'HERBS' },
-  'header.water': { ar: 'مياه معدنية', en: 'MINERAL WATER' },
-  'header.milkPowder': { ar: 'حليب مجفف', en: 'MILK POWDER' },
-  'header.kefir': { ar: 'كفير', en: 'KEFIR' },
-  'header.greekYogurt': { ar: 'زبادي يوناني', en: 'GREEK YOGURT' },
-  'header.highProtein': { ar: 'بروتين عالي', en: 'HIGH PROTEIN' },
+  'header.water': { ar: 'مياه طبيعية', en: 'NATURAL WATER' },
+  'header.tissue': { ar: 'مناديل ورقية', en: 'TISSUE' },
   'header.searchPlaceholder': { ar: 'بحث...', en: 'Search...' },
   'header.cart': { ar: 'السلة', en: 'CART' },
   'header.signIn': { ar: 'تسجيل دخول', en: 'SIGN IN' },
 
   // Store Page
-  'store.title': { ar: 'ألكالايف', en: 'ALKALIVE' },
+  'store.title': { ar: 'الريان', en: 'RAYYAN' },
   'store.subtitle': {
-    ar: 'ألكالايف : مياه شرب قلوية نقية من قطر',
-    en: "ALKALIVE : Pure Alkaline Drinking Water from Qatar",
+    ar: 'الريان : مياه طبيعية نقية من قطر',
+    en: "RAYYAN : Pure Natural Drinking Water from Qatar",
   },
   'store.description': {
-    ar: 'تسوق مياه ألكالايف القلوية النقية بأحجام مختلفة. توصيل سريع في قطر.',
-    en: 'Shop Alkalive pure alkaline water in different sizes. Fast delivery in Qatar.',
+    ar: 'تسوق مياه الريان الطبيعية النقية بأحجام مختلفة. توصيل سريع في قطر.',
+    en: 'Shop Rayyan pure natural water in different sizes. Fast delivery in Qatar.',
   },
   'store.viewAs': { ar: 'عرض كـ', en: 'VIEW AS' },
   'store.show': { ar: 'عرض', en: 'SHOW' },
@@ -94,17 +77,17 @@ const translations: Record<string, Record<Lang, string>> = {
   'search.tryDifferent': { ar: 'حاول البحث بكلمات مختلفة', en: 'Try different keywords' },
 
   // Footer
-  'footer.brandName': { ar: 'ألكالايف قطر', en: 'Alkalive Qatar' },
+  'footer.brandName': { ar: 'مياه الريان قطر', en: 'Rayyan Water Qatar' },
   'footer.about': {
-    ar: 'ألكالايف - مياه قلوية نقية لحياة صحية أفضل. نوفر لك أجود أنواع المياه القلوية في قطر.',
-    en: "Alkalive - Pure alkaline water for a healthier life. We provide the finest alkaline water in Qatar.",
+    ar: 'الريان - مياه طبيعية نقية لحياة صحية أفضل. نوفر لك أجود أنواع المياه الطبيعية في قطر.',
+    en: "Rayyan - Pure natural water for a healthier life. We provide the finest natural water in Qatar.",
   },
   'footer.quickLinks': { ar: 'روابط سريعة', en: 'Quick Links' },
   'footer.categories': { ar: 'التصنيفات', en: 'Categories' },
   'footer.contactUs': { ar: 'تواصل معنا', en: 'Contact Us' },
   'footer.copyright': {
-    ar: '© {year} ألكالايف قطر. جميع الحقوق محفوظة.',
-    en: '© {year} Alkalive Qatar. All rights reserved.',
+    ar: '© {year} مياه الريان قطر. جميع الحقوق محفوظة.',
+    en: '© {year} Rayyan Water Qatar. All rights reserved.',
   },
   'footer.paymentMethods': { ar: 'طرق الدفع', en: 'Payment Methods' },
 };
@@ -114,7 +97,7 @@ const LanguageContext = createContext<LanguageContextType | null>(null);
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const [lang, setLangState] = useState<Lang>(() => {
     try {
-      const saved = localStorage.getItem('alkalive-lang');
+      const saved = localStorage.getItem('rayyan-lang');
       return (saved === 'en' || saved === 'ar') ? saved : 'ar';
     } catch {
       return 'ar';
@@ -122,7 +105,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   });
 
   useEffect(() => {
-    localStorage.setItem('alkalive-lang', lang);
+    localStorage.setItem('rayyan-lang', lang);
     document.documentElement.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
     document.documentElement.setAttribute('lang', lang);
   }, [lang]);

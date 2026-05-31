@@ -58,11 +58,11 @@ export default function DiscountPopup() {
           onClick={(e) => e.stopPropagation()}
           style={{ animation: 'popIn 0.4s ease' }}
         >
-          {/* Blue top bar - Alkalive branding */}
-          <div style={{ background: 'linear-gradient(135deg, #1a5276, #2980b9)', padding: '16px 20px', textAlign: 'center' }}>
+          {/* Blue top bar - Rayyan branding */}
+          <div style={{ background: 'linear-gradient(135deg, #00a0d2, #0077b6)', padding: '16px 20px', textAlign: 'center' }}>
             <img
-              src="/alkalive-assets/alkalive-logo.png"
-              alt="ألكالايف"
+              src="/rayyan-site/images/logo.png"
+              alt="الريان"
               style={{ height: '70px', width: '70px', borderRadius: '50%', margin: '0 auto', background: 'white', padding: '4px', boxShadow: '0 4px 15px rgba(0,0,0,0.2)', objectFit: 'contain' }}
             />
           </div>
@@ -85,7 +85,7 @@ export default function DiscountPopup() {
               خصم 50%
             </div>
 
-            <p style={{ fontSize: '16px', fontWeight: '700', color: '#1a5276', marginBottom: '20px', marginTop: '8px' }}>
+            <p style={{ fontSize: '16px', fontWeight: '700', color: '#00a0d2', marginBottom: '20px', marginTop: '8px' }}>
               على جميع المنتجات
             </p>
 
@@ -152,14 +152,14 @@ export default function DiscountPopup() {
                 display: 'block',
                 width: '100%',
                 padding: '12px',
-                background: 'linear-gradient(135deg, #1a5276, #2980b9)',
+                background: 'linear-gradient(135deg, #00a0d2, #0077b6)',
                 color: 'white',
                 border: 'none',
                 borderRadius: '10px',
                 fontSize: '16px',
                 fontWeight: '700',
                 cursor: 'pointer',
-                boxShadow: '0 4px 15px rgba(26,82,118,0.3)',
+                boxShadow: '0 4px 15px rgba(0,160,210,0.3)',
                 transition: 'transform 0.2s',
                 textDecoration: 'none',
                 textAlign: 'center'

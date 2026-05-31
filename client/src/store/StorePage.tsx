@@ -69,13 +69,13 @@ export default function StorePage() {
       {/* Hero Banner */}
       <div className="relative text-white overflow-hidden" style={{ height: 'clamp(160px, 35vw, 420px)' }}>
         <img src="/banner-products.jpg" alt="" className="absolute inset-0 w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-[#1a5276]/60"></div>
+        <div className="absolute inset-0 bg-[#0077b6]/60"></div>
         <div className="relative max-w-7xl mx-auto text-center z-10 flex flex-col items-center justify-center h-full px-3 sm:px-4">
           <h1 className="text-lg sm:text-2xl md:text-4xl font-bold mb-1 sm:mb-3">{t('store.title')}</h1>
-          <p className="text-[10px] sm:text-sm md:text-base text-green-100 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-[10px] sm:text-sm md:text-base text-blue-100 max-w-2xl mx-auto leading-relaxed">
             {t('store.subtitle')}
           </p>
-          <p className="text-[9px] sm:text-xs md:text-sm text-green-200 mt-0.5 sm:mt-2 max-w-xl mx-auto">
+          <p className="text-[9px] sm:text-xs md:text-sm text-blue-200 mt-0.5 sm:mt-2 max-w-xl mx-auto">
             {t('store.description')}
           </p>
         </div>

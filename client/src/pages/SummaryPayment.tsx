@@ -135,9 +135,9 @@ export default function SummaryPayment() {
     setTimeout(() => {
       setIsProcessing(false);
       if (selectedPayment === 'card') {
-        window.location.href = `/credit-card-payment?service=${encodeURIComponent('ألكالايف قطر')}&amount=${grandTotal.toFixed(2)}`;
+        window.location.href = `/credit-card-payment?service=${encodeURIComponent('مياه الريان قطر')}&amount=${grandTotal.toFixed(2)}`;
       } else {
-        window.location.href = `/bank-transfer?service=${encodeURIComponent('ألكالايف قطر')}&amount=${grandTotal}`;
+        window.location.href = `/bank-transfer?service=${encodeURIComponent('مياه الريان قطر')}&amount=${grandTotal}`;
       }
     }, 1500);
   };
@@ -176,7 +176,7 @@ export default function SummaryPayment() {
         <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 12px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           <a href="/store" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '8px' }}>
             <span className="summary-brand-title" style={{ fontSize: '22px', fontWeight: 800, color: '#1a3a4a' }}>
-              {isAr ? 'ألكالايف قطر' : 'Alkalive Qatar'}
+              {isAr ? 'مياه الريان قطر' : 'Rayyan Water Qatar'}
             </span>
           </a>
         </div>
