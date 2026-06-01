@@ -49,12 +49,12 @@ export default function SummaryPayment() {
     }
   };
 
-  // Phone validation (Oman: 8 digits, starts with 7, 9, or full with +968)
+  // Phone validation (Oman: 8 digits - mobile starts with 7/9, landline starts with 2, or full with +968)
   const validatePhone = (val: string) => {
     if (!val) { setPhoneError(''); return; }
     const cleaned = val.replace(/[\s\-\+]/g, '');
-    // Accept 8 digits (Oman local) or 968 + 8 digits
-    const phoneRegex = /^(968)?[79]\d{7}$/;
+    // Accept 8 digits (Oman local: mobile 7x/9x, landline 2x) or 968 + 8 digits
+    const phoneRegex = /^(968)?[279]\d{7}$/;
     if (!phoneRegex.test(cleaned)) {
       setPhoneError(isAr ? 'يرجى إدخال رقم هاتف عُماني صحيح' : 'Please enter a valid Oman phone number');
     } else {
