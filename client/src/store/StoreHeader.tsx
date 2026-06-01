@@ -5,7 +5,7 @@ import { useStore } from './StoreContext';
 
 export default function StoreHeader() {
   const { t, lang, toggleLang, isRTL, dir } = useLang();
-  const { getCartCount, setCartDrawerOpen } = useStore();
+  const { getCartCount, getCartTotal, setCartDrawerOpen } = useStore();
   const [location, navigate] = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const cartCount = getCartCount();
@@ -108,7 +108,7 @@ export default function StoreHeader() {
               onClick={(e) => { e.preventDefault(); setCartDrawerOpen(true); }}
               style={{ fontSize: '13px', color: '#1a5276', textDecoration: 'none', whiteSpace: 'nowrap' }}
             >
-              {cartCount} items - 0.000
+              {cartCount} items - {getCartTotal().toFixed(3)}
             </a>
 
             {/* Search icon */}
