@@ -199,15 +199,15 @@ export default function ProductCard({ product }: ProductCardProps) {
             {hasCompareAt ? (
               <>
                 <span className="text-[9px] sm:text-sm text-gray-400 line-through">
-                  {parseFloat(variant.compareAtPrice!).toFixed(1)} <span className="text-[8px] sm:text-xs">ر.ق</span>
+                  {parseFloat(variant.compareAtPrice!).toFixed(3)} <span className="text-[8px] sm:text-xs">ر.ع</span>
                 </span>
                 <span className="text-[12px] sm:text-base font-bold text-[#0ea5e9]">
-                  {originalPrice.toFixed(1)} <span className="text-[9px] sm:text-xs font-normal">ر.ق</span>
+                  {originalPrice.toFixed(3)} <span className="text-[9px] sm:text-xs font-normal">ر.ع</span>
                 </span>
               </>
             ) : (
               <span className="text-[12px] sm:text-base font-bold text-[#0ea5e9]">
-                {originalPrice.toFixed(1)} <span className="text-[9px] sm:text-xs font-normal">ر.ق</span>
+                {originalPrice.toFixed(3)} <span className="text-[9px] sm:text-xs font-normal">ر.ع</span>
               </span>
             )}
           </div>

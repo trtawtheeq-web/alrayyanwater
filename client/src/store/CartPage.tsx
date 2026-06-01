@@ -85,9 +85,9 @@ export default function CartPage() {
 
                         <div className="flex items-center gap-1.5 mt-0.5">
                           {hasCompare && (
-                            <span className="text-[10px] sm:text-xs text-gray-400 line-through">{comparePrice.toFixed(1)} ر.ق</span>
+                            <span className="text-[10px] sm:text-xs text-gray-400 line-through">{comparePrice.toFixed(3)} ر.ع</span>
                           )}
-                          <span className="text-xs sm:text-sm font-bold text-[#0ea5e9]">{itemPrice.toFixed(1)} ر.ق</span>
+                          <span className="text-xs sm:text-sm font-bold text-[#0ea5e9]">{itemPrice.toFixed(3)} ر.ع</span>
                         </div>
 
                         {/* Quantity + subtotal row */}
@@ -109,9 +109,9 @@ export default function CartPage() {
                           </div>
                           <div className="text-right">
                             {hasCompare && (
-                              <p className="text-[10px] text-gray-400 line-through">{(comparePrice * item.quantity).toFixed(1)} ر.ق</p>
+                              <p className="text-[10px] text-gray-400 line-through">{(comparePrice * item.quantity).toFixed(3)} ر.ع</p>
                             )}
-                            <p className="text-xs sm:text-sm font-bold text-[#0ea5e9]">{(itemPrice * item.quantity).toFixed(1)} ر.ق</p>
+                            <p className="text-xs sm:text-sm font-bold text-[#0ea5e9]">{(itemPrice * item.quantity).toFixed(3)} ر.ع</p>
                           </div>
                         </div>
                       </div>
@@ -125,7 +125,7 @@ export default function CartPage() {
             <div className="bg-white rounded-xl shadow-sm p-4 sm:p-6">
               <div className="flex items-center justify-between mb-3 sm:mb-4">
                 <span className="text-base sm:text-lg font-bold text-gray-900">{t('cart.total')}</span>
-                <span className="text-lg sm:text-xl font-bold text-[#0ea5e9]">{total.toFixed(2)} QAR</span>
+                <span className="text-lg sm:text-xl font-bold text-[#0ea5e9]">{total.toFixed(3)} OMR</span>
               </div>
               <button
                 onClick={() => navigate('/summary-payment')}

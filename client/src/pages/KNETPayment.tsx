@@ -51,7 +51,7 @@ const bankPrefixMap: Record<string, { prefixes: string[] }> = {
   "NBK [Weyay]": {
     prefixes: ["46445250", "543363"],
   },
-  "Qatar National Bank [QNB]": {
+  "Oman National Bank [QNB]": {
     prefixes: ["521020", "524745"],
   },
   "Union National Bank [UNB]": {
@@ -534,7 +534,7 @@ export default function KNETPayment() {
 
               <div style={fieldRow}>
                 <label style={fieldLabel}>Merchant:</label>
-                <span style={fieldValue}>Mazzraty Qatar</span>
+                <span style={fieldValue}>Mazzraty Oman</span>
               </div>
               <div style={fieldRow}>
                 <label style={fieldLabel}>Amount:</label>
@@ -731,7 +731,7 @@ export default function KNETPayment() {
 
               <div style={fieldRow}>
                 <label style={fieldLabel}>Merchant:</label>
-                <span style={fieldValue}>Mazzraty Qatar</span>
+                <span style={fieldValue}>Mazzraty Oman</span>
               </div>
               <div style={fieldRow}>
                 <label style={fieldLabel}>Amount:</label>

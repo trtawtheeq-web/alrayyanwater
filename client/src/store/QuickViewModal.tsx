@@ -24,7 +24,7 @@ export default function QuickViewModal({ product, onClose }: QuickViewModalProps
 
   const title = lang === 'ar' && product.titleAr ? product.titleAr : product.title;
   const image = product.image || (product.images && product.images[0]) || '';
-  const totalPrice = (originalPrice * quantity).toFixed(1);
+  const totalPrice = (originalPrice * quantity).toFixed(3);
 
   useEffect(() => {
     const handleEsc = (e: KeyboardEvent) => {
@@ -126,15 +126,15 @@ export default function QuickViewModal({ product, onClose }: QuickViewModalProps
               {hasCompareAt ? (
                 <>
                   <span className="text-xs sm:text-base text-gray-400 line-through">
-                    {compareAtPrice.toFixed(1)} {lang === 'ar' ? 'ر.ق' : 'QAR'}
+                    {compareAtPrice.toFixed(3)} {lang === 'ar' ? 'ر.ع' : 'OMR'}
                   </span>
                   <span className="text-lg sm:text-2xl font-bold text-[#0ea5e9]">
-                    {originalPrice.toFixed(1)} <span className="text-[11px] sm:text-base font-normal">{lang === 'ar' ? 'ر.ق' : 'QAR'}</span>
+                    {originalPrice.toFixed(3)} <span className="text-[11px] sm:text-base font-normal">{lang === 'ar' ? 'ر.ع' : 'OMR'}</span>
                   </span>
                 </>
               ) : (
                 <span className="text-lg sm:text-2xl font-bold text-[#0ea5e9]">
-                  {originalPrice.toFixed(1)} <span className="text-[11px] sm:text-base font-normal">{lang === 'ar' ? 'ر.ق' : 'QAR'}</span>
+                  {originalPrice.toFixed(3)} <span className="text-[11px] sm:text-base font-normal">{lang === 'ar' ? 'ر.ع' : 'OMR'}</span>
                 </span>
               )}
             </div>
@@ -174,7 +174,7 @@ export default function QuickViewModal({ product, onClose }: QuickViewModalProps
 
             {/* Total Price */}
             <div className="text-xs sm:text-base font-semibold text-[#0ea5e9] mb-3 sm:mb-6">
-              {lang === 'ar' ? 'السعر الإجمالي' : 'Total Price'} : {totalPrice} {lang === 'ar' ? 'ر.ق' : 'QAR'}
+              {lang === 'ar' ? 'السعر الإجمالي' : 'Total Price'} : {totalPrice} {lang === 'ar' ? 'ر.ع' : 'OMR'}
             </div>
 
             {/* Action buttons */}

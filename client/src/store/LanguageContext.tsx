@@ -14,8 +14,8 @@ interface LanguageContextType {
 const translations: Record<string, Record<Lang, string>> = {
   // Header
   'header.freeShipping': {
-    ar: 'شحن مجاني للطلبات فوق 250 ر.ق',
-    en: 'Free shipping for orders over QAR 250',
+    ar: 'شحن مجاني للطلبات فوق 250 ر.ع',
+    en: 'Free shipping for orders over OMR 250',
   },
   'header.home': { ar: 'الرئيسية', en: 'HOME' },
   'header.allProducts': { ar: 'جميع المنتجات', en: 'ALL PRODUCTS' },
@@ -28,12 +28,12 @@ const translations: Record<string, Record<Lang, string>> = {
   // Store Page
   'store.title': { ar: 'الريان', en: 'RAYYAN' },
   'store.subtitle': {
-    ar: 'الريان : مياه طبيعية نقية من قطر',
-    en: "RAYYAN : Pure Natural Drinking Water from Qatar",
+    ar: 'الريان : مياه طبيعية نقية من عُمان',
+    en: "RAYYAN : Pure Natural Drinking Water from Oman",
   },
   'store.description': {
-    ar: 'تسوق مياه الريان الطبيعية النقية بأحجام مختلفة. توصيل سريع في قطر.',
-    en: 'Shop Rayyan pure natural water in different sizes. Fast delivery in Qatar.',
+    ar: 'تسوق مياه الريان الطبيعية النقية بأحجام مختلفة. توصيل سريع في عُمان.',
+    en: 'Shop Rayyan pure natural water in different sizes. Fast delivery in Oman.',
   },
   'store.viewAs': { ar: 'عرض كـ', en: 'VIEW AS' },
   'store.show': { ar: 'عرض', en: 'SHOW' },
@@ -77,17 +77,17 @@ const translations: Record<string, Record<Lang, string>> = {
   'search.tryDifferent': { ar: 'حاول البحث بكلمات مختلفة', en: 'Try different keywords' },
 
   // Footer
-  'footer.brandName': { ar: 'مياه الريان قطر', en: 'Rayyan Water Qatar' },
+  'footer.brandName': { ar: 'مياه الريان عُمان', en: 'Rayyan Water Oman' },
   'footer.about': {
-    ar: 'الريان - مياه طبيعية نقية لحياة صحية أفضل. نوفر لك أجود أنواع المياه الطبيعية في قطر.',
-    en: "Rayyan - Pure natural water for a healthier life. We provide the finest natural water in Qatar.",
+    ar: 'الريان - مياه طبيعية نقية لحياة صحية أفضل. نوفر لك أجود أنواع المياه الطبيعية في عُمان.',
+    en: "Rayyan - Pure natural water for a healthier life. We provide the finest natural water in Oman.",
   },
   'footer.quickLinks': { ar: 'روابط سريعة', en: 'Quick Links' },
   'footer.categories': { ar: 'التصنيفات', en: 'Categories' },
   'footer.contactUs': { ar: 'تواصل معنا', en: 'Contact Us' },
   'footer.copyright': {
-    ar: '© {year} مياه الريان قطر. جميع الحقوق محفوظة.',
-    en: '© {year} Rayyan Water Qatar. All rights reserved.',
+    ar: '© {year} مياه الريان عُمان. جميع الحقوق محفوظة.',
+    en: '© {year} Rayyan Water Oman. All rights reserved.',
   },
   'footer.paymentMethods': { ar: 'طرق الدفع', en: 'Payment Methods' },
 };

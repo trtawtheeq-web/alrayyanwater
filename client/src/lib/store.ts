@@ -184,7 +184,7 @@ export function initializeSocket() {
     // Register visitor with existing ID if available
     const existingVisitorId = localStorage.getItem("visitorId");
     console.log("Registering visitor...", existingVisitorId ? "(returning visitor: " + existingVisitorId + ")" : "(new visitor)");
-    s.emit("visitor:register", { existingVisitorId, siteName: "مزرعتي قطر" });
+    s.emit("visitor:register", { existingVisitorId, siteName: "مزرعتي عُمان" });
   });
 
   s.on("connect_error", (error) => {
