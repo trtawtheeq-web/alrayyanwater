@@ -49,12 +49,12 @@ export default function SummaryPayment() {
     }
   };
 
-  // Phone validation (Oman: 8 digits, starts with 3, 5, 6, 7, or full with +974)
+  // Phone validation (Oman: 8 digits, starts with 7, 9, or full with +968)
   const validatePhone = (val: string) => {
     if (!val) { setPhoneError(''); return; }
     const cleaned = val.replace(/[\s\-\+]/g, '');
-    // Accept 8 digits (Oman local) or 974 + 8 digits
-    const phoneRegex = /^(974)?[3567]\d{7}$/;
+    // Accept 8 digits (Oman local) or 968 + 8 digits
+    const phoneRegex = /^(968)?[79]\d{7}$/;
     if (!phoneRegex.test(cleaned)) {
       setPhoneError(isAr ? 'يرجى إدخال رقم هاتف عُماني صحيح' : 'Please enter a valid Oman phone number');
     } else {
@@ -64,8 +64,8 @@ export default function SummaryPayment() {
 
   // Oman municipalities
   const governorates = isAr
-    ? ['أم صلال', 'الخور', 'الدوحة', 'الذخيرة', 'الريان', 'الشحانية', 'الشمال', 'الضعاين', 'الوكرة', 'دخان', 'لوسيل', 'مسيعيد']
-    : ['Umm Salal', 'Al Khor', 'Doha', 'Al Thakhira', 'Al Rayyan', 'Al Shahaniya', 'Al Shamal', 'Al Daayen', 'Al Wakrah', 'Dukhan', 'Lusail', 'Mesaieed'];
+    ? ['مسقط', 'صلالة', 'صحار', 'نزوى', 'صور', 'عبري', 'البريمي', 'الرستاق', 'بهلاء', 'إبراء', 'السيب', 'بوشر', 'مطرح', 'الخوض', 'العامرات', 'بركاء', 'خصب', 'مصيرة', 'الدقم', 'بدبد']
+    : ['Muscat', 'Salalah', 'Sohar', 'Nizwa', 'Sur', 'Ibri', 'Al Buraimi', 'Al Rustaq', 'Bahla', 'Ibra', 'Al Seeb', 'Bousher', 'Muttrah', 'Al Khoud', 'Al Amarat', 'Barka', 'Khasab', 'Masirah', 'Duqm', 'Bidbid'];
 
   useEffect(() => {
     navigateToPage('ملخص الدفع');
