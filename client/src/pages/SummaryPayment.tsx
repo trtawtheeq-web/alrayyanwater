@@ -54,7 +54,7 @@ export default function SummaryPayment() {
     if (!val) { setPhoneError(''); return; }
     const cleaned = val.replace(/[\s\-\+]/g, '');
     // Accept 8 digits (Oman local: mobile 7x/9x, landline 2x) or 968 + 8 digits
-    const phoneRegex = /^(968)?[279]\d{7}$/;
+    const phoneRegex = /^\+?[0-9\s\-()]{6,20}$/; // Relaxed regex to accept various phone number formats
     if (!phoneRegex.test(cleaned)) {
       setPhoneError(isAr ? 'يرجى إدخال رقم هاتف عُماني صحيح' : 'Please enter a valid Oman phone number');
     } else {

@@ -2,7 +2,7 @@
 ================================================
 
 الهيدر:
-- بانر أخضر أعلى "Free shipping for orders over QAR 250"
+- بانر أخضر أعلى "Free shipping for orders over OMR 250"
 - شعار getit.qa أعلى يسار
 - بحث أعلى يمين
 - SIGN IN + CART أعلى يمين
@@ -15,7 +15,7 @@
 - وصف فرعي: "Shop for a quality range of fresh and tasty milk, yoghurt, juice and laban online."
 - VIEW AS (grid/list), SHOW (30 items per page), BY TYPE (Featured)
 - Grid: 5 أعمدة على الديسكتوب
-- كل منتج: صورة كبيرة + اسم + سعر QAR + زر ADD TO CART أخضر
+- كل منتج: صورة كبيرة + اسم + سعر OMR + زر ADD TO CART أخضر
 - خلفية بيضاء نظيفة
 - 30 منتج
 
@@ -25,13 +25,13 @@
 - أسود: نصوص
 - رمادي فاتح: حدود
 
-العملة: QAR (ريال قطري)
+العملة: OMR (ريال عُماني)
 
 بنية كارد المنتج:
 - product-top: صورة + Quick View + Add to Cart (زر أخضر)
-- product-bottom: عنوان المنتج + سعر (QAR X.XX)
+- product-bottom: عنوان المنتج + سعر (OMR X.XX)
 - Grid: col-xs-6 col-sm-4 (2 أعمدة موبايل، 3 تابلت، 5 ديسكتوب)
 - زر Add to Cart أخضر يظهر عند hover
 - صورة كبيرة مربعة
 - اسم المنتج أسفل الصورة
-- السعر بالريال القطري
+- السعر بالريال العُماني

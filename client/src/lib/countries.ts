@@ -10,7 +10,6 @@ export const countries: Country[] = [
   { name: "United Arab Emirates", code: "AE", dial_code: "+971", flag: "🇦🇪" },
   { name: "Kuwait", code: "KW", dial_code: "+965", flag: "🇰🇼" },
   { name: "Bahrain", code: "BH", dial_code: "+973", flag: "🇧🇭" },
-  { name: "Qatar", code: "QA", dial_code: "+974", flag: "🇶🇦" },
   { name: "Oman", code: "OM", dial_code: "+968", flag: "🇴🇲" },
   { name: "Egypt", code: "EG", dial_code: "+20", flag: "🇪🇬" },
   { name: "Jordan", code: "JO", dial_code: "+962", flag: "🇯🇴" },
