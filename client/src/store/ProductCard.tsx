@@ -1,10 +1,9 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import ReactDOM from 'react-dom';
 import { useLocation } from 'wouter';
 import { useLang } from './LanguageContext';
 import { useStore, Product, Variant } from './StoreContext';
 import QuickViewModal from './QuickViewModal';
-import AddToCartPopup from './AddToCartPopup';
 
 interface ProductCardProps {
   product: Product;
@@ -16,29 +15,16 @@ export default function ProductCard({ product }: ProductCardProps) {
   const [, navigate] = useLocation();
   const [imgError, setImgError] = useState(false);
   const [showQuickView, setShowQuickView] = useState(false);
-  const [showCartPopup, setShowCartPopup] = useState(false);
+  const [showQty, setShowQty] = useState(false);
+  const [qty, setQty] = useState(1);
   const cardRef = useRef<HTMLDivElement>(null);
 
   const variant = product.variants[0];
   const originalPrice = parseFloat(variant.price);
-  const hasPrice = originalPrice > 0;
   const hasCompareAt = variant.compareAtPrice && parseFloat(variant.compareAtPrice) > 0;
-
 
   const title = lang === 'ar' && product.titleAr ? product.titleAr : product.title;
   const image = product.image || (product.images && product.images[0]) || '';
-
-  const handleQuickView = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    e.preventDefault();
-    setShowQuickView(true);
-  };
-
-  const handleCartPopup = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    e.preventDefault();
-    setShowCartPopup(prev => !prev);
-  };
 
   const handleDetails = (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -46,12 +32,31 @@ export default function ProductCard({ product }: ProductCardProps) {
     navigate(`/store/product/${product.handle}`);
   };
 
+  const handleAddToCartClick = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    e.preventDefault();
+    if (!showQty) {
+      setShowQty(true);
+      setQty(1);
+    } else {
+      // Add to cart
+      addToCart(product, variant, qty);
+      setShowQty(false);
+      setQty(1);
+    }
+  };
+
+  const handleQtyChange = (delta: number, e: React.MouseEvent) => {
+    e.stopPropagation();
+    e.preventDefault();
+    setQty(prev => Math.max(1, prev + delta));
+  };
+
   return (
     <>
       <div
         ref={cardRef}
-        className="group bg-white rounded-lg sm:rounded-xl border border-gray-100 hover:shadow-lg transition-all duration-300 flex flex-col relative"
-        style={{ overflow: showCartPopup ? 'visible' : 'hidden' }}
+        className="group bg-white rounded-lg sm:rounded-xl border border-gray-100 hover:shadow-lg transition-all duration-300 flex flex-col relative overflow-hidden"
       >
         {/* Image */}
         <div className="relative bg-gray-50 overflow-hidden cursor-pointer" style={{ aspectRatio: '3/4' }} onClick={handleDetails}>
@@ -72,21 +77,10 @@ export default function ProductCard({ product }: ProductCardProps) {
             </div>
           )}
 
-          {/* Discount badge - only show for products with compareAtPrice */}
+          {/* Discount badge */}
           {hasCompareAt && (
             <div className="absolute top-1 left-1 sm:top-2 sm:left-2 bg-red-600 text-white text-[9px] sm:text-xs font-bold px-1.5 sm:px-2 py-0.5 sm:py-1 rounded sm:rounded-md z-10">
               {`خصم ${Math.round((1 - originalPrice / parseFloat(variant.compareAtPrice!)) * 100)}%`}
-            </div>
-          )}
-
-          {/* Add to Cart Popup */}
-          {showCartPopup && (
-            <div className="absolute inset-0 flex items-start justify-center z-30" onClick={(e) => e.stopPropagation()}>
-              <AddToCartPopup
-                product={product}
-                variant={variant}
-                onClose={() => setShowCartPopup(false)}
-              />
             </div>
           )}
         </div>
@@ -97,17 +91,6 @@ export default function ProductCard({ product }: ProductCardProps) {
           <h3 className="text-[11px] sm:text-sm font-medium text-gray-800 line-clamp-2 mb-1 sm:mb-2 flex-1 leading-tight sm:leading-snug">
             {title}
           </h3>
-
-          {/* Available sizes */}
-          {product.availableIn && product.availableIn.length > 0 && (
-            <div className="flex flex-wrap gap-0.5 sm:gap-1 mb-1">
-              {product.availableIn.map((size, i) => (
-                <span key={i} className="text-[8px] sm:text-[10px] bg-gray-100 text-gray-500 px-1 sm:px-1.5 py-0.5 rounded">
-                  {size}
-                </span>
-              ))}
-            </div>
-          )}
 
           {/* Price */}
           <div className="flex items-center gap-1 sm:gap-2 flex-wrap mb-2">
@@ -127,6 +110,25 @@ export default function ProductCard({ product }: ProductCardProps) {
             )}
           </div>
 
+          {/* Quantity selector - appears above buttons when active */}
+          {showQty && (
+            <div className="flex items-center justify-center gap-2 sm:gap-3 mb-2 py-1">
+              <button
+                onClick={(e) => handleQtyChange(-1, e)}
+                className="w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-gray-300 flex items-center justify-center text-gray-600 hover:bg-gray-100 text-sm sm:text-base font-bold"
+              >
+                -
+              </button>
+              <span className="text-sm sm:text-base font-bold text-gray-800 min-w-[20px] text-center">{qty}</span>
+              <button
+                onClick={(e) => handleQtyChange(1, e)}
+                className="w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-gray-300 flex items-center justify-center text-gray-600 hover:bg-gray-100 text-sm sm:text-base font-bold"
+              >
+                +
+              </button>
+            </div>
+          )}
+
           {/* Action Buttons */}
           <div className="flex gap-1.5 sm:gap-2 mt-auto">
             <button
@@ -136,10 +138,10 @@ export default function ProductCard({ product }: ProductCardProps) {
               التفاصيل
             </button>
             <button
-              onClick={handleCartPopup}
+              onClick={handleAddToCartClick}
               className="flex-1 py-1.5 sm:py-2 px-1 sm:px-3 text-[10px] sm:text-sm font-medium rounded sm:rounded-md bg-[#0ea5e9] text-white hover:bg-[#0284c7] transition-colors duration-200"
             >
-              أضف للسلة
+              {showQty ? 'تأكيد' : 'أضف للسلة'}
             </button>
           </div>
         </div>
