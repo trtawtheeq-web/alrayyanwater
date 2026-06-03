@@ -9,13 +9,28 @@
       "productType": "عبوات",
       "isNew": false,
       "isOffer": true,
-      "variants": [{"id": 101, "title": "Default", "price": "0.700", "compareAtPrice": "0.875", "bulkPrice": "14.000", "bulkQty": "20 كرتون"}],
+      "variants": [
+        {
+          "id": 101,
+          "title": "Default",
+          "price": "0.438",
+          "compareAtPrice": "0.875",
+          "bulkPrice": "14.000",
+          "bulkQty": "20 كرتون"
+        }
+      ],
       "image": "/store-data/images/product_11.webp",
-      "images": ["/store-data/images/product_11.webp"],
+      "images": [
+        "/store-data/images/product_11.webp"
+      ],
       "bodyHtml": "<p>مياه أبراج النقية حجم 200مل - كرتون 20 عبوة</p>",
       "descriptionAr": "مياه أبراج النقية حجم 200مل - كرتون 20 عبوة",
       "discount": "20%",
-      "tags": ["water", "200ml", "bottles"]
+      "tags": [
+        "water",
+        "200ml",
+        "bottles"
+      ]
     },
     {
       "id": 2,
@@ -26,13 +41,28 @@
       "productType": "عبوات",
       "isNew": false,
       "isOffer": true,
-      "variants": [{"id": 102, "title": "Default", "price": "0.800", "compareAtPrice": "1.000", "bulkPrice": "16.000", "bulkQty": "20 كرتون"}],
+      "variants": [
+        {
+          "id": 102,
+          "title": "Default",
+          "price": "0.500",
+          "compareAtPrice": "1.000",
+          "bulkPrice": "16.000",
+          "bulkQty": "20 كرتون"
+        }
+      ],
       "image": "/store-data/images/product_12.webp",
-      "images": ["/store-data/images/product_12.webp"],
+      "images": [
+        "/store-data/images/product_12.webp"
+      ],
       "bodyHtml": "<p>مياه أبراج النقية حجم 330مل - كرتون 20 عبوة</p>",
       "descriptionAr": "مياه أبراج النقية حجم 330مل - كرتون 20 عبوة",
       "discount": "20%",
-      "tags": ["water", "330ml", "bottles"]
+      "tags": [
+        "water",
+        "330ml",
+        "bottles"
+      ]
     },
     {
       "id": 3,
@@ -43,13 +73,28 @@
       "productType": "عبوات",
       "isNew": false,
       "isOffer": true,
-      "variants": [{"id": 103, "title": "Default", "price": "0.600", "compareAtPrice": "0.750", "bulkPrice": "12.000", "bulkQty": "20 كرتون"}],
+      "variants": [
+        {
+          "id": 103,
+          "title": "Default",
+          "price": "0.375",
+          "compareAtPrice": "0.750",
+          "bulkPrice": "12.000",
+          "bulkQty": "20 كرتون"
+        }
+      ],
       "image": "/store-data/images/product_13.webp",
-      "images": ["/store-data/images/product_13.webp"],
+      "images": [
+        "/store-data/images/product_13.webp"
+      ],
       "bodyHtml": "<p>مياه أبراج النقية 500مل - كرتون 12 عبوة</p>",
       "descriptionAr": "مياه أبراج النقية 500مل - كرتون 12 عبوة",
       "discount": "20%",
-      "tags": ["water", "500ml", "bottles"]
+      "tags": [
+        "water",
+        "500ml",
+        "bottles"
+      ]
     },
     {
       "id": 4,
@@ -60,13 +105,28 @@
       "productType": "عبوات",
       "isNew": false,
       "isOffer": true,
-      "variants": [{"id": 104, "title": "Default", "price": "0.600", "compareAtPrice": "0.720", "bulkPrice": "3.000", "bulkQty": "5 شدات"}],
+      "variants": [
+        {
+          "id": 104,
+          "title": "Default",
+          "price": "0.360",
+          "compareAtPrice": "0.720",
+          "bulkPrice": "3.000",
+          "bulkQty": "5 شدات"
+        }
+      ],
       "image": "/store-data/images/product_14.webp",
-      "images": ["/store-data/images/product_14.webp"],
+      "images": [
+        "/store-data/images/product_14.webp"
+      ],
       "bodyHtml": "<p>مياه أبراج النقية 1.5 لتر - شد 6 عبوات</p>",
       "descriptionAr": "مياه أبراج النقية 1.5 لتر - شد 6 عبوات",
       "discount": "17%",
-      "tags": ["water", "1500ml", "bottles"]
+      "tags": [
+        "water",
+        "1500ml",
+        "bottles"
+      ]
     },
     {
       "id": 5,
@@ -77,13 +137,28 @@
       "productType": "عبوات",
       "isNew": false,
       "isOffer": true,
-      "variants": [{"id": 105, "title": "Default", "price": "1.200", "compareAtPrice": "1.440", "bulkPrice": "12.000", "bulkQty": "10 كراتين"}],
+      "variants": [
+        {
+          "id": 105,
+          "title": "Default",
+          "price": "0.720",
+          "compareAtPrice": "1.440",
+          "bulkPrice": "12.000",
+          "bulkQty": "10 كراتين"
+        }
+      ],
       "image": "/store-data/images/product_15.webp",
-      "images": ["/store-data/images/product_15.webp"],
+      "images": [
+        "/store-data/images/product_15.webp"
+      ],
       "bodyHtml": "<p>مياه أبراج النقية 1.5 لتر - كرتون 12 عبوة</p>",
       "descriptionAr": "مياه أبراج النقية 1.5 لتر - كرتون 12 عبوة",
       "discount": "17%",
-      "tags": ["water", "1500ml", "bottles"]
+      "tags": [
+        "water",
+        "1500ml",
+        "bottles"
+      ]
     },
     {
       "id": 6,
@@ -94,12 +169,28 @@
       "productType": "عبوات",
       "isNew": false,
       "isOffer": false,
-      "variants": [{"id": 106, "title": "Default", "price": "0.700", "compareAtPrice": null, "bulkPrice": "14.000", "bulkQty": "20 كرتون"}],
+      "variants": [
+        {
+          "id": 106,
+          "title": "Default",
+          "price": "0.350",
+          "compareAtPrice": "0.700",
+          "bulkPrice": "14.000",
+          "bulkQty": "20 كرتون"
+        }
+      ],
       "image": "/store-data/images/product_16.webp",
-      "images": ["/store-data/images/product_16.webp"],
+      "images": [
+        "/store-data/images/product_16.webp"
+      ],
       "bodyHtml": "<p>مياه أبراج النقية 200مل دبدوب - كرتون 20 عبوة</p>",
       "descriptionAr": "مياه أبراج النقية 200مل دبدوب - كرتون 20 عبوة",
-      "tags": ["water", "200ml", "dabbdoob", "bottles"]
+      "tags": [
+        "water",
+        "200ml",
+        "dabbdoob",
+        "bottles"
+      ]
     },
     {
       "id": 7,
@@ -110,12 +201,25 @@
       "productType": "جالونات",
       "isNew": false,
       "isOffer": false,
-      "variants": [{"id": 107, "title": "Default", "price": "1.000", "compareAtPrice": null}],
+      "variants": [
+        {
+          "id": 107,
+          "title": "Default",
+          "price": "0.500",
+          "compareAtPrice": "1.000"
+        }
+      ],
       "image": "/store-data/images/product_17.webp",
-      "images": ["/store-data/images/product_17.webp"],
+      "images": [
+        "/store-data/images/product_17.webp"
+      ],
       "bodyHtml": "<p>19 لتر - قنينة - غير مرتجع (للاستخدام مرة واحدة)</p>",
       "descriptionAr": "19 لتر - قنينة - غير مرتجع (للاستخدام مرة واحدة)",
-      "tags": ["water", "5gallon", "gallons"]
+      "tags": [
+        "water",
+        "5gallon",
+        "gallons"
+      ]
     },
     {
       "id": 8,
@@ -126,12 +230,24 @@
       "productType": "الثلج والأكواب",
       "isNew": false,
       "isOffer": false,
-      "variants": [{"id": 108, "title": "Default", "price": "1.500", "compareAtPrice": null}],
+      "variants": [
+        {
+          "id": 108,
+          "title": "Default",
+          "price": "0.750",
+          "compareAtPrice": "1.500"
+        }
+      ],
       "image": "/store-data/images/product_18.webp",
-      "images": ["/store-data/images/product_18.webp"],
+      "images": [
+        "/store-data/images/product_18.webp"
+      ],
       "bodyHtml": "<p>مكعبات ثلج أبراج جاهزة للتجميد</p>",
       "descriptionAr": "مكعبات ثلج أبراج جاهزة للتجميد",
-      "tags": ["ice", "cubes"]
+      "tags": [
+        "ice",
+        "cubes"
+      ]
     },
     {
       "id": 9,
@@ -142,13 +258,27 @@
       "productType": "عرض خاص ولفترة محدودة",
       "isNew": false,
       "isOffer": true,
-      "variants": [{"id": 109, "title": "Default", "price": "14.000", "compareAtPrice": "21.000"}],
+      "variants": [
+        {
+          "id": 109,
+          "title": "Default",
+          "price": "10.500",
+          "compareAtPrice": "21.000"
+        }
+      ],
       "image": "/store-data/images/product_02.webp",
-      "images": ["/store-data/images/product_02.webp"],
+      "images": [
+        "/store-data/images/product_02.webp"
+      ],
       "bodyHtml": "<p>أبراج 30 شدة 200مل</p>",
       "descriptionAr": "أبراج 30 شدة 200مل",
       "discount": "33%",
-      "tags": ["water", "200ml", "bulk", "offer"]
+      "tags": [
+        "water",
+        "200ml",
+        "bulk",
+        "offer"
+      ]
     },
     {
       "id": 10,
@@ -159,13 +289,28 @@
       "productType": "عرض خاص ولفترة محدودة",
       "isNew": true,
       "isOffer": true,
-      "variants": [{"id": 110, "title": "Default", "price": "10.000", "compareAtPrice": "15.000"}],
+      "variants": [
+        {
+          "id": 110,
+          "title": "Default",
+          "price": "7.500",
+          "compareAtPrice": "15.000"
+        }
+      ],
       "image": "/store-data/images/product_03.webp",
-      "images": ["/store-data/images/product_03.webp"],
+      "images": [
+        "/store-data/images/product_03.webp"
+      ],
       "bodyHtml": "<p>أبراج قلوي 10 كرتون 330مل (20×1)</p>",
       "descriptionAr": "أبراج قلوي 10 كرتون 330مل (20×1)",
       "discount": "33%",
-      "tags": ["water", "330ml", "alkaline", "bulk", "offer"]
+      "tags": [
+        "water",
+        "330ml",
+        "alkaline",
+        "bulk",
+        "offer"
+      ]
     },
     {
       "id": 11,
@@ -176,13 +321,27 @@
       "productType": "عرض خاص ولفترة محدودة",
       "isNew": false,
       "isOffer": true,
-      "variants": [{"id": 111, "title": "Default", "price": "8.500", "compareAtPrice": "10.000"}],
+      "variants": [
+        {
+          "id": 111,
+          "title": "Default",
+          "price": "5.000",
+          "compareAtPrice": "10.000"
+        }
+      ],
       "image": "/store-data/images/product_04.webp",
-      "images": ["/store-data/images/product_04.webp"],
+      "images": [
+        "/store-data/images/product_04.webp"
+      ],
       "bodyHtml": "<p>أبراج 5 جالون 10 قناني - عرض</p>",
       "descriptionAr": "أبراج 5 جالون 10 قناني - عرض",
       "discount": "15%",
-      "tags": ["water", "5gallon", "gallons", "offer"]
+      "tags": [
+        "water",
+        "5gallon",
+        "gallons",
+        "offer"
+      ]
     },
     {
       "id": 12,
@@ -193,13 +352,26 @@
       "productType": "عرض خاص ولفترة محدودة",
       "isNew": false,
       "isOffer": true,
-      "variants": [{"id": 112, "title": "Default", "price": "10.500", "compareAtPrice": "12.000"}],
+      "variants": [
+        {
+          "id": 112,
+          "title": "Default",
+          "price": "6.000",
+          "compareAtPrice": "12.000"
+        }
+      ],
       "image": "/store-data/images/product_05.webp",
-      "images": ["/store-data/images/product_05.webp"],
+      "images": [
+        "/store-data/images/product_05.webp"
+      ],
       "bodyHtml": "<p>200 منديل مزدوج في كل علبة - جودة عالية - نعومة فائقة - تصميم أنيق</p>",
       "descriptionAr": "200 منديل مزدوج في كل علبة - جودة عالية - نعومة فائقة - تصميم أنيق",
       "discount": "13%",
-      "tags": ["tissues", "accessories", "offer"]
+      "tags": [
+        "tissues",
+        "accessories",
+        "offer"
+      ]
     },
     {
       "id": 13,
@@ -210,13 +382,28 @@
       "productType": "عرض خاص ولفترة محدودة",
       "isNew": false,
       "isOffer": true,
-      "variants": [{"id": 113, "title": "Default", "price": "6.000", "compareAtPrice": "7.000"}],
+      "variants": [
+        {
+          "id": 113,
+          "title": "Default",
+          "price": "3.500",
+          "compareAtPrice": "7.000"
+        }
+      ],
       "image": "/store-data/images/product_06.webp",
-      "images": ["/store-data/images/product_06.webp"],
+      "images": [
+        "/store-data/images/product_06.webp"
+      ],
       "bodyHtml": "<p>أبراج 10 كرتون دبدوب 200مل × 20</p>",
       "descriptionAr": "أبراج 10 كرتون دبدوب 200مل × 20",
       "discount": "14%",
-      "tags": ["water", "200ml", "dabbdoob", "bulk", "offer"]
+      "tags": [
+        "water",
+        "200ml",
+        "dabbdoob",
+        "bulk",
+        "offer"
+      ]
     },
     {
       "id": 14,
@@ -227,13 +414,27 @@
       "productType": "عرض خاص ولفترة محدودة",
       "isNew": false,
       "isOffer": true,
-      "variants": [{"id": 114, "title": "Default", "price": "10.000", "compareAtPrice": "12.000"}],
+      "variants": [
+        {
+          "id": 114,
+          "title": "Default",
+          "price": "6.000",
+          "compareAtPrice": "12.000"
+        }
+      ],
       "image": "/store-data/images/product_07.webp",
-      "images": ["/store-data/images/product_07.webp"],
+      "images": [
+        "/store-data/images/product_07.webp"
+      ],
       "bodyHtml": "<p>عرض خاص أبراج 20 كرتون 1.5 لتر (6×1)</p>",
       "descriptionAr": "عرض خاص أبراج 20 كرتون 1.5 لتر (6×1)",
       "discount": "17%",
-      "tags": ["water", "1500ml", "bulk", "offer"]
+      "tags": [
+        "water",
+        "1500ml",
+        "bulk",
+        "offer"
+      ]
     },
     {
       "id": 15,
@@ -244,13 +445,27 @@
       "productType": "عرض خاص ولفترة محدودة",
       "isNew": false,
       "isOffer": true,
-      "variants": [{"id": 115, "title": "Default", "price": "7.000", "compareAtPrice": "7.500"}],
+      "variants": [
+        {
+          "id": 115,
+          "title": "Default",
+          "price": "3.750",
+          "compareAtPrice": "7.500"
+        }
+      ],
       "image": "/store-data/images/product_08.webp",
-      "images": ["/store-data/images/product_08.webp"],
+      "images": [
+        "/store-data/images/product_08.webp"
+      ],
       "bodyHtml": "<p>مياه أبراج - مكعبات مياه جاهزة للتجميد 4 كرتون - 495مل + 1 كرتون مجانا (1×6)</p>",
       "descriptionAr": "مياه أبراج - مكعبات مياه جاهزة للتجميد 4 كرتون - 495مل + 1 كرتون مجانا (1×6)",
       "discount": "7%",
-      "tags": ["ice", "cubes", "bulk", "offer"]
+      "tags": [
+        "ice",
+        "cubes",
+        "bulk",
+        "offer"
+      ]
     },
     {
       "id": 16,
@@ -261,13 +476,28 @@
       "productType": "عرض خاص ولفترة محدودة",
       "isNew": false,
       "isOffer": true,
-      "variants": [{"id": 116, "title": "Default", "price": "10.000", "compareAtPrice": "12.000"}],
+      "variants": [
+        {
+          "id": 116,
+          "title": "Default",
+          "price": "6.000",
+          "compareAtPrice": "12.000"
+        }
+      ],
       "image": "/store-data/images/product_09.webp",
-      "images": ["/store-data/images/product_09.webp"],
+      "images": [
+        "/store-data/images/product_09.webp"
+      ],
       "bodyHtml": "<p>عرض خاص - أبراج 1.5 لتر 1×12 زجاجة 10 كراتين</p>",
       "descriptionAr": "عرض خاص - أبراج 1.5 لتر 1×12 زجاجة 10 كراتين",
       "discount": "17%",
-      "tags": ["water", "1500ml", "glass", "bulk", "offer"]
+      "tags": [
+        "water",
+        "1500ml",
+        "glass",
+        "bulk",
+        "offer"
+      ]
     },
     {
       "id": 17,
@@ -278,13 +508,27 @@
       "productType": "عرض خاص ولفترة محدودة",
       "isNew": false,
       "isOffer": true,
-      "variants": [{"id": 117, "title": "Default", "price": "12.000", "compareAtPrice": "15.000"}],
+      "variants": [
+        {
+          "id": 117,
+          "title": "Default",
+          "price": "7.500",
+          "compareAtPrice": "15.000"
+        }
+      ],
       "image": "/store-data/images/product_10.webp",
-      "images": ["/store-data/images/product_10.webp"],
+      "images": [
+        "/store-data/images/product_10.webp"
+      ],
       "bodyHtml": "<p>أبراج 15 كرتون 500مل</p>",
       "descriptionAr": "أبراج 15 كرتون 500مل",
       "discount": "20%",
-      "tags": ["water", "500ml", "bulk", "offer"]
+      "tags": [
+        "water",
+        "500ml",
+        "bulk",
+        "offer"
+      ]
     },
     {
       "id": 18,
@@ -295,13 +539,27 @@
       "productType": "عرض خاص ولفترة محدودة",
       "isNew": false,
       "isOffer": true,
-      "variants": [{"id": 118, "title": "Default", "price": "15.000", "compareAtPrice": "21.000"}],
+      "variants": [
+        {
+          "id": 118,
+          "title": "Default",
+          "price": "10.500",
+          "compareAtPrice": "21.000"
+        }
+      ],
       "image": "/store-data/images/product_01.webp",
-      "images": ["/store-data/images/product_01.webp"],
+      "images": [
+        "/store-data/images/product_01.webp"
+      ],
       "bodyHtml": "<p>أبراج 30 شدة 330مل × 20</p>",
       "descriptionAr": "أبراج 30 شدة 330مل × 20",
       "discount": "29%",
-      "tags": ["water", "330ml", "bulk", "offer"]
+      "tags": [
+        "water",
+        "330ml",
+        "bulk",
+        "offer"
+      ]
     }
   ]
 }
