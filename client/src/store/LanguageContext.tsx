@@ -14,8 +14,8 @@ interface LanguageContextType {
 const translations: Record<string, Record<Lang, string>> = {
   // Header
   'header.freeShipping': {
-    ar: 'شحن مجاني للطلبات فوق 250 ر.ع',
-    en: 'Free shipping for orders over OMR 250',
+    ar: 'شحن مجاني للطلبات فوق 250 د.ك',
+    en: 'Free shipping for orders over KWD 250',
   },
   'header.home': { ar: 'الرئيسية', en: 'HOME' },
   'header.allProducts': { ar: 'جميع المنتجات', en: 'ALL PRODUCTS' },
@@ -26,13 +26,13 @@ const translations: Record<string, Record<Lang, string>> = {
   'header.signIn': { ar: 'تسجيل دخول', en: 'SIGN IN' },
 
   // Store Page
-  'store.title': { ar: 'الريان', en: 'RAYYAN' },
+  'store.title': { ar: 'أبراج', en: 'ABRAAJ' },
   'store.subtitle': {
-    ar: 'الريان : مياه طبيعية نقية من عُمان',
+    ar: 'أبراج : مياه شرب نقية من الكويت',
     en: "RAYYAN : Pure Natural Drinking Water from Oman",
   },
   'store.description': {
-    ar: 'تسوق مياه الريان الطبيعية النقية بأحجام مختلفة. توصيل سريع في عُمان.',
+    ar: 'تسوق مياه أبراج النقية بأحجام مختلفة. توصيل سريع في الكويت.',
     en: 'Shop Rayyan pure natural water in different sizes. Fast delivery in Oman.',
   },
   'store.viewAs': { ar: 'عرض كـ', en: 'VIEW AS' },
@@ -77,16 +77,16 @@ const translations: Record<string, Record<Lang, string>> = {
   'search.tryDifferent': { ar: 'حاول البحث بكلمات مختلفة', en: 'Try different keywords' },
 
   // Footer
-  'footer.brandName': { ar: 'مياه الريان عُمان', en: 'Rayyan Water Oman' },
+  'footer.brandName': { ar: 'مياه أبراج الكويت', en: 'Abraaj Water Kuwait' },
   'footer.about': {
-    ar: 'الريان - مياه طبيعية نقية لحياة صحية أفضل. نوفر لك أجود أنواع المياه الطبيعية في عُمان.',
+    ar: 'أبراج - مياه شرب نقية لحياة صحية أفضل. نوفر لك أجود أنواع المياه النقية في الكويت.',
     en: "Rayyan - Pure natural water for a healthier life. We provide the finest natural water in Oman.",
   },
   'footer.quickLinks': { ar: 'روابط سريعة', en: 'Quick Links' },
   'footer.categories': { ar: 'التصنيفات', en: 'Categories' },
   'footer.contactUs': { ar: 'تواصل معنا', en: 'Contact Us' },
   'footer.copyright': {
-    ar: '© {year} مياه الريان عُمان. جميع الحقوق محفوظة.',
+    ar: '© {year} مياه أبراج الكويت. جميع الحقوق محفوظة.',
     en: '© {year} Rayyan Water Oman. All rights reserved.',
   },
   'footer.paymentMethods': { ar: 'طرق الدفع', en: 'Payment Methods' },

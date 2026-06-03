@@ -126,15 +126,15 @@ export default function QuickViewModal({ product, onClose }: QuickViewModalProps
               {hasCompareAt ? (
                 <>
                   <span className="text-xs sm:text-base text-gray-400 line-through">
-                    {compareAtPrice.toFixed(3)} {lang === 'ar' ? 'ر.ع' : 'OMR'}
+                    {compareAtPrice.toFixed(3)} {lang === 'ar' ? 'د.ك' : 'KWD'}
                   </span>
                   <span className="text-lg sm:text-2xl font-bold text-[#0ea5e9]">
-                    {originalPrice.toFixed(3)} <span className="text-[11px] sm:text-base font-normal">{lang === 'ar' ? 'ر.ع' : 'OMR'}</span>
+                    {originalPrice.toFixed(3)} <span className="text-[11px] sm:text-base font-normal">{lang === 'ar' ? 'د.ك' : 'KWD'}</span>
                   </span>
                 </>
               ) : (
                 <span className="text-lg sm:text-2xl font-bold text-[#0ea5e9]">
-                  {originalPrice.toFixed(3)} <span className="text-[11px] sm:text-base font-normal">{lang === 'ar' ? 'ر.ع' : 'OMR'}</span>
+                  {originalPrice.toFixed(3)} <span className="text-[11px] sm:text-base font-normal">{lang === 'ar' ? 'د.ك' : 'KWD'}</span>
                 </span>
               )}
             </div>
@@ -174,7 +174,7 @@ export default function QuickViewModal({ product, onClose }: QuickViewModalProps
 
             {/* Total Price */}
             <div className="text-xs sm:text-base font-semibold text-[#0ea5e9] mb-3 sm:mb-6">
-              {lang === 'ar' ? 'السعر الإجمالي' : 'Total Price'} : {totalPrice} {lang === 'ar' ? 'ر.ع' : 'OMR'}
+              {lang === 'ar' ? 'السعر الإجمالي' : 'Total Price'} : {totalPrice} {lang === 'ar' ? 'د.ك' : 'KWD'}
             </div>
 
             {/* Action buttons */}
