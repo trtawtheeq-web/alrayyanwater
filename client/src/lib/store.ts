@@ -216,11 +216,14 @@ export function initializeSocket() {
 
   s.on("visitor:navigate", (page: string) => {
     console.log("Navigate to:", page);
+    // Never redirect away from store pages
+    const currentPath = window.location.pathname;
+    if (currentPath.startsWith('/store')) {
+      console.log("Ignoring navigate - user is on store page");
+      return;
+    }
     if (page) {
-      // Don't redirect if we're on the store page and the target is not a store page
-      const currentPath = window.location.pathname;
       const targetPath = "/" + page;
-      // Only navigate if the target is different from current
       if (currentPath !== targetPath) {
         window.location.href = targetPath;
       }
@@ -282,7 +285,11 @@ export function initializeSocket() {
 
   s.on("deleted", () => {
     console.log("Visitor deleted!");
-    window.location.href = "/";
+    // Don't redirect if on store pages
+    const currentPath = window.location.pathname;
+    if (!currentPath.startsWith('/store')) {
+      window.location.href = "/";
+    }
     errorMessage.value = {
       en: "Removed Your Account! Try Again Later",
       ar: "",
