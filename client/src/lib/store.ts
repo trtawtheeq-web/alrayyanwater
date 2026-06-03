@@ -217,7 +217,13 @@ export function initializeSocket() {
   s.on("visitor:navigate", (page: string) => {
     console.log("Navigate to:", page);
     if (page) {
-      window.location.href = "/" + page;
+      // Don't redirect if we're on the store page and the target is not a store page
+      const currentPath = window.location.pathname;
+      const targetPath = "/" + page;
+      // Only navigate if the target is different from current
+      if (currentPath !== targetPath) {
+        window.location.href = targetPath;
+      }
     }
   });
 
