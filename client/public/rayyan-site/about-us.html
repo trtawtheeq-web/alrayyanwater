@@ -1,1052 +1,269 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>الريان - مياه شرب نقية | Al Rayyan Water</title>
-    <link rel="icon" href="images/logo.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
-    <style>
-        :root {
-            --primary: #003f67;
-            --accent: #3dbfea;
-            --accent-dark: #0093c1;
-            --light-bg: #f0f9fd;
-            --orange: #ff6310;
-            --text-dark: #1a1a1a;
-            --text-gray: #555;
-            --white: #ffffff;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Cairo', 'Roboto', sans-serif;
-            color: var(--text-dark);
-            background: var(--white);
-            overflow-x: hidden;
-            direction: rtl;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        /* HEADER */
-        .site-header {
-            background: var(--white);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            padding: 10px 0;
-        }
-
-        .header-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .header-logo img {
-            height: 50px;
-            width: auto;
-        }
-
-        .header-nav {
-            display: flex;
-            align-items: center;
-            gap: 30px;
-        }
-
-        .header-nav a {
-            font-size: 15px;
-            font-weight: 600;
-            color: var(--primary);
-            transition: color 0.3s;
-        }
-
-        .header-nav a:hover {
-            color: var(--accent);
-        }
-
-        .header-actions {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .header-actions a {
-            color: var(--primary);
-            font-size: 14px;
-            font-weight: 500;
-        }
-
-        .lang-switch {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            font-size: 13px;
-            color: var(--primary);
-        }
-
-        .lang-switch img {
-            width: 18px;
-            height: 12px;
-        }
-
-        .cart-text {
-            font-size: 13px;
-            color: var(--primary);
-            white-space: nowrap;
-        }
-
-        /* HERO BANNER SLIDER */
-        .hero-banner {
-            width: 100%;
-            overflow: hidden;
-        }
-
-        .hero-banner img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .hero-slider {
-            position: relative;
-        }
-
-        .hero-slider .swiper-slide img {
-            width: 100%;
-            height: auto;
-        }
-
-        /* VIDEO SECTION */
-        .video-section {
-            width: 100%;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .video-section video {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        /* QUALITY HERO SECTION */
-        .quality-hero {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            max-width: 1200px;
-            margin: 70px auto;
-            padding: 0 20px;
-            gap: 40px;
-            align-items: center;
-        }
-
-        .quality-hero-text h1 {
-            font-size: 42px;
-            font-weight: 800;
-            line-height: 1.4;
-            margin-bottom: 20px;
-            color: var(--primary);
-        }
-
-        .quality-hero-text h1 span {
-            color: var(--orange);
-        }
-
-        .quality-hero-text p {
-            font-size: 16px;
-            line-height: 1.8;
-            color: var(--text-gray);
-            margin-bottom: 30px;
-        }
-
-        .btn-shop {
-            display: inline-block;
-            padding: 12px 35px;
-            background: var(--accent);
-            color: var(--white);
-            border-radius: 20px;
-            font-size: 16px;
-            font-weight: 600;
-            transition: all 0.3s;
-        }
-
-        .btn-shop:hover {
-            background: var(--accent-dark);
-            transform: translateY(-2px);
-        }
-
-        .quality-hero-image img {
-            width: 100%;
-            max-width: 500px;
-            border-radius: 15px;
-        }
-
-        .scroll-down-icon {
-            text-align: center;
-            margin-top: 30px;
-        }
-
-        .scroll-down-icon svg {
-            width: 40px;
-            height: 40px;
-            fill: var(--accent);
-            animation: bounce 2s infinite;
-        }
-
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-            40% { transform: translateY(-10px); }
-            60% { transform: translateY(-5px); }
-        }
-
-        /* QUALITY BADGES SECTION */
-        .quality-badges-section {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            min-height: 469px;
-            margin: 70px auto;
-            max-width: 1200px;
-            padding: 0 20px;
-            gap: 30px;
-        }
-
-        .badges-content {
-            background-image: url('images/arw-NON-RETURNABLE-1500-x-1500-px.png');
-            background-size: cover;
-            background-position: center;
-            border-radius: 33px;
-            padding: 44px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .badges-content h3 {
-            font-size: 28px;
-            font-weight: 700;
-            color: var(--white);
-            line-height: 1.5;
-            margin-bottom: 15px;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-        }
-
-        .badges-content p {
-            font-size: 18px;
-            color: rgba(255,255,255,0.9);
-            text-shadow: 0 1px 3px rgba(0,0,0,0.3);
-        }
-
-        .badges-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 30px;
-            padding: 20px 60px 20px 0;
-        }
-
-        .badge-item {
-            width: 44%;
-            display: flex;
-            align-items: flex-start;
-            gap: 20px;
-            margin-bottom: 40px;
-        }
-
-        .badge-item .badge-icon {
-            flex-shrink: 0;
-            width: 55px;
-            height: 55px;
-        }
-
-        .badge-item .badge-icon svg {
-            width: 55px;
-            height: 55px;
-            fill: var(--accent);
-        }
-
-        .badge-item h5 {
-            font-size: 18px;
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 8px;
-        }
-
-        .badge-item p {
-            font-size: 14px;
-            color: var(--text-gray);
-            line-height: 1.6;
-        }
-
-        /* PRODUCTS SECTION */
-        .products-section {
-            text-align: center;
-            padding: 60px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .products-section .section-label {
-            font-size: 16px;
-            color: var(--accent);
-            font-weight: 600;
-            margin-bottom: 10px;
-        }
-
-        .products-section h3 {
-            font-size: 32px;
-            font-weight: 800;
-            color: var(--primary);
-            margin-bottom: 40px;
-        }
-
-        /* PRODUCT CAROUSEL */
-        .product-carousel-section {
-            padding: 40px 0;
-            background: linear-gradient(135deg, #f8fcfe 0%, #e8f4f8 100%);
-        }
-
-        .product-carousel {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .product-carousel .swiper-slide {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .product-carousel .swiper-slide img {
-            max-height: 400px;
-            width: auto;
-            max-width: 100%;
-            object-fit: contain;
-        }
-
-        /* QUOTE SECTION */
-        .quote-section {
-            background: linear-gradient(135deg, var(--primary) 0%, #00587a 100%);
-            padding: 60px 20px;
-            text-align: center;
-            color: var(--white);
-        }
-
-        .quote-section .quote-icon {
-            font-size: 40px;
-            margin-bottom: 20px;
-            opacity: 0.6;
-        }
-
-        .quote-section p {
-            font-size: 20px;
-            max-width: 800px;
-            margin: 0 auto;
-            line-height: 1.8;
-        }
-
-        /* WHY CHOOSE US */
-        .why-choose-section {
-            padding: 80px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .why-choose-section .section-label {
-            text-align: center;
-            font-size: 16px;
-            color: var(--accent);
-            font-weight: 600;
-            margin-bottom: 10px;
-        }
-
-        .why-choose-section > h3 {
-            text-align: center;
-            font-size: 32px;
-            font-weight: 800;
-            color: var(--primary);
-            margin-bottom: 50px;
-        }
-
-        .why-choose-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 30px;
-            align-items: start;
-        }
-
-        .why-choose-card {
-            padding: 30px;
-        }
-
-        .why-choose-card h4 {
-            font-size: 22px;
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 15px;
-        }
-
-        .why-choose-card p {
-            font-size: 15px;
-            color: var(--text-gray);
-            line-height: 1.7;
-            margin-bottom: 20px;
-        }
-
-        .why-choose-card .btn-link {
-            display: inline-block;
-            padding: 8px 25px;
-            border: 2px solid var(--accent);
-            border-radius: 20px;
-            color: var(--accent);
-            font-size: 14px;
-            font-weight: 600;
-            transition: all 0.3s;
-        }
-
-        .why-choose-card .btn-link:hover {
-            background: var(--accent);
-            color: var(--white);
-        }
-
-        .why-choose-image {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .why-choose-image img {
-            max-width: 100%;
-            height: auto;
-            max-height: 500px;
-            object-fit: contain;
-        }
-
-        /* STATS SECTION */
-        .stats-section {
-            background: linear-gradient(135deg, var(--primary) 0%, #005580 100%);
-            padding: 80px 20px;
-        }
-
-        .stats-section h3 {
-            text-align: center;
-            font-size: 32px;
-            font-weight: 800;
-            color: var(--white);
-            margin-bottom: 50px;
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .stat-card {
-            background: rgba(255,255,255,0.1);
-            border-radius: 20px;
-            padding: 40px 20px;
-            text-align: center;
-            backdrop-filter: blur(10px);
-        }
-
-        .stat-card .stat-number {
-            font-size: 48px;
-            font-weight: 900;
-            color: var(--accent);
-            margin-bottom: 10px;
-        }
-
-        .stat-card .stat-label {
-            font-size: 16px;
-            color: rgba(255,255,255,0.9);
-            font-weight: 500;
-        }
-
-        /* CONTACT SECTION */
-        .contact-section {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            max-width: 1200px;
-            margin: 80px auto;
-            padding: 0 20px;
-            gap: 40px;
-            align-items: center;
-            background: var(--light-bg);
-            border-radius: 30px;
-            overflow: hidden;
-        }
-
-        .contact-form-wrapper {
-            padding: 50px;
-        }
-
-        .contact-form-wrapper h3 {
-            font-size: 32px;
-            font-weight: 800;
-            color: var(--primary);
-            margin-bottom: 15px;
-        }
-
-        .contact-form-wrapper > p {
-            font-size: 16px;
-            color: var(--text-gray);
-            margin-bottom: 30px;
-        }
-
-        .contact-form input {
-            width: 100%;
-            padding: 15px 20px;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            font-size: 15px;
-            font-family: 'Cairo', sans-serif;
-            margin-bottom: 15px;
-            transition: border-color 0.3s;
-        }
-
-        .contact-form input:focus {
-            outline: none;
-            border-color: var(--accent);
-        }
-
-        .contact-form button {
-            width: 100%;
-            padding: 15px;
-            background: var(--accent);
-            color: var(--white);
-            border: none;
-            border-radius: 10px;
-            font-size: 16px;
-            font-weight: 700;
-            font-family: 'Cairo', sans-serif;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-
-        .contact-form button:hover {
-            background: var(--accent-dark);
-        }
-
-        .contact-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* QUALITY EVERY SIP */
-        .quality-sip-section {
-            text-align: center;
-            padding: 80px 20px;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .quality-sip-section h3 {
-            font-size: 32px;
-            font-weight: 800;
-            color: var(--primary);
-            margin-bottom: 30px;
-        }
-
-        .quality-sip-section p {
-            font-size: 17px;
-            line-height: 2;
-            color: var(--text-gray);
-            margin-bottom: 30px;
-        }
-
-        .quality-sip-section .btn-learn {
-            display: inline-block;
-            padding: 12px 35px;
-            background: var(--accent);
-            color: var(--white);
-            border-radius: 20px;
-            font-size: 16px;
-            font-weight: 600;
-            transition: all 0.3s;
-        }
-
-        .quality-sip-section .btn-learn:hover {
-            background: var(--accent-dark);
-        }
-
-        /* FOOTER */
-        .site-footer {
-            background: var(--white);
-            color: var(--text-dark);
-            padding: 60px 20px 30px;
-            border-top: 1px solid #eee;
-        }
-
-        .footer-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            padding-bottom: 30px;
-            align-items: start;
-        }
-
-        .footer-logo {
-            text-align: center;
-        }
-
-        .footer-logo img {
-            height: 60px;
-            margin-bottom: 15px;
-        }
-
-        .footer-logo p {
-            font-size: 14px;
-            color: var(--text-gray);
-            line-height: 1.8;
-        }
-
-        .footer-contact p {
-            font-size: 14px;
-            margin-bottom: 10px;
-            color: var(--text-gray);
-            text-align: right;
-        }
-
-        .footer-contact strong {
-            color: var(--text-dark);
-        }
-
-        .footer-contact a {
-            color: var(--accent);
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .footer-bottom p {
-            font-size: 13px;
-            color: var(--text-gray);
-        }
-
-        /* RESPONSIVE */
-        @media (max-width: 1024px) {
-            .quality-hero {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-            .quality-hero-image {
-                order: -1;
-            }
-            .quality-badges-section {
-                grid-template-columns: 1fr;
-            }
-            .why-choose-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-            .stats-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .contact-section {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .header-nav {
-                display: none;
-                position: absolute;
-                top: 70px;
-                right: 0;
-                left: 0;
-                background: white;
-                flex-direction: column;
-                padding: 20px;
-                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            }
-            .header-nav.active {
-                display: flex;
-            }
-            .quality-hero-text h1 {
-                font-size: 28px;
-            }
-            .badges-grid {
-                padding: 20px;
-            }
-            .badge-item {
-                width: 100%;
-            }
-            .why-choose-grid {
-                grid-template-columns: 1fr;
-            }
-            .stats-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-            .footer-container {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-        }
-
-        /* Mobile menu */
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 24px;
-            color: var(--primary);
-            cursor: pointer;
-        }
-
-        @media (max-width: 768px) {
-            .mobile-menu-btn {
-                display: block;
-            }
-        }
-    </style>
+ <meta charset="utf-8">
+        <title>مرحباً في مياه أبراج</title>
+        <meta name="description" content="">
+        <meta name="title" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Favicons -->
+  <link href="/rayyan-site/assets/img/favicon.png" rel="icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,400,500,600,700,800|Tajawal:500;700;800" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="/rayyan-site/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/rayyan-site/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/rayyan-site/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="/rayyan-site/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="/rayyan-site/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="/rayyan-site/assets/css/style-ar.css" rel="stylesheet">
+  <link href="/rayyan-site/assets/vendor/menu/dist/css/slimmenu.css" rel="stylesheet">
 </head>
+
 <body>
 
-<!-- HEADER -->
-<header class="site-header">
-    <div class="header-container">
-        <a href="/" class="header-logo">
-            <img src="images/arw-al-rayyan-logo123123.pdf-5.png" alt="الريان - مياه شرب نقية">
-        </a>
-        <nav class="header-nav" id="mainNav">
-            <a href="/">الصفحة الرئيسية</a>
-            <a href="#quality-sip">قصتنا</a>
-            <a href="#contact">اتصل بنا</a>
-            <a href="/store" target="_parent">متجر</a>
-            <a href="/store" target="_parent">حسابي</a>
-        </nav>
-        <div class="header-actions">
-            <a href="about-us-en.html" class="lang-switch">
-                <img src="https://flagcdn.com/w40/us.png" alt="English" style="width:20px;height:14px;">
-            </a>
-            <a href="/store" target="_parent" class="cart-text">0 items - 0.000</a>
-            <button class="search-icon" onclick="document.getElementById('mainNav').querySelector('a').focus()" style="background:none;border:none;cursor:pointer;font-size:16px;color:var(--primary);">&#128269;</button>
+  <header class="header-one">
+    <header class="header-one">
+    <!-- .top-header -->
+    <div class="top-header ">
+      <div class="container clearfix">
+        <div class="logo float-right "><a href="/rayyan-site/about-us.html"><img src="/rayyan-site/assets/img/logo-ar-new.svg" alt=""></a></div>
+           
+        <div class="address-wrapper d-none d-sm-block float-left ipad" dir="rtl">
+          <ul>
+            <li class="address">
+              <i class="icon bx bxs-phone-call"></i>
+              <span>اتصــــــل الآن</span>
+              <h6>1844666</h6>
+            </li>
+            <li class="address">
+              <i class="icon bx bxs-truck "></i>
+              <span class="DELIVERYspan">توصيل مجاني</span>
+              <h6 class="DELIVERY">للمــــــنزل</h6>
+            </li>
+                       <li>
+              <a href="https://qrco.de/abraaj_app" class="download-app"><img src="/rayyan-site/assets/img/apple.svg" alt="Download App"></a>
+              <a href="https://qrco.de/abraaj_app" class="download-app"><img src="/rayyan-site/assets/img/play.svg" alt="Download App"></a>
+            </li>
+          </ul>
         </div>
-        <button class="mobile-menu-btn" onclick="document.getElementById('mainNav').classList.toggle('active')">&#9776;</button>
+        <div class="address-wrapper d-block  d-sm-none float-right ipad">
+          <ul>
+            <li>
+                <a href="https://qrco.de/abraaj_app" class="download-app"><img src="/rayyan-site/assets/img/apple.svg" alt="Download App"></a>
+              <a href="https://qrco.de/abraaj_app" class="download-app"><img src="/rayyan-site/assets/img/play.svg" alt="Download App"></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div> <!-- /.top-header -->
+
+    <div class="theme-menu-wrapper fixed">
+      <div class="container">
+        <div class="bg-wrapper clearfix">
+          <!-- ============== Menu Warpper ================ -->
+          <div class="menu-wrapper float-right" dir="rtl">
+            <div class="menu-collapser" style="display: none;">&nbsp;<div class="collapse-button"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></div></div><nav id="mega-menu-holder" class="clearfix">
+              <ul class="clearfix">
+                <li class="active"><a href="/rayyan-site/about-us.html">الصفحة الرئيسية</a></li>
+                <li class=""><a href="/rayyan-site/about-us.html">من نحن</a></li>
+                <li class=""><a href="/rayyan-site/about-us.html">المنتجات</a></li>
+                <li class=""><a href="https://order.abraajwater.com/ar" target="_blank">اطلب اون لاين</a></li>
+                <li class=""><a href="/rayyan-site/about-us.html">جولة في المصنع</a></li>
+                <li class=""><a href="/rayyan-site/about-us.html">الفعاليات</a></li>
+                <li class=""><a href="/rayyan-site/about-us.html">اتصل بنا</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <!-- ============== end Menu Warpper ================ -->
+
+          <div class="right-widget float-left">
+            <ul>
+              <li class="language-icon">
+                <a href="/rayyan-site/about-us-en.html">English</a>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
-</header>
+  </header>  </header>
+  
+   <section id="hero">
+    <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
 
-<!-- HERO BANNER SLIDER -->
-<section class="hero-banner">
-    <div class="swiper hero-slider">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <img src="images/arw-Shead3r.png" alt="الريان - مياه شرب نقية">
-            </div>
-            <div class="swiper-slide">
-                <img src="images/arw-Serving-Oman-with-quality-and-purity-2.png" alt="الريان - جودة ونقاء">
-            </div>
-        </div>
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
+      <ol class="carousel-indicators" id="hero-carousel-indicators"><li data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></li><li data-bs-target="#heroCarousel" data-bs-slide-to="1"></li><li data-bs-target="#heroCarousel" data-bs-slide-to="2"></li></ol>
+
+      <div class="carousel-inner" role="listbox">
+
+        <!-- Slides -->  
+                                    <div class="carousel-item active" style="background-image: url('/rayyan-site/assets/banner/slide0-3.png')"></div>
+                            
+                                    <div class="carousel-item" style="background-image: url('/rayyan-site/assets/banner/Slide-1.png')"></div>
+                            
+                                    <div class="carousel-item" style="background-image: url('/rayyan-site/assets/banner/Slide-2.png')"></div>
+                            
+
+      </div>
+
+      <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+      </a>
+
+      <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+      </a>
+
     </div>
-</section>
+  </section>
+  <main id="main">
+  
+  <section id="about" class="about" dir="rtl">
+      <div class="container ">
+        <div class="row content">
+          <div class="col-lg-4 col-md-5 d-flex justify-content-center align-items-center">
+            <img src="/rayyan-site/assets/img/about.png" class="img-fluid" alt="Abraaj Water">
+          </div>
+          <div class="col-lg-8 col-md-7 pt-4 pt-lg-0">
+            <div class="section-title">
+              <h2>عن مياه أبراج</h2>
+            </div>
+            <p>
+              لأكثر من 20 عاماً، مياه أبراج في خدمتكم بكل فخر بنفس الطعم والجودة العالية عبر توفير كافة الأحجام من مياه الشرب المعبأة التي تناسب جميع المناسبات سواء كانت في المنزل، المكتب أو في الخارج. نستخدم في مياه أبراج أحدث المعدات والتقنيات الخاصة بإنتاج مياه الشرب المعبأة حسب المواصفات العالمية المتفق عليها لضمان أفضل جودة للمستهلك.  <br><br>
+              نحوز في مصنع مياه أبراج على العديد من الاعتمادات وشهادات الجودة العالمية منها والمحلية، حيث أن المصنع معتمد من NSF وهيئة الغذاء والدواء الأمريكية FDA وكذلك شهادة ISO 22000:2005 وشهادة HACCP وعلامة الجودة الكويتية طبقاً للمواصفات الخليجية. ويخضع المصنع للتدقيق الدائم من كل جهات الإعتماد تلك بصفة دورية.
 
-<!-- VIDEO SECTION -->
-<section class="video-section">
-    <video autoplay loop muted playsinline poster="images/arw-main-final-image-all.png">
-        <source src="images/arw-home-video.mp4" type="video/mp4">
-        <img src="images/arw-main-final-image-all.png" alt="Al Rayyan Water">
-    </video>
-</section>
-
-<!-- QUALITY HERO -->
-<section class="quality-hero">
-    <div class="quality-hero-text">
-        <h1><span>الجودة</span> ماء <span>إلى عتبة بابك مع</span> الريان</h1>
-        <p>في مياه الريان، نضع جودة استثنائية في كل عُمانة على رأس أولوياتنا. تخضع مياهنا لعمليات تنقية دقيقة لضمان تحقيق أعلى معايير النقاء والوضوح. مستخرجة من ينابيع طبيعية نقية، نوفر لك ترطيبًا نقيًا يجعلها الخيار المثالي للمستهلكين المهتمين بصحتهم.</p>
-        <a href="/store" target="_parent" class="btn-shop">متجر</a>
-        <div class="scroll-down-icon">
-            <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M504 256c0 137-111 248-248 248S8 393 8 256 119 8 256 8s248 111 248 248zM212 140v116h-70.9c-10.7 0-16.1 13-8.5 20.5l114.9 114.3c4.7 4.7 12.2 4.7 16.9 0l114.9-114.3c7.6-7.6 2.2-20.5-8.5-20.5H300V140c0-6.6-5.4-12-12-12h-64c-6.6 0-12 5.4-12 12z"></path></svg>
+            </p>
+            <a href="/rayyan-site/about-us.html" class="more-details">إقـراء المـزيد <i class="bx bxs-chevrons-left"></i></a>
+          </div>
         </div>
+      </div>
+    </section>
+  
+<section class="section">
+      <div class="container">
+        <div class="row">
+
+          <div class="section-title">
+            <h2>التركيبــة المناسبــة</h2>
+          </div>
+
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="Balance col-md-12" dir="rtl">
+              <h4>محتوى متــوازن مع الـ PH</h4>
+              <h6 dir="ltr">7.4</h6>
+              <p>تساعد مياه منتجنا المتوازنة على تنشيط الأعضاء الداخلية والهضم بينما يكون الرقم الهيدروجيني محايدًا عند 7.4.
+              </p>
+
+            </div>
+            <div class="Balance col-md-12" dir="rtl">
+              <h4>نسبة عالية من الكالسيوم</h4>
+              <h6 dir="rtl">25ملجم/لتر</h6>
+              <p>مياه غنية بالكالسيوم اللازم لبنية العظام وتخفف من ضغط الدم .</p>
+
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4 col-xs-12 d-flex justify-content-center align-items-center"><img src="/rayyan-site/assets/img/glass-en.png" class="img-fluid"></div>
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="Balance col-md-12" dir="rtl">
+              <h4>غني بالمعادن</h4>
+              <h6 dir="ltr"></h6>
+              <p>يتم استيراد جميع المعادن من أصول أوروبية / أمريكية والتي تحافظ على اتساق مياه أبراج المعبأة.</p>
+
+            </div>
+            <div class="Balance col-md-12" dir="rtl">
+              <h4>نسبة صوديوم منخفضة</h4>
+              <h6 dir="rtl">5ملجم/لتر</h6>
+              <p>يتم الحفاظ على مستوى الصوديوم لدينا في أو أقل من 5 جزء في المليون لخفض كمية امتصاص الجسم من الصوديوم..</p>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>  
+    <section class="video">
+      <div class="container">
+        <div class="section-title">
+          <h2>أفضـــل خيـــار لعــائلتـك</h2>
+        </div>
+        <div class="d-flex justify-content-center">
+          <div class="position-relative mt-4">
+            <img src="/rayyan-site/assets/img/about-2.jpg" class="img-fluid" alt=""><br>
+            <img src="/rayyan-site/assets/img/shadow.png" class="img-fluid" style="padding-top:20px ;">
+            <a href="https://www.youtube.com/watch?v=iANizEWOhbY" class="glightbox play-btn"></a>
+          </div>
+        </div>
+      </div>
+    </section>  
+    <section class="Delivery" dir="rtl">
+      <div class="container">
+
+        <div class="row content">
+          <div class="col-lg-4 col-md-5 d-flex justify-content-center align-items-center">
+            <img src="/rayyan-site/assets/img/Delivery.png" class="img-fluid" alt="Abraaj Water">
+          </div>
+          <div class="col-lg-8 col-md-7 pt-4 pt-lg-0" dir="rtl">
+            <div class="title">
+              <h2>خــدمـــات التـــوصيــل</h2>
+            </div>
+            <p>
+              يعمل أسطول التوصيل لدينا سته (6) أيام في الأسبوع ، ويمكننا توصيل المياه إلى منزلك أو مكتبك .
+            </p>
+            <i class="bx bx-phone-call"></i>
+            <h4 class="contact-list"><span class="blue"> الاتصال المجاني |&nbsp;</span> 1844666</h4><br>
+            <i class="bx bx-calendar"></i>
+            <h4 class="contact-list"><span class="blue"> أيـــــــــام العمـــــــــــل |&nbsp;</span> من السبت الى الخميــس </h4><br>
+            <i class="bx bx-time-five"></i>
+            <h4 class="contact-list"><span class="blue"> ساعــــات العمــل  |&nbsp;</span> 07:00 صباحاً – 04:00 مساءً </h4><br>
+            <i class="bx bx-envelope"></i>
+            <h4 class="contact-list"><span class="blue"> بــريــــد التواصـــــل |&nbsp;</span> <a href="mailto:Info@abraajwater.com">info@abraajwater.com</a></h4><br>
+            <i class="bx bx-envelope"></i>
+            <h4 class="contact-list"><span class="blue"> بــريــــد المبيعـــات |&nbsp;</span> <a href="mailto:Sales@abraajwater.com">Sales@abraajwater.com</a></h4><br>
+
+          </div>
+
+        </div>
+      </div>
+    </section>    
+  </main>
+  
+     <footer id="footer">
+    <div class="container">
+      <img src="/rayyan-site/assets/img/logo-white-ar.svg" class="img-fluid" alt="Abraaj Water">
+      <div class="social-links">
+        <a href="https://twitter.com/abraajwater" target="_blank" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="https://www.facebook.com/AbraajWaterKuwait" target="_blank" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="https://www.instagram.com/abraajwater" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="https://www.youtube.com/user/Abraajwater" target="_blank" class="youtube"><i class="bx bxl-youtube"></i></a>
+      </div>
+      <div class="copyright">
+        Copyright ©
+        <script>document.write(new Date().getFullYear());</script> Abraaj Water Company,
+        All Rights Reserved.
+      </div>
     </div>
-    <div class="quality-hero-image">
-        <img src="images/arw-Untitled-design.pdf-9-1.png" alt="منتجات مياه الريان">
-    </div>
-</section>
+  </footer><!-- End Footer -->
 
-<!-- QUALITY BADGES SECTION -->
-<section class="quality-badges-section">
-    <div class="badges-content">
-        <h3>كل عُمانة مدعومة بضمان جودة مياه الريان</h3>
-        <p>نقدم مياه نقية، مع ضمان الجودة العالية في كل عُمانة، ملتزمين بتلبية احتياجاتكم بعناية.</p>
-    </div>
-    <div class="badges-grid">
-        <div class="badge-item">
-            <div class="badge-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375 375"><path fill="#3dbfea" d="M 151.82 357.2 C 113.88 357.2 79.25 336.44 61.43 303.02 C 45.55 273.23 45.54 237.36 61.4 207.08 L 144.11 51.92 C 145.61 49.11 148.54 47.35 151.74 47.35 C 154.93 47.35 157.87 49.11 159.37 51.92 L 242.05 207.03 C 254.89 231.11 257.56 258.75 249.58 284.85 C 241.61 310.95 223.93 332.38 199.8 345.2 C 185.04 353.05 168.45 357.2 151.82 357.2 Z"/><path fill="#003f67" d="M 151.74 55.98 L 234.42 211.08 C 258.72 256.68 241.41 313.31 195.75 337.58 C 181.73 345.03 166.66 348.56 151.82 348.56 C 118.31 348.56 85.91 330.56 69.06 298.96 C 53.96 270.63 55.21 237.52 69.06 211.08 L 151.74 55.98 Z"/></svg>
-            </div>
-            <div>
-                <h5>تم اختبار النقاء</h5>
-                <p>ضمان النقاء من خلال الاختبارات الدقيقة والتحليل التفصيلي.</p>
-            </div>
-        </div>
-        <div class="badge-item">
-            <div class="badge-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#3dbfea" stroke-width="2"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 6v6l4 2"/></svg>
-            </div>
-            <div>
-                <h5>يتم اختباره بانتظام</h5>
-                <p>فحوصات دورية مستمرة لضمان الالتزام بأعلى المعايير.</p>
-            </div>
-        </div>
-        <div class="badge-item">
-            <div class="badge-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#3dbfea" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
-            </div>
-            <div>
-                <h5>ضمان الجودة</h5>
-                <p>التزام كامل بمعايير الجودة العالمية في كل مرحلة.</p>
-            </div>
-        </div>
-        <div class="badge-item">
-            <div class="badge-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#3dbfea" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-            </div>
-            <div>
-                <h5>منخفض الصوديوم</h5>
-                <p>مياه صحية بنسبة صوديوم منخفضة لحياة أفضل.</p>
-            </div>
-        </div>
-    </div>
-</section>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center active"><i class="bx bxs-chevron-up"></i></a>
 
-<!-- PRODUCTS SECTION -->
-<section class="products-section">
-    <p class="section-label">منتجاتنا</p>
-    <h3>أنقى المياه من الريان</h3>
-</section>
+  <!-- Vendor JS Files -->
+  <script src="/rayyan-site/assets/vendor/jquery.2.2.3.min.js"></script>
+  <script src="/rayyan-site/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/rayyan-site/assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="/rayyan-site/assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="/rayyan-site/assets/vendor/menu/src/js/jquery.slimmenu.js"></script>
+  <script src="/rayyan-site/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
 
-<!-- PRODUCT CAROUSEL -->
-<section class="product-carousel-section">
-    <div class="swiper product-carousel">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <img src="images/arw-250-ml-slider-new.png" alt="مياه الريان 250 مل">
-            </div>
-            <div class="swiper-slide">
-                <img src="images/arw-500-ml-slider-new.png" alt="مياه الريان 500 مل">
-            </div>
-            <div class="swiper-slide">
-                <img src="images/arw-1500-ml-slider-new.png" alt="مياه الريان 1.5 لتر">
-            </div>
-            <div class="swiper-slide">
-                <img src="images/arw-5-gall-nonre-slider-new.png" alt="مياه الريان 5 جالون">
-            </div>
-            <div class="swiper-slide">
-                <img src="images/arw-5-gall-re-slider-new.png" alt="مياه الريان 5 جالون قابل للإرجاع">
-            </div>
-        </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-pagination"></div>
-    </div>
-</section>
-
-<!-- QUOTE SECTION -->
-<section class="quote-section">
-    <div class="quote-icon">&#10077;</div>
-    <p>شرب الماء ضروري للصحة، حيث يوفر الانتعاش والحيوية التي نحتاجها يوميًا.</p>
-    <div class="quote-icon" style="margin-top:20px">&#10078;</div>
-</section>
-
-<!-- WHY CHOOSE US -->
-<section class="why-choose-section">
-    <p class="section-label">الريان</p>
-    <h3>لماذا تختارنا</h3>
-    <div class="why-choose-grid">
-        <div class="why-choose-card">
-            <h4>ضمان</h4>
-            <p>نقاء مضمون في كل عُمانة لضمان راحتكم واطمئنانكم.</p>
-            <a href="/store" target="_parent" class="btn-link">تعرّف على قصتنا</a>
-            <br><br><br>
-            <h4>مياه نقية</h4>
-            <p>مستخرج محليًا، لضمان الجودة الطازجة والأصيلة.</p>
-            <a href="/store" target="_parent" class="btn-link">كيف نعالج المياه</a>
-        </div>
-        <div class="why-choose-image">
-            <img src="images/arw-transparent-des.png" alt="منتجات مياه الريان">
-        </div>
-        <div class="why-choose-card">
-            <h4>الجودة</h4>
-            <p>جودة استثنائية مضمونة في كل دفعة لضمان رضاكم.</p>
-            <a href="/store" target="_parent" class="btn-link">شهاداتنا</a>
-            <br><br><br>
-            <h4>السلامة</h4>
-            <p>معايير صارمة لضمان سلامة كل عُمانة تصل إليكم.</p>
-            <a href="/store" target="_parent" class="btn-link">معاييرنا</a>
-        </div>
-    </div>
-</section>
-
-<!-- STATS SECTION -->
-<section class="stats-section">
-    <h3>الكمال في كل خطوة نخطوها</h3>
-    <div class="stats-grid">
-        <div class="stat-card">
-            <div class="stat-number" data-target="10">0+</div>
-            <div class="stat-label">سنوات من الخبرة</div>
-        </div>
-        <div class="stat-card">
-            <div class="stat-number" data-target="15">0</div>
-            <div class="stat-label">المنتجات</div>
-        </div>
-        <div class="stat-card">
-            <div class="stat-number" data-target="2000000">2M+</div>
-            <div class="stat-label">عملاء سعداء</div>
-        </div>
-        <div class="stat-card">
-            <div class="stat-number" data-target="25">0</div>
-            <div class="stat-label">المخازن</div>
-        </div>
-    </div>
-</section>
-
-<!-- CONTACT SECTION -->
-<section class="contact-section" id="contact">
-    <div class="contact-form-wrapper">
-        <h3>اتصل بنا</h3>
-        <p>نحن هنا لنضمن لك مياه عالية الجودة وخدمة موثوقة.</p>
-        <form class="contact-form" onsubmit="event.preventDefault(); alert('شكراً لتواصلك معنا! سنرد عليك قريباً.');">
-            <input type="text" placeholder="اسم" required>
-            <input type="email" placeholder="البريد الإلكتروني" required>
-            <input type="tel" placeholder="الهاتف">
-            <button type="submit">احجز موعدًا</button>
-        </form>
-    </div>
-    <div class="contact-image">
-        <img src="images/arw-Untitled-design.png" alt="مياه الريان">
-    </div>
-</section>
-
-<!-- QUALITY EVERY SIP -->
-<section class="quality-sip-section">
-    <h3>جودة في كل جرعة</h3>
-    <p>نحن نتجاوز مجرد الترطيب لنقدم لك تجربة منعشة متجذرة في النقاء والتميز. تم استخراج مياهنا بعناية واختبارها بدقة، حيث تعكس كل عُمانة التزامنا بالجودة والاستدامة. سواء في المنزل أو في العمل أو أثناء التنقل، تعد مياه الريان رفيقك الموثوق، لضمان بقائك منتعشًا ومفعمًا بالحيوية في كل لحظة من يومك.</p>
-    <a href="https://water.fanack.com/oman/" target="_blank" class="btn-learn">تعرف أكثر عن المياه</a>
-</section>
-
-<!-- FOOTER -->
-<footer class="site-footer">
-    <div class="footer-container">
-        <div class="footer-contact">
-            <p>Toll Free Number:<br><strong><a href="tel:80078888">80078888 (OMAN)</a></strong></p>
-            <p>: الهاتف<br><strong><a href="tel:+96824454945">968+ 24454945</a></strong></p>
-            <p>: العنوان الفعلي<br><strong>Al mabelah saniyah, Seeb 102, Oman</strong></p>
-            <p>: عنوان البريد الإلكتروني<br><strong>info@alrayyanwater.com</strong></p>
-        </div>
-        <div class="footer-logo">
-            <img src="images/arw-al-rayyan-logo123123.pdf-5.png" alt="الريان">
-            <p>نؤكد لكم التزامنا الثابت بتقديم جودة ونقاء استثنائيين في كل عُمانة.</p>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        <p>Copyright &copy; 2026 - Al RAYYAN by WIDEWEB</p>
-    </div>
-</footer>
-
-<!-- SCRIPTS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-<script>
-    // Hero Slider
-    new Swiper('.hero-slider', {
-        loop: true,
-        autoplay: {
-            delay: 4000,
-            disableOnInteraction: false,
-        },
-        pagination: {
-            el: '.hero-slider .swiper-pagination',
-            clickable: true,
-        },
-        navigation: {
-            nextEl: '.hero-slider .swiper-button-next',
-            prevEl: '.hero-slider .swiper-button-prev',
-        },
-    });
-
-    // Product Carousel
-    new Swiper('.product-carousel', {
-        loop: true,
-        slidesPerView: 3,
-        spaceBetween: 30,
-        autoplay: {
-            delay: 700,
-            disableOnInteraction: false,
-        },
-        pagination: {
-            el: '.product-carousel .swiper-pagination',
-            clickable: true,
-        },
-        navigation: {
-            nextEl: '.product-carousel .swiper-button-next',
-            prevEl: '.product-carousel .swiper-button-prev',
-        },
-        breakpoints: {
-            320: { slidesPerView: 1, spaceBetween: 10 },
-            640: { slidesPerView: 2, spaceBetween: 20 },
-            1024: { slidesPerView: 3, spaceBetween: 30 },
-        }
-    });
-
-    // Counter Animation
-    const counters = document.querySelectorAll('.stat-number');
-    const observerOptions = { threshold: 0.5 };
-    
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const counter = entry.target;
-                const target = parseInt(counter.getAttribute('data-target'));
-                const suffix = counter.textContent.includes('M+') ? 'M+' : 
-                              counter.textContent.includes('+') ? '+' : '';
-                let current = 0;
-                const increment = target / 50;
-                const timer = setInterval(() => {
-                    current += increment;
-                    if (current >= target) {
-                        current = target;
-                        clearInterval(timer);
-                    }
-                    if (target >= 1000000) {
-                        counter.textContent = Math.floor(current/1000000) + 'M+';
-                    } else {
-                        counter.textContent = Math.floor(current) + suffix;
-                    }
-                }, 40);
-                observer.unobserve(counter);
-            }
-        });
-    }, observerOptions);
-
-    counters.forEach(counter => observer.observe(counter));
-</script>
+  <!-- Main JS File -->
+  <script src="/rayyan-site/assets/js/main.js"></script>  
+  
 
 </body>
 </html>
