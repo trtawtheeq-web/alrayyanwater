@@ -32,7 +32,7 @@ export default function CartPage() {
             <p className="text-gray-500 text-sm sm:text-base mb-4">{t('cart.empty')}</p>
             <button
               onClick={() => navigate('/store')}
-              className="px-5 sm:px-6 py-2 bg-[#0ea5e9] text-white rounded-lg text-sm hover:bg-[#0284c7] transition-colors"
+              className="px-5 sm:px-6 py-2 bg-[#253272] text-white rounded-lg text-sm hover:bg-[#1a2555] transition-colors"
             >
               {t('cart.continueShopping')}
             </button>
@@ -87,7 +87,7 @@ export default function CartPage() {
                           {hasCompare && (
                             <span className="text-[10px] sm:text-xs text-gray-400 line-through">{comparePrice.toFixed(3)} د.ك</span>
                           )}
-                          <span className="text-xs sm:text-sm font-bold text-[#0ea5e9]">{itemPrice.toFixed(3)} د.ك</span>
+                          <span className="text-xs sm:text-sm font-bold text-[#253272]">{itemPrice.toFixed(3)} د.ك</span>
                         </div>
 
                         {/* Quantity + subtotal row */}
@@ -111,7 +111,7 @@ export default function CartPage() {
                             {hasCompare && (
                               <p className="text-[10px] text-gray-400 line-through">{(comparePrice * item.quantity).toFixed(3)} د.ك</p>
                             )}
-                            <p className="text-xs sm:text-sm font-bold text-[#0ea5e9]">{(itemPrice * item.quantity).toFixed(3)} د.ك</p>
+                            <p className="text-xs sm:text-sm font-bold text-[#253272]">{(itemPrice * item.quantity).toFixed(3)} د.ك</p>
                           </div>
                         </div>
                       </div>
@@ -125,18 +125,18 @@ export default function CartPage() {
             <div className="bg-white rounded-xl shadow-sm p-4 sm:p-6">
               <div className="flex items-center justify-between mb-3 sm:mb-4">
                 <span className="text-base sm:text-lg font-bold text-gray-900">{t('cart.total')}</span>
-                <span className="text-lg sm:text-xl font-bold text-[#0ea5e9]">{total.toFixed(3)} KWD</span>
+                <span className="text-lg sm:text-xl font-bold text-[#253272]">{total.toFixed(3)} KWD</span>
               </div>
               <button
                 onClick={() => navigate('/summary-payment')}
-                className="w-full py-2.5 sm:py-3 bg-[#0ea5e9] text-white rounded-lg font-medium text-sm sm:text-base hover:bg-[#0284c7] transition-colors"
+                className="w-full py-2.5 sm:py-3 bg-[#253272] text-white rounded-lg font-medium text-sm sm:text-base hover:bg-[#1a2555] transition-colors"
               >
                 {t('cart.checkout')}
               </button>
               <div className="flex items-center justify-between mt-2 sm:mt-3">
                 <button
                   onClick={() => navigate('/store')}
-                  className="text-xs sm:text-sm text-[#0ea5e9] hover:underline"
+                  className="text-xs sm:text-sm text-[#253272] hover:underline"
                 >
                   {t('cart.continueShopping')}
                 </button>
