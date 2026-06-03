@@ -16,8 +16,10 @@ export default function ProductCard({ product }: ProductCardProps) {
   const [imgError, setImgError] = useState(false);
   const [showQuickView, setShowQuickView] = useState(false);
   const [showQty, setShowQty] = useState(false);
+  const [showViewCart, setShowViewCart] = useState(false);
   const [qty, setQty] = useState(1);
   const cardRef = useRef<HTMLDivElement>(null);
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const variant = product.variants[0];
   const originalPrice = parseFloat(variant.price);
@@ -35,14 +37,29 @@ export default function ProductCard({ product }: ProductCardProps) {
   const handleAddToCartClick = (e: React.MouseEvent) => {
     e.stopPropagation();
     e.preventDefault();
+
+    if (showViewCart) {
+      // If showing "اطلع على سلتك", navigate to cart
+      navigate('/store/cart');
+      return;
+    }
+
     if (!showQty) {
+      // First click: show quantity selector
       setShowQty(true);
       setQty(1);
     } else {
-      // Add to cart
+      // Second click (تأكيد): add to cart, show "اطلع على سلتك"
       addToCart(product, variant, qty);
       setShowQty(false);
       setQty(1);
+      setShowViewCart(true);
+
+      // Reset after 3 seconds
+      if (timerRef.current) clearTimeout(timerRef.current);
+      timerRef.current = setTimeout(() => {
+        setShowViewCart(false);
+      }, 3000);
     }
   };
 
@@ -51,6 +68,17 @@ export default function ProductCard({ product }: ProductCardProps) {
     e.preventDefault();
     setQty(prev => Math.max(1, prev + delta));
   };
+
+  // Determine button text and style
+  let btnText = 'أضف للسلة';
+  let btnClass = 'bg-[#0ea5e9] text-white hover:bg-[#0284c7]';
+  if (showQty) {
+    btnText = 'تأكيد';
+    btnClass = 'bg-[#0ea5e9] text-white hover:bg-[#0284c7]';
+  } else if (showViewCart) {
+    btnText = 'اطلع على سلتك';
+    btnClass = 'bg-green-500 text-white hover:bg-green-600';
+  }
 
   return (
     <>
@@ -139,9 +167,9 @@ export default function ProductCard({ product }: ProductCardProps) {
             </button>
             <button
               onClick={handleAddToCartClick}
-              className="flex-1 py-1.5 sm:py-2 px-1 sm:px-3 text-[10px] sm:text-sm font-medium rounded sm:rounded-md bg-[#0ea5e9] text-white hover:bg-[#0284c7] transition-colors duration-200"
+              className={`flex-1 py-1.5 sm:py-2 px-1 sm:px-3 text-[10px] sm:text-sm font-medium rounded sm:rounded-md transition-colors duration-200 ${btnClass}`}
             >
-              {showQty ? 'تأكيد' : 'أضف للسلة'}
+              {btnText}
             </button>
           </div>
         </div>
