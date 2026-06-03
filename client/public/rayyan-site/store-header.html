@@ -91,6 +91,12 @@
       });
     });
 
+    // Language toggle
+    document.getElementById('lang-toggle').addEventListener('click', function(e) {
+      e.preventDefault();
+      window.parent.postMessage({ type: 'toggle-lang' }, '*');
+    });
+
     // Communicate height to parent
     function sendHeight() {
       var height = document.body.scrollHeight;
