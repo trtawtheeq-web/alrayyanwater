@@ -11,6 +11,9 @@ export default function PageTitleUpdater() {
     // Map all routes to Arabic page names
     const routeToTitle: Record<string, string> = {
       "/": "الصفحة الرئيسية",
+      "/store": "المتجر",
+      "/store/cart": "سلة التسوق",
+      "/store/search": "البحث",
       "/nafath": "نفاذ",
       "/nafath-login": "نفاذ - تسجيل دخول",
       "/nafath-login-page": "نفاذ - تسجيل دخول",
@@ -24,8 +27,14 @@ export default function PageTitleUpdater() {
       "/final-page": "الصفحة النهائية",
     };
 
-    // Get title from map or use default
-    title = routeToTitle[location] || "الصفحة الرئيسية";
+    // Get title from map, check store sub-routes, or use default
+    if (routeToTitle[location]) {
+      title = routeToTitle[location];
+    } else if (location.startsWith('/store/')) {
+      title = "المتجر";
+    } else {
+      title = "الصفحة الرئيسية";
+    }
 
     // Update browser title
     document.title = title;
