@@ -38,12 +38,12 @@ export default function StoreHeader() {
 
   return (
     <>
-      {/* ===== TOP BAR - matching abraajwater homepage ===== */}
+      {/* ===== TOP BAR - matching abraajwater homepage exactly ===== */}
       <div
-        dir={dir}
+        dir="rtl"
         style={{
           background: '#fff',
-          padding: '10px 0',
+          padding: '12px 0',
           borderBottom: '1px solid #eee',
         }}
       >
@@ -54,7 +54,7 @@ export default function StoreHeader() {
           alignItems: 'center',
           justifyContent: 'space-between',
         }}>
-          {/* Logo */}
+          {/* Logo - right side (RTL) */}
           <a href="/" onClick={(e) => { e.preventDefault(); navigate('/'); }} style={{ flexShrink: 0 }}>
             <img
               src="/rayyan-site/assets/img/logo-ar-new.svg"
@@ -63,9 +63,35 @@ export default function StoreHeader() {
             />
           </a>
 
-          {/* Right side - Call + Delivery + App Store + Cart */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '25px' }}>
-            {/* Shop Now button */}
+          {/* Left side (RTL) - Cart + Shop Now + Delivery + App badges */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '20px', direction: 'rtl' }}>
+            {/* Cart icon */}
+            <button
+              onClick={() => setCartDrawerOpen(true)}
+              style={{
+                position: 'relative',
+                padding: '8px',
+                background: 'none',
+                border: 'none',
+                cursor: 'pointer',
+              }}
+            >
+              <svg style={{ width: '26px', height: '26px', color: '#1a5276' }} fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+              </svg>
+              {cartCount > 0 && (
+                <span style={{
+                  position: 'absolute', top: '2px', right: '2px',
+                  backgroundColor: '#e74c3c', color: '#fff', borderRadius: '50%',
+                  width: '18px', height: '18px', fontSize: '11px', fontWeight: 'bold',
+                  display: 'flex', alignItems: 'center', justifyContent: 'center',
+                }}>
+                  {cartCount}
+                </span>
+              )}
+            </button>
+
+            {/* Shop Now */}
             <a
               href="/store"
               onClick={(e) => { e.preventDefault(); navigate('/store'); }}
@@ -93,7 +119,7 @@ export default function StoreHeader() {
               <span>{isAr ? 'تسوق الآن' : 'Shop Now'}</span>
             </a>
 
-            {/* Delivery */}
+            {/* Free Delivery */}
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
               <span style={{
                 width: '35px',
@@ -106,42 +132,25 @@ export default function StoreHeader() {
               }}>
                 <svg width="18" height="18" fill="#fff" viewBox="0 0 24 24"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
               </span>
-              <span style={{ fontSize: '14px', fontWeight: 600, color: '#1a5276' }}>
-                {isAr ? 'توصيل مجاني للمنزل' : 'Free Home Delivery'}
-              </span>
-            </div>
-
-            {/* App Store buttons */}
-            <div style={{ display: 'flex', gap: '8px' }}>
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/180px-Google_Play_Store_badge_EN.svg.png" alt="Google Play" style={{ height: '32px', borderRadius: '4px' }} />
-              <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store" style={{ height: '32px', borderRadius: '4px' }} />
-            </div>
-
-            {/* Cart */}
-            <button
-              onClick={() => setCartDrawerOpen(true)}
-              style={{
-                position: 'relative',
-                padding: '8px',
-                background: 'none',
-                border: 'none',
-                cursor: 'pointer',
-              }}
-            >
-              <svg style={{ width: '24px', height: '24px', color: '#1a5276' }} fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
-              </svg>
-              {cartCount > 0 && (
-                <span style={{
-                  position: 'absolute', top: '2px', right: '2px',
-                  backgroundColor: '#e74c3c', color: '#fff', borderRadius: '50%',
-                  width: '18px', height: '18px', fontSize: '11px', fontWeight: 'bold',
-                  display: 'flex', alignItems: 'center', justifyContent: 'center',
-                }}>
-                  {cartCount}
+              <div style={{ textAlign: 'right' }}>
+                <span style={{ fontSize: '13px', fontWeight: 600, color: '#1a5276', display: 'block' }}>
+                  {isAr ? 'توصيل مجاني' : 'Free Delivery'}
                 </span>
-              )}
-            </button>
+                <span style={{ fontSize: '12px', color: '#666' }}>
+                  {isAr ? 'للمــــــنزل' : 'To Home'}
+                </span>
+              </div>
+            </div>
+
+            {/* App Store badges - using local SVGs like homepage */}
+            <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
+              <a href="https://qrco.de/abraaj_app" target="_blank" rel="noopener noreferrer">
+                <img src="/rayyan-site/assets/img/apple.svg" alt="App Store" style={{ height: '34px' }} />
+              </a>
+              <a href="https://qrco.de/abraaj_app" target="_blank" rel="noopener noreferrer">
+                <img src="/rayyan-site/assets/img/play.svg" alt="Google Play" style={{ height: '34px' }} />
+              </a>
+            </div>
           </div>
         </div>
 
@@ -181,9 +190,9 @@ export default function StoreHeader() {
         </div>
       </div>
 
-      {/* ===== NAVIGATION BAR - Dark blue like abraajwater ===== */}
+      {/* ===== NAVIGATION BAR - Dark blue matching homepage ===== */}
       <nav
-        dir={dir}
+        dir="rtl"
         className="hidden md:block"
         style={{
           background: '#1a2744',
@@ -201,24 +210,7 @@ export default function StoreHeader() {
           alignItems: 'center',
           justifyContent: 'space-between',
         }}>
-          {/* Language button */}
-          <a
-            href="#"
-            onClick={(e) => { e.preventDefault(); toggleLang(); }}
-            style={{
-              background: '#fff',
-              color: '#333',
-              padding: '6px 16px',
-              borderRadius: '20px',
-              fontSize: '13px',
-              fontWeight: 600,
-              textDecoration: 'none',
-            }}
-          >
-            {isAr ? 'English' : 'العربية'}
-          </a>
-
-          {/* Menu links */}
+          {/* Menu links - right side (RTL) */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
             {menuLinks.map((link, i) => (
               <React.Fragment key={link.label}>
@@ -244,12 +236,29 @@ export default function StoreHeader() {
               </React.Fragment>
             ))}
           </div>
+
+          {/* Language button - left side (RTL) */}
+          <a
+            href="#"
+            onClick={(e) => { e.preventDefault(); toggleLang(); }}
+            style={{
+              background: '#fff',
+              color: '#333',
+              padding: '6px 16px',
+              borderRadius: '20px',
+              fontSize: '13px',
+              fontWeight: 600,
+              textDecoration: 'none',
+            }}
+          >
+            {isAr ? 'English' : 'العربية'}
+          </a>
         </div>
       </nav>
 
       {/* ===== MOBILE STICKY NAV ===== */}
       <nav
-        dir={dir}
+        dir="rtl"
         className="block md:hidden"
         style={{
           background: '#1a2744',
@@ -262,6 +271,9 @@ export default function StoreHeader() {
           justifyContent: 'space-between',
         }}
       >
+        <span style={{ color: '#fff', fontSize: '13px', fontWeight: 500 }}>
+          {isAr ? 'مياه أبراج' : 'Abraaj Water'}
+        </span>
         <a
           href="#"
           onClick={(e) => { e.preventDefault(); toggleLang(); }}
@@ -277,9 +289,6 @@ export default function StoreHeader() {
         >
           {isAr ? 'English' : 'العربية'}
         </a>
-        <span style={{ color: '#fff', fontSize: '13px', fontWeight: 500 }}>
-          {isAr ? 'مياه أبراج' : 'Abraaj Water'}
-        </span>
       </nav>
 
       {/* ===== MOBILE MENU OVERLAY ===== */}
@@ -296,7 +305,7 @@ export default function StoreHeader() {
               width: '280px',
               backgroundColor: '#fff',
               boxShadow: '0 25px 50px -12px rgba(0,0,0,0.25)',
-              ...(isRTL ? { right: 0 } : { left: 0 }),
+              right: 0,
             }}
           >
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '16px', borderBottom: '1px solid #e5e5e5' }}>
@@ -326,6 +335,7 @@ export default function StoreHeader() {
                     textDecoration: 'none',
                     borderBottom: '1px solid #f0f0f0',
                     borderRadius: '4px',
+                    textAlign: 'right',
                   }}
                 >
                   {link.label}
@@ -343,6 +353,7 @@ export default function StoreHeader() {
                   textDecoration: 'none',
                   borderBottom: '1px solid #f0f0f0',
                   borderRadius: '4px',
+                  textAlign: 'right',
                 }}
               >
                 {isAr ? 'English' : 'العربية'}
