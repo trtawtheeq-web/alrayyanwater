@@ -61,7 +61,7 @@ export default function CollectionPage() {
       <div dir={dir}>
         <StoreHeader />
         <div className="min-h-screen flex items-center justify-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#0ea5e9] mx-auto"></div>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#253272] mx-auto"></div>
         </div>
         <CartDrawer />
       </div>
@@ -73,7 +73,7 @@ export default function CollectionPage() {
       <StoreHeader />
 
       {/* Collection Header */}
-      <div className="bg-[#0ea5e9] text-white py-4 sm:py-8 px-3 sm:px-4">
+      <div className="bg-[#253272] text-white py-4 sm:py-8 px-3 sm:px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-lg sm:text-2xl md:text-3xl font-bold">{title}</h1>
           <p className="text-xs sm:text-sm text-sky-200 mt-1 sm:mt-2">
@@ -92,7 +92,7 @@ export default function CollectionPage() {
           <select
             value={sortBy}
             onChange={(e) => setSortBy(e.target.value as SortOption)}
-            className="text-xs sm:text-sm border border-gray-300 rounded-lg px-2 sm:px-3 py-1.5 sm:py-2 bg-white focus:outline-none focus:border-[#0ea5e9]"
+            className="text-xs sm:text-sm border border-gray-300 rounded-lg px-2 sm:px-3 py-1.5 sm:py-2 bg-white focus:outline-none focus:border-[#253272]"
           >
             <option value="featured">{t('store.featured')}</option>
             <option value="price-asc">{t('store.priceLow')}</option>

@@ -71,10 +71,10 @@ export default function ProductCard({ product }: ProductCardProps) {
 
   // Determine button text and style
   let btnText = 'أضف للسلة';
-  let btnClass = 'bg-[#0ea5e9] text-white hover:bg-[#0284c7]';
+  let btnClass = 'bg-[#253272] text-white hover:bg-[#1a2555]';
   if (showQty) {
     btnText = 'تأكيد';
-    btnClass = 'bg-[#0ea5e9] text-white hover:bg-[#0284c7]';
+    btnClass = 'bg-[#253272] text-white hover:bg-[#1a2555]';
   } else if (showViewCart) {
     btnText = 'اطلع على سلتك';
     btnClass = 'bg-green-500 text-white hover:bg-green-600';
@@ -127,12 +127,12 @@ export default function ProductCard({ product }: ProductCardProps) {
                 <span className="text-[9px] sm:text-sm text-gray-400 line-through">
                   {parseFloat(variant.compareAtPrice!).toFixed(3)} <span className="text-[8px] sm:text-xs">د.ك</span>
                 </span>
-                <span className="text-[12px] sm:text-base font-bold text-[#0ea5e9]">
+                <span className="text-[12px] sm:text-base font-bold text-[#253272]">
                   {originalPrice.toFixed(3)} <span className="text-[9px] sm:text-xs font-normal">د.ك</span>
                 </span>
               </>
             ) : (
-              <span className="text-[12px] sm:text-base font-bold text-[#0ea5e9]">
+              <span className="text-[12px] sm:text-base font-bold text-[#253272]">
                 {originalPrice.toFixed(3)} <span className="text-[9px] sm:text-xs font-normal">د.ك</span>
               </span>
             )}
@@ -161,7 +161,7 @@ export default function ProductCard({ product }: ProductCardProps) {
           <div className="flex gap-1.5 sm:gap-2 mt-auto">
             <button
               onClick={handleDetails}
-              className="flex-1 py-1.5 sm:py-2 px-1 sm:px-3 text-[10px] sm:text-sm font-medium rounded sm:rounded-md border border-[#0ea5e9] text-[#0ea5e9] hover:bg-[#0ea5e9] hover:text-white transition-colors duration-200"
+              className="flex-1 py-1.5 sm:py-2 px-1 sm:px-3 text-[10px] sm:text-sm font-medium rounded sm:rounded-md border border-[#253272] text-[#253272] hover:bg-[#253272] hover:text-white transition-colors duration-200"
             >
               التفاصيل
             </button>
