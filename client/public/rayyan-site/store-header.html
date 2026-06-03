@@ -95,6 +95,25 @@
     document.getElementById('lang-toggle').addEventListener('click', function(e) {
       e.preventDefault();
       window.parent.postMessage({ type: 'toggle-lang' }, '*');
+      // Toggle button text
+      var btn = document.getElementById('lang-toggle');
+      if (btn.textContent.trim() === 'English') {
+        btn.textContent = 'عربي';
+      } else {
+        btn.textContent = 'English';
+      }
+    });
+
+    // Listen for lang update from parent to sync button text
+    window.addEventListener('message', function(event) {
+      if (event.data && event.data.type === 'lang-update') {
+        var btn = document.getElementById('lang-toggle');
+        if (event.data.lang === 'ar') {
+          btn.textContent = 'English';
+        } else {
+          btn.textContent = 'عربي';
+        }
+      }
     });
 
     // Communicate height to parent
@@ -109,6 +128,14 @@
 
     // Listen for cart count updates from parent React app
     window.addEventListener('message', function(event) {
+      if (event.data && event.data.type === 'lang-update') {
+        var btn = document.getElementById('lang-toggle');
+        if (event.data.lang === 'ar') {
+          btn.textContent = 'English';
+        } else {
+          btn.textContent = 'عربي';
+        }
+      }
       if (event.data && event.data.type === 'cart-count') {
         var count = event.data.count || 0;
         var badge = document.getElementById('cart-count-badge');

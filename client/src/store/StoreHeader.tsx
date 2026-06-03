@@ -6,7 +6,7 @@ export default function StoreHeader() {
   const [headerHeight, setHeaderHeight] = useState(140);
   const iframeRef = useRef<HTMLIFrameElement>(null);
   const { getCartCount } = useStore();
-  const { toggleLang } = useLang();
+  const { toggleLang, lang } = useLang();
   const cartCount = getCartCount();
 
   useEffect(() => {
@@ -22,6 +22,13 @@ export default function StoreHeader() {
     return () => window.removeEventListener('message', handleMessage);
   }, [toggleLang]);
 
+  // Send lang to iframe whenever it changes
+  useEffect(() => {
+    if (iframeRef.current && iframeRef.current.contentWindow) {
+      iframeRef.current.contentWindow.postMessage({ type: 'lang-update', lang: lang }, '*');
+    }
+  }, [lang]);
+
   // Send cart count to iframe whenever it changes
   useEffect(() => {
     if (iframeRef.current && iframeRef.current.contentWindow) {
@@ -33,6 +40,7 @@ export default function StoreHeader() {
   const handleIframeLoad = () => {
     if (iframeRef.current && iframeRef.current.contentWindow) {
       iframeRef.current.contentWindow.postMessage({ type: 'cart-count', count: cartCount }, '*');
+      iframeRef.current.contentWindow.postMessage({ type: 'lang-update', lang: lang }, '*');
     }
   };
 
