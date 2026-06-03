@@ -61,8 +61,8 @@ export default function DiscountPopup() {
           {/* Blue top bar - Rayyan branding */}
           <div style={{ background: 'linear-gradient(135deg, #00a0d2, #0077b6)', padding: '16px 20px', textAlign: 'center' }}>
             <img
-              src="/rayyan-site/images/logo.png"
-              alt="الريان"
+              src="/rayyan-site/assets/img/logo-ar-new.svg"
+              alt="أبراج"
               style={{ height: '70px', width: '70px', borderRadius: '50%', margin: '0 auto', background: 'white', padding: '4px', boxShadow: '0 4px 15px rgba(0,0,0,0.2)', objectFit: 'contain' }}
             />
           </div>
