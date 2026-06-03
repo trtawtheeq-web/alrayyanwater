@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Tajawal:500;700;800" rel="stylesheet">
+  <link href="/rayyan-site/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/rayyan-site/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/rayyan-site/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="/rayyan-site/assets/css/style-ar.css" rel="stylesheet">
+  <link href="/rayyan-site/assets/vendor/menu/css/slimmenu.css" rel="stylesheet">
+  <style>
+    body { margin: 0; padding: 0; overflow: hidden; }
+    html { overflow: hidden; }
+  </style>
+</head>
+<body>
+  <header class="header-one">
+    <div class="top-header">
+      <div class="container clearfix">
+        <div class="logo float-right">
+          <a href="/store" target="_parent"><img src="/rayyan-site/assets/img/logo-ar-new.svg" alt="مياه أبراج"></a>
+        </div>
+        <div class="address-wrapper d-none d-sm-block float-left ipad" dir="rtl">
+          <ul>
+            <li class="address">
+              <a href="/store" target="_parent" style="text-decoration:none;color:inherit;">
+                <i class="icon bx bxs-cart"></i>
+                <span>تسوق الآن</span>
+                <h6>🛒</h6>
+              </a>
+            </li>
+            <li class="address">
+              <i class="icon bx bxs-truck"></i>
+              <span class="DELIVERYspan">توصيل مجاني</span>
+              <h6 class="DELIVERY">للمــــــنزل</h6>
+            </li>
+            <li>
+              <a href="https://qrco.de/abraaj_app" class="download-app" target="_blank"><img src="/rayyan-site/assets/img/apple.svg" alt="Download App"></a>
+              <a href="https://qrco.de/abraaj_app" class="download-app" target="_blank"><img src="/rayyan-site/assets/img/play.svg" alt="Download App"></a>
+            </li>
+          </ul>
+        </div>
+        <div class="address-wrapper d-block d-sm-none float-right ipad">
+          <ul>
+            <li>
+              <a href="https://qrco.de/abraaj_app" class="download-app" target="_blank"><img src="/rayyan-site/assets/img/apple.svg" alt="Download App"></a>
+              <a href="https://qrco.de/abraaj_app" class="download-app" target="_blank"><img src="/rayyan-site/assets/img/play.svg" alt="Download App"></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="theme-menu-wrapper fixed">
+      <div class="container">
+        <div class="bg-wrapper clearfix">
+          <div class="menu-wrapper float-right" dir="rtl">
+            <nav id="mega-menu-holder" class="clearfix">
+              <ul class="clearfix">
+                <li class="active"><a href="/" target="_parent">الصفحة الرئيسية</a></li>
+                <li><a href="/store" target="_parent">من نحن</a></li>
+                <li><a href="/store" target="_parent">المنتجات</a></li>
+                <li><a href="/store" target="_parent">اطلب اون لاين</a></li>
+                <li><a href="/store" target="_parent">جولة في المصنع</a></li>
+                <li><a href="/store" target="_parent">الفعاليات</a></li>
+                <li><a href="/store" target="_parent">اتصل بنا</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="right-widget float-left">
+            <ul>
+              <li class="language-icon">
+                <a href="#" id="lang-toggle">English</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <script src="/rayyan-site/assets/vendor/jquery.2.2.3.min.js"></script>
+  <script src="/rayyan-site/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/rayyan-site/assets/vendor/menu/src/js/jquery.slimmenu.js"></script>
+  <script>
+    $(document).ready(function() {
+      $("#mega-menu-holder").slimmenu({
+        resizeWidth: '991',
+        animSpeed: 'medium',
+        indentChildren: true,
+      });
+    });
+
+    // Communicate height to parent
+    function sendHeight() {
+      var height = document.body.scrollHeight;
+      window.parent.postMessage({ type: 'header-height', height: height }, '*');
+    }
+    window.addEventListener('load', sendHeight);
+    window.addEventListener('resize', sendHeight);
+    setTimeout(sendHeight, 100);
+    setTimeout(sendHeight, 500);
+  </script>
+</body>
+</html>

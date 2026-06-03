@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Tajawal:500;700;800" rel="stylesheet">
+  <link href="/rayyan-site/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/rayyan-site/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="/rayyan-site/assets/css/style-ar.css" rel="stylesheet">
+  <style>
+    body { margin: 0; padding: 0; }
+  </style>
+</head>
+<body>
+  <footer id="footer">
+    <div class="container">
+      <img src="/rayyan-site/assets/img/logo-white-ar.svg" class="img-fluid" alt="Abraaj Water">
+      <div class="social-links">
+        <a href="https://twitter.com/abraajwater" target="_blank" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="https://www.facebook.com/AbraajWaterKuwait" target="_blank" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="https://www.instagram.com/abraajwater" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="https://www.youtube.com/user/Abraajwater" target="_blank" class="youtube"><i class="bx bxl-youtube"></i></a>
+      </div>
+      <div class="copyright">
+        Copyright © <script>document.write(new Date().getFullYear());</script> Abraaj Water Company, All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Communicate height to parent
+    function sendHeight() {
+      var height = document.body.scrollHeight;
+      window.parent.postMessage({ type: 'footer-height', height: height }, '*');
+    }
+    window.addEventListener('load', sendHeight);
+    window.addEventListener('resize', sendHeight);
+    setTimeout(sendHeight, 100);
+    setTimeout(sendHeight, 500);
+  </script>
+</body>
+</html>

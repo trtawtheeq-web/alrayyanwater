@@ -1,31 +1,30 @@
-import React from 'react';
-import { useLang } from './LanguageContext';
+import React, { useState, useEffect } from 'react';
 
 export default function StoreFooter() {
-  const { lang } = useLang();
+  const [footerHeight, setFooterHeight] = useState(200);
+
+  useEffect(() => {
+    const handleMessage = (event: MessageEvent) => {
+      if (event.data && event.data.type === 'footer-height') {
+        setFooterHeight(event.data.height);
+      }
+    };
+    window.addEventListener('message', handleMessage);
+    return () => window.removeEventListener('message', handleMessage);
+  }, []);
 
   return (
-    <footer id="footer">
-      <div className="container">
-        <img src="/rayyan-site/assets/img/logo-white-ar.svg" className="img-fluid" alt="Abraaj Water" />
-        <div className="social-links">
-          <a href="https://twitter.com/abraajwater" target="_blank" rel="noopener noreferrer" className="twitter">
-            <i className="bx bxl-twitter"></i>
-          </a>
-          <a href="https://www.facebook.com/AbraajWaterKuwait" target="_blank" rel="noopener noreferrer" className="facebook">
-            <i className="bx bxl-facebook"></i>
-          </a>
-          <a href="https://www.instagram.com/abraajwater" target="_blank" rel="noopener noreferrer" className="instagram">
-            <i className="bx bxl-instagram"></i>
-          </a>
-          <a href="https://www.youtube.com/user/Abraajwater" target="_blank" rel="noopener noreferrer" className="youtube">
-            <i className="bx bxl-youtube"></i>
-          </a>
-        </div>
-        <div className="copyright">
-          Copyright © {new Date().getFullYear()} Abraaj Water Company, All Rights Reserved.
-        </div>
-      </div>
-    </footer>
+    <div style={{ width: '100%', height: `${footerHeight}px`, overflow: 'hidden' }}>
+      <iframe
+        src="/rayyan-site/store-footer.html"
+        style={{
+          width: '100%',
+          height: `${footerHeight}px`,
+          border: 'none',
+          display: 'block',
+        }}
+        title="Store Footer"
+      />
+    </div>
   );
 }
