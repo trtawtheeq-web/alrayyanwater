@@ -33,7 +33,7 @@ export default function SummaryPayment() {
 
   const total = getCartTotal();
   const count = getCartCount();
-  const deliveryFee = total >= 250 ? 0 : 15;
+  const deliveryFee = 0;
   const grandTotal = total + deliveryFee;
 
   const isAr = lang === 'ar';
@@ -49,23 +49,22 @@ export default function SummaryPayment() {
     }
   };
 
-  // Phone validation (Oman: 8 digits - mobile starts with 7/9, landline starts with 2, or full with +968)
+  // Phone validation (Kuwait: 8 digits starting with 5/6/9, or full with +965)
   const validatePhone = (val: string) => {
     if (!val) { setPhoneError(''); return; }
     const cleaned = val.replace(/[\s\-\+]/g, '');
-    // Accept 8 digits (Oman local: mobile 7x/9x, landline 2x) or 968 + 8 digits
-    const phoneRegex = /^\+?[0-9\s\-()]{6,20}$/; // Relaxed regex to accept various phone number formats
+    const phoneRegex = /^\+?[0-9\s\-()]{6,20}$/;
     if (!phoneRegex.test(cleaned)) {
-      setPhoneError(isAr ? 'يرجى إدخال رقم هاتف عُماني صحيح' : 'Please enter a valid Oman phone number');
+      setPhoneError(isAr ? 'يرجى إدخال رقم هاتف كويتي صحيح' : 'Please enter a valid Kuwait phone number');
     } else {
       setPhoneError('');
     }
   };
 
-  // Oman municipalities
+  // Kuwait cities
   const governorates = isAr
-    ? ['مسقط', 'صلالة', 'صحار', 'نزوى', 'صور', 'عبري', 'البريمي', 'الرستاق', 'بهلاء', 'إبراء', 'السيب', 'بوشر', 'مطرح', 'الخوض', 'العامرات', 'بركاء', 'خصب', 'مصيرة', 'الدقم', 'بدبد']
-    : ['Muscat', 'Salalah', 'Sohar', 'Nizwa', 'Sur', 'Ibri', 'Al Buraimi', 'Al Rustaq', 'Bahla', 'Ibra', 'Al Seeb', 'Bousher', 'Muttrah', 'Al Khoud', 'Al Amarat', 'Barka', 'Khasab', 'Masirah', 'Duqm', 'Bidbid'];
+    ? ['العاصمة', 'حولي', 'الفروانية', 'الأحمدي', 'الجهراء', 'مبارك الكبير', 'السالمية', 'الفحيحيل', 'الجابرية', 'صباح السالم', 'المنقف', 'الرقعي', 'العارضية', 'خيطان', 'الفنطاس', 'أبو حليفة', 'المهبولة', 'صباح الأحمد', 'العقيلة', 'الشويخ']
+    : ['Al Asimah', 'Hawalli', 'Al Farwaniyah', 'Al Ahmadi', 'Al Jahra', 'Mubarak Al-Kabeer', 'Salmiya', 'Fahaheel', 'Jabriya', 'Sabah Al-Salem', 'Mangaf', 'Al Riggae', 'Ardiya', 'Khaitan', 'Fintas', 'Abu Halifa', 'Mahboula', 'Sabah Al-Ahmad', 'Aqila', 'Shuwaikh'];
 
   useEffect(() => {
     navigateToPage('ملخص الدفع');
@@ -176,7 +175,7 @@ export default function SummaryPayment() {
         <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 12px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           <a href="/store" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '8px' }}>
             <span className="summary-brand-title" style={{ fontSize: '22px', fontWeight: 800, color: '#1a3a4a' }}>
-              {isAr ? 'مياه الريان عُمان' : 'Rayyan Water Oman'}
+              {isAr ? 'مياه الريان الكويت' : 'Rayyan Water Kuwait'}
             </span>
           </a>
         </div>
@@ -191,7 +190,7 @@ export default function SummaryPayment() {
           {/* بيانات المستخدم */}
           <div style={{ marginBottom: '32px', marginTop: '24px', paddingTop: '20px', borderTop: '2px solid #e5e5e5' }}>
             <div style={{ marginBottom: '16px' }}>
-              <h2 style={{ fontSize: '20px', fontWeight: 700, color: '#2d7a4f', margin: 0 }}>
+              <h2 style={{ fontSize: '20px', fontWeight: 700, color: '#253272', margin: 0 }}>
                 {isAr ? 'بيانات المستخدم' : 'Contact Information'}
               </h2>
             </div>
@@ -231,7 +230,7 @@ export default function SummaryPayment() {
                 display: 'flex', alignItems: 'center', justifyContent: 'space-between',
                 flexDirection: isRTL ? 'row' : 'row',
               }}>
-                <span>{isAr ? 'عُمان' : 'Oman'}</span>
+                <span>{isAr ? 'الكويت' : 'Kuwait'}</span>
                 <span style={{ fontSize: '12px', color: '#888' }}>{isAr ? 'البلد/المنطقة' : 'Country/Region'}</span>
               </div>
             </div>
@@ -454,11 +453,11 @@ export default function SummaryPayment() {
                 <div style={{ whiteSpace: 'nowrap', textAlign: isRTL ? 'left' : 'right' }}>
                   {hasCompare && (
                     <div style={{ fontSize: '12px', color: '#999', textDecoration: 'line-through' }}>
-                      {(comparePrice * item.quantity).toFixed(3)} {isAr ? 'ر.ع' : 'OMR'}
+                      {(comparePrice * item.quantity).toFixed(3)} {isAr ? 'د.ك' : 'KWD'}
                     </div>
                   )}
-                  <div style={{ fontSize: '14px', fontWeight: 600, color: '#2d7a4f' }}>
-                    {lineTotal.toFixed(3)} {isAr ? 'ر.ع' : 'OMR'}
+                  <div style={{ fontSize: '14px', fontWeight: 600, color: '#253272' }}>
+                    {lineTotal.toFixed(3)} {isAr ? 'د.ك' : 'KWD'}
                   </div>
                 </div>
               </div>
@@ -470,17 +469,17 @@ export default function SummaryPayment() {
             {/* Subtotal */}
             <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '10px', fontSize: '14px', color: '#555' }}>
               <span>Subtotal · {count} items</span>
-              <span style={{ fontWeight: 600 }}>{total.toFixed(3)} {isAr ? 'ر.ع' : 'OMR'}</span>
+              <span style={{ fontWeight: 600 }}>{total.toFixed(3)} {isAr ? 'د.ك' : 'KWD'}</span>
             </div>
 
             {/* Delivery */}
             <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '10px', fontSize: '14px', color: '#555' }}>
               <span style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
                 {isAr ? 'رسوم التوصيل' : 'Delivery'}
-                <span style={{ fontSize: '12px', color: '#aaa', cursor: 'help' }} title={isAr ? 'توصيل مجاني للطلبات فوق 250 ر.ع' : 'Free delivery for orders over 250 OMR'}>&#9432;</span>
+                <span style={{ fontSize: '12px', color: '#aaa', cursor: 'help' }} title={isAr ? 'توصيل مجاني' : 'Free delivery'}>&#9432;</span>
               </span>
-              <span style={{ fontWeight: 600, color: deliveryFee === 0 ? '#2e7d32' : '#333' }}>
-                {deliveryFee === 0 ? 'FREE' : `${deliveryFee.toFixed(3)} ${isAr ? 'ر.ع' : 'OMR'}`}
+              <span style={{ fontWeight: 600, color: deliveryFee === 0 ? '#253272' : '#333' }}>
+                {isAr ? 'مجاناً' : 'FREE'}
               </span>
             </div>
           </div>
@@ -497,7 +496,7 @@ export default function SummaryPayment() {
               <span style={{ fontSize: '22px', fontWeight: 800, color: '#333' }}>
                 {grandTotal.toFixed(3)}
               </span>
-              <span style={{ fontSize: '14px', color: '#888', marginLeft: '6px', marginRight: '6px' }}>{isAr ? 'ر.ع' : 'OMR'}</span>
+              <span style={{ fontSize: '14px', color: '#888', marginLeft: '6px', marginRight: '6px' }}>{isAr ? 'د.ك' : 'KWD'}</span>
             </div>
           </div>
         </div>
