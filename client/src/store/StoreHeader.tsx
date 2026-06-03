@@ -1,9 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import { useStore } from './StoreContext';
 
 export default function StoreHeader() {
   const [headerHeight, setHeaderHeight] = useState(140);
+  const iframeRef = useRef<HTMLIFrameElement>(null);
+  const { getCartCount } = useStore();
+  const cartCount = getCartCount();
 
-  // Load the same CSS and JS files used by the homepage
   useEffect(() => {
     const handleMessage = (event: MessageEvent) => {
       if (event.data && event.data.type === 'header-height') {
@@ -14,9 +17,24 @@ export default function StoreHeader() {
     return () => window.removeEventListener('message', handleMessage);
   }, []);
 
+  // Send cart count to iframe whenever it changes
+  useEffect(() => {
+    if (iframeRef.current && iframeRef.current.contentWindow) {
+      iframeRef.current.contentWindow.postMessage({ type: 'cart-count', count: cartCount }, '*');
+    }
+  }, [cartCount]);
+
+  // Also send cart count when iframe loads
+  const handleIframeLoad = () => {
+    if (iframeRef.current && iframeRef.current.contentWindow) {
+      iframeRef.current.contentWindow.postMessage({ type: 'cart-count', count: cartCount }, '*');
+    }
+  };
+
   return (
     <div style={{ width: '100%', height: `${headerHeight}px`, overflow: 'hidden' }}>
       <iframe
+        ref={iframeRef}
         src="/rayyan-site/store-header.html"
         style={{
           width: '100%',
@@ -25,6 +43,7 @@ export default function StoreHeader() {
           display: 'block',
         }}
         title="Store Header"
+        onLoad={handleIframeLoad}
       />
     </div>
   );

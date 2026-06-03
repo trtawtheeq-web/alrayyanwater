@@ -35,9 +35,10 @@
               <span class="DELIVERYspan">توصيل مجاني</span>
               <h6 class="DELIVERY">للمــــــنزل</h6>
             </li>
-            <li class="address">
-              <a href="/store/cart" target="_parent" style="text-decoration:none;color:inherit;">
+            <li class="address" style="position:relative;">
+              <a href="/store/cart" target="_parent" style="text-decoration:none;color:inherit;position:relative;">
                 <i class="icon bx bxs-basket" style="font-size:24px;"></i>
+                <span id="cart-count-badge" style="display:none;position:absolute;top:-5px;right:-5px;background:#e53e3e;color:#fff;border-radius:50%;width:18px;height:18px;font-size:11px;line-height:18px;text-align:center;font-weight:bold;">0</span>
                 <span>السلة</span>
                 <h6>🛒</h6>
               </a>
@@ -46,9 +47,10 @@
         </div>
         <div class="address-wrapper d-block d-sm-none float-right ipad">
           <ul>
-            <li class="address">
-              <a href="/store/cart" target="_parent" style="text-decoration:none;color:inherit;">
+            <li class="address" style="position:relative;">
+              <a href="/store/cart" target="_parent" style="text-decoration:none;color:inherit;position:relative;">
                 <i class="icon bx bxs-basket" style="font-size:24px;"></i>
+                <span id="cart-count-badge-mobile" style="display:none;position:absolute;top:-5px;right:-5px;background:#e53e3e;color:#fff;border-radius:50%;width:18px;height:18px;font-size:11px;line-height:18px;text-align:center;font-weight:bold;">0</span>
                 <span>السلة</span>
               </a>
             </li>
@@ -106,6 +108,38 @@
     window.addEventListener('resize', sendHeight);
     setTimeout(sendHeight, 100);
     setTimeout(sendHeight, 500);
+
+    // Listen for cart count updates from parent React app
+    window.addEventListener('message', function(event) {
+      if (event.data && event.data.type === 'cart-count') {
+        var count = event.data.count || 0;
+        var badge = document.getElementById('cart-count-badge');
+        var badgeMobile = document.getElementById('cart-count-badge-mobile');
+        if (badge) {
+          badge.textContent = count;
+          badge.style.display = count > 0 ? 'block' : 'none';
+        }
+        if (badgeMobile) {
+          badgeMobile.textContent = count;
+          badgeMobile.style.display = count > 0 ? 'block' : 'none';
+        }
+      }
+    });
+
+    // Also read cart from localStorage on load
+    try {
+      var savedCart = localStorage.getItem('rayyan-cart');
+      if (savedCart) {
+        var cartItems = JSON.parse(savedCart);
+        var totalCount = cartItems.reduce(function(sum, item) { return sum + (item.quantity || 1); }, 0);
+        if (totalCount > 0) {
+          var badge = document.getElementById('cart-count-badge');
+          var badgeMobile = document.getElementById('cart-count-badge-mobile');
+          if (badge) { badge.textContent = totalCount; badge.style.display = 'block'; }
+          if (badgeMobile) { badgeMobile.textContent = totalCount; badgeMobile.style.display = 'block'; }
+        }
+      }
+    } catch(e) {}
   </script>
 </body>
 </html>
