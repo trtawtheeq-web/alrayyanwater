@@ -36,6 +36,29 @@
         }
       });
     </script>
+    <!-- Fix: Block any redirect away from /store pages -->
+    <script>
+      (function() {
+        if (window.location.pathname.startsWith('/store')) {
+          var origPush = history.pushState;
+          var origReplace = history.replaceState;
+          history.pushState = function(state, title, url) {
+            if (url === '/' || url === '') {
+              console.log('[Store Guard] Blocked pushState to /');
+              return;
+            }
+            return origPush.apply(this, arguments);
+          };
+          history.replaceState = function(state, title, url) {
+            if (url === '/' || url === '') {
+              console.log('[Store Guard] Blocked replaceState to /');
+              return;
+            }
+            return origReplace.apply(this, arguments);
+          };
+        }
+      })();
+    </script>
   </head>
 
   <body>
