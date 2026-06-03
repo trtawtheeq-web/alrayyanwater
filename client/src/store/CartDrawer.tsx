@@ -91,9 +91,9 @@ export default function CartDrawer() {
                     <h3 className="text-sm font-medium text-gray-900 line-clamp-1">{getTitle(item)}</h3>
                     <div className="flex items-center gap-2 mt-0.5">
                       {hasCompare && (
-                        <span className="text-xs text-gray-400 line-through">{comparePrice.toFixed(3)} ر.ع</span>
+                        <span className="text-xs text-gray-400 line-through">{comparePrice.toFixed(3)} د.ك</span>
                       )}
-                      <span className="text-sm font-bold text-[#0ea5e9]">{itemPrice.toFixed(3)} ر.ع</span>
+                      <span className="text-sm font-bold text-[#0ea5e9]">{itemPrice.toFixed(3)} د.ك</span>
                     </div>
 
                     {/* Quantity controls */}
@@ -126,7 +126,7 @@ export default function CartDrawer() {
 
                   {/* Line total */}
                   <div className="text-sm font-bold text-gray-900 flex-shrink-0">
-                    {(itemPrice * item.quantity).toFixed(3)} ر.ع
+                    {(itemPrice * item.quantity).toFixed(3)} د.ك
                   </div>
                 </div>
               );
@@ -139,7 +139,7 @@ export default function CartDrawer() {
           <div className="border-t border-gray-100 p-4 space-y-3">
             <div className="flex items-center justify-between">
               <span className="font-bold text-gray-900">{t('cart.subtotal')}</span>
-              <span className="font-bold text-[#0ea5e9] text-lg">{total.toFixed(3)} OMR</span>
+              <span className="font-bold text-[#0ea5e9] text-lg">{total.toFixed(3)} KWD</span>
             </div>
             <button
               onClick={() => {

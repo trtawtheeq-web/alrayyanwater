@@ -110,15 +110,15 @@ export default function ProductPage() {
                 {hasCompareAt ? (
                   <>
                     <span className="text-xs sm:text-lg text-gray-400 line-through">
-                      {compareAtPrice.toFixed(3)} <span className="text-[8px] sm:text-xs">ر.ع</span>
+                      {compareAtPrice.toFixed(3)} <span className="text-[8px] sm:text-xs">د.ك</span>
                     </span>
                     <span className="text-lg sm:text-2xl font-bold text-[#0ea5e9]">
-                      {originalPrice.toFixed(3)} <span className="text-[10px] sm:text-sm font-normal">ر.ع</span>
+                      {originalPrice.toFixed(3)} <span className="text-[10px] sm:text-sm font-normal">د.ك</span>
                     </span>
                   </>
                 ) : (
                   <span className="text-lg sm:text-2xl font-bold text-[#0ea5e9]">
-                    {originalPrice.toFixed(3)} <span className="text-[10px] sm:text-sm font-normal">ر.ع</span>
+                    {originalPrice.toFixed(3)} <span className="text-[10px] sm:text-sm font-normal">د.ك</span>
                   </span>
                 )}
               </div>
@@ -194,7 +194,7 @@ export default function ProductPage() {
                     <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 100 4 2 2 0 000-4z" />
                     </svg>
-                    {t('product.addToCart')} - {(originalPrice * quantity).toFixed(3)} ر.ع
+                    {t('product.addToCart')} - {(originalPrice * quantity).toFixed(3)} د.ك
                   </span>
                 )}
               </button>

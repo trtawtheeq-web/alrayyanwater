@@ -9,53 +9,70 @@ export default function StoreFooter() {
     <footer
       dir={dir}
       style={{
-        backgroundColor: '#fff',
-        paddingTop: '60px',
+        backgroundColor: '#1a2744',
+        paddingTop: '50px',
         paddingBottom: '30px',
-        borderTop: '1px solid #eee',
+        color: '#fff',
       }}
     >
-      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 20px' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '40px', alignItems: 'start' }}>
-          {/* Contact Info */}
-          <div style={{ textAlign: isAr ? 'right' : 'left' }}>
-            <p style={{ fontSize: '14px', color: '#666', marginBottom: '10px' }}>
-              Toll Free Number:<br/>
-              <strong><a href="tel:80078888" style={{ color: '#0ea5e9', textDecoration: 'none' }}>80078888 (OMAN)</a></strong>
-            </p>
-            <p style={{ fontSize: '14px', color: '#666', marginBottom: '10px' }}>
-              {isAr ? ': الهاتف' : 'Phone:'}<br/>
-              <strong><a href="tel:+96824454945" style={{ color: '#0ea5e9', textDecoration: 'none' }}>968+ 24454945</a></strong>
-            </p>
-            <p style={{ fontSize: '14px', color: '#666', marginBottom: '10px' }}>
-              {isAr ? ': العنوان الفعلي' : 'Address:'}<br/>
-              <strong style={{ color: '#333' }}>Al mabelah saniyah, Seeb 102, Oman</strong>
-            </p>
-            <p style={{ fontSize: '14px', color: '#666', marginBottom: '10px' }}>
-              {isAr ? ': عنوان البريد الإلكتروني' : 'Email:'}<br/>
-              <strong style={{ color: '#333' }}>info@alrayyanwater.com</strong>
-            </p>
-          </div>
+      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 20px', textAlign: 'center' }}>
+        {/* Logo */}
+        <img
+          src="/rayyan-site/assets/img/logo-white-ar.svg"
+          alt="مياه أبراج"
+          style={{ height: '70px', marginBottom: '20px' }}
+        />
 
-          {/* Logo + tagline */}
-          <div style={{ textAlign: 'center' }}>
-            <img
-              src="/rayyan-site/images/arw-al-rayyan-logo123123.pdf-5.png"
-              alt="الريان"
-              style={{ height: '60px', marginBottom: '15px' }}
-            />
-            <p style={{ fontSize: '14px', color: '#666', lineHeight: '1.8' }}>
-              {isAr
-                ? 'نؤكد لكم التزامنا الثابت بتقديم جودة ونقاء استثنائيين في كل قطرة.'
-                : 'We assure you of our steadfast commitment to delivering exceptional quality and purity in every drop.'}
-            </p>
-          </div>
+        {/* Social Media Icons */}
+        <div style={{ display: 'flex', justifyContent: 'center', gap: '12px', marginBottom: '25px' }}>
+          <a href="#" style={{
+            width: '40px', height: '40px', borderRadius: '50%', border: '1px solid rgba(255,255,255,0.3)',
+            display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', textDecoration: 'none', fontSize: '18px',
+          }}>
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+          </a>
+          <a href="#" style={{
+            width: '40px', height: '40px', borderRadius: '50%', border: '1px solid rgba(255,255,255,0.3)',
+            display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', textDecoration: 'none', fontSize: '18px',
+          }}>
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="#" style={{
+            width: '40px', height: '40px', borderRadius: '50%', border: '1px solid rgba(255,255,255,0.3)',
+            display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', textDecoration: 'none', fontSize: '18px',
+          }}>
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </a>
+          <a href="#" style={{
+            width: '40px', height: '40px', borderRadius: '50%', border: '1px solid rgba(255,255,255,0.3)',
+            display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', textDecoration: 'none', fontSize: '18px',
+          }}>
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z"/><path fill="#1a2744" d="M9.545 15.568V8.432L15.818 12z"/></svg>
+          </a>
+        </div>
+
+        {/* Footer Links */}
+        <div style={{ display: 'flex', justifyContent: 'center', gap: '20px', flexWrap: 'wrap', marginBottom: '20px' }}>
+          <a href="/store" style={{ color: 'rgba(255,255,255,0.8)', textDecoration: 'none', fontSize: '14px' }}>
+            {isAr ? 'الصفحة الرئيسية' : 'Home'}
+          </a>
+          <a href="/store" style={{ color: 'rgba(255,255,255,0.8)', textDecoration: 'none', fontSize: '14px' }}>
+            {isAr ? 'من نحن' : 'About Us'}
+          </a>
+          <a href="/store" style={{ color: 'rgba(255,255,255,0.8)', textDecoration: 'none', fontSize: '14px' }}>
+            {isAr ? 'المنتجات' : 'Products'}
+          </a>
+          <a href="/store" style={{ color: 'rgba(255,255,255,0.8)', textDecoration: 'none', fontSize: '14px' }}>
+            {isAr ? 'اتصل بنا' : 'Contact Us'}
+          </a>
         </div>
 
         {/* Copyright */}
-        <div style={{ textAlign: 'center', paddingTop: '20px', marginTop: '30px', borderTop: '1px solid #eee' }}>
-          <p style={{ fontSize: '13px', color: '#999', margin: 0 }}>
-            Copyright &copy; 2026 - Al RAYYAN by WIDEWEB
+        <div style={{ paddingTop: '20px', borderTop: '1px solid rgba(255,255,255,0.15)' }}>
+          <p style={{ fontSize: '13px', color: 'rgba(255,255,255,0.6)', margin: 0 }}>
+            {isAr
+              ? '© 2026 مياه أبراج الكويت. جميع الحقوق محفوظة.'
+              : '© 2026 Abraaj Water Kuwait. All rights reserved.'}
           </p>
         </div>
       </div>
