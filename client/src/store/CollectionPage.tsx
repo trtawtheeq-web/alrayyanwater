@@ -9,25 +9,10 @@ import CartDrawer from './CartDrawer';
 
 const categoryInfo: Record<string, { titleAr: string; titleEn: string }> = {
   all: { titleAr: 'جميع المنتجات', titleEn: 'All Products' },
-  yogurt: { titleAr: 'زبادي', titleEn: 'Yogurt' },
-  milk: { titleAr: 'حليب', titleEn: 'Milk' },
-  laban: { titleAr: 'لبن', titleEn: 'Laban' },
-  juice: { titleAr: 'عصائر', titleEn: 'Juice' },
-  chicken: { titleAr: 'دجاج', titleEn: 'Chicken' },
-  cheese: { titleAr: 'أجبان', titleEn: 'Cheese' },
-  eggs: { titleAr: 'بيض', titleEn: 'Eggs' },
-  butter: { titleAr: 'زبدة', titleEn: 'Butter' },
-  ghee: { titleAr: 'سمنة', titleEn: 'Ghee' },
-  labneh: { titleAr: 'لبنة', titleEn: 'Labneh' },
-  desserts: { titleAr: 'حلويات', titleEn: 'Desserts' },
-  vegetables: { titleAr: 'خضار', titleEn: 'Vegetables' },
-  fruits: { titleAr: 'فواكه', titleEn: 'Fruits' },
-  herbs: { titleAr: 'أعشاب', titleEn: 'Herbs' },
-  water: { titleAr: 'مياه معدنية', titleEn: 'Mineral Water' },
-  'milk-powder': { titleAr: 'حليب مجفف', titleEn: 'Milk Powder' },
-  kefir: { titleAr: 'كفير', titleEn: 'Kefir' },
-  'greek-yogurt': { titleAr: 'زبادي يوناني', titleEn: 'Greek Yogurt' },
-  'high-protein': { titleAr: 'بروتين عالي', titleEn: 'High Protein' },
+  'عرض خاص': { titleAr: 'عرض خاص ولفترة محدودة', titleEn: 'Special Offers' },
+  'عبوات': { titleAr: 'عبوات', titleEn: 'Bottles' },
+  'جالونات': { titleAr: 'جالونات', titleEn: 'Gallons' },
+  'الثلج والأكواب': { titleAr: 'الثلج والأكواب', titleEn: 'Ice & Cups' },
 };
 
 type SortOption = 'featured' | 'price-asc' | 'price-desc' | 'name-asc' | 'name-desc';
