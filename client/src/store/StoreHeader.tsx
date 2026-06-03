@@ -1,10 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useStore } from './StoreContext';
+import { useLang } from './LanguageContext';
 
 export default function StoreHeader() {
   const [headerHeight, setHeaderHeight] = useState(140);
   const iframeRef = useRef<HTMLIFrameElement>(null);
   const { getCartCount } = useStore();
+  const { toggleLang } = useLang();
   const cartCount = getCartCount();
 
   useEffect(() => {
@@ -12,10 +14,13 @@ export default function StoreHeader() {
       if (event.data && event.data.type === 'header-height') {
         setHeaderHeight(event.data.height);
       }
+      if (event.data && event.data.type === 'toggle-lang') {
+        toggleLang();
+      }
     };
     window.addEventListener('message', handleMessage);
     return () => window.removeEventListener('message', handleMessage);
-  }, []);
+  }, [toggleLang]);
 
   // Send cart count to iframe whenever it changes
   useEffect(() => {
