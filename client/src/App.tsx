@@ -204,7 +204,7 @@ function App() {
           <Toaster />
           <ScrollToTop />
           <PageTitleUpdater />
-          <AmerChat />
+          {/* <AmerChat /> */}
           {/* <RamadanPopup /> */}
           <LanguageProvider>
             <StoreProvider>
