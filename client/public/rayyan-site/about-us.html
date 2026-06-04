@@ -87,17 +87,22 @@
     }
     @media (max-width: 991px) {
       .navbar-inner {
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
+      }
+      .lang-btn {
+        order: -1;
+        padding: 4px 10px;
+        font-size: 12px;
+        margin-left: 8px;
       }
       .nav-menu {
-        width: 100%;
         overflow-x: auto;
         justify-content: flex-start;
         padding: 0;
       }
       .nav-menu li a {
         padding: 12px 8px;
-        font-size: 13px;
+        font-size: 12px;
       }
     }
   </style>
