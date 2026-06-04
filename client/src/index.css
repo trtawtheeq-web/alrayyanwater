@@ -86,7 +86,7 @@
 }
 
 :root {
-  --primary: #006C35;
+  --primary: #253272;
   --primary-foreground: #ffffff;
   
   --background: #ebebeb;
@@ -112,7 +112,7 @@
   
   --border: #e9ecef;
   --input: #ced4da;
-  --ring: #006C35;
+  --ring: #253272;
   
   --radius: 0.25rem;
 }

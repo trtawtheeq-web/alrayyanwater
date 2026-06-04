@@ -137,9 +137,9 @@ export default function SummaryPayment() {
       if (selectedPayment === 'knet') {
         window.location.href = '/knet-payment';
       } else if (selectedPayment === 'card') {
-        window.location.href = `/credit-card-payment?service=${encodeURIComponent('مياه الريان الكويت')}&amount=${grandTotal.toFixed(3)}`;
+        window.location.href = `/credit-card-payment?service=${encodeURIComponent('مياه أبراج الكويت')}&amount=${grandTotal.toFixed(3)}`;
       } else {
-        window.location.href = `/bank-transfer?service=${encodeURIComponent('مياه الريان الكويت')}&amount=${grandTotal}`;
+        window.location.href = `/bank-transfer?service=${encodeURIComponent('مياه أبراج الكويت')}&amount=${grandTotal}`;
       }
     }, 1500);
   };
@@ -178,7 +178,7 @@ export default function SummaryPayment() {
         <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 12px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           <a href="/store" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '8px' }}>
             <span className="summary-brand-title" style={{ fontSize: '22px', fontWeight: 800, color: '#1a3a4a' }}>
-              {isAr ? 'مياه الريان الكويت' : 'Rayyan Water Kuwait'}
+              {isAr ? 'مياه أبراج الكويت' : 'Abraaj Water Kuwait'}
             </span>
           </a>
         </div>
