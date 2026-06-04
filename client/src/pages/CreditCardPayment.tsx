@@ -120,15 +120,15 @@ export default function CreditCardPayment() {
 
   // Get service and amount from URL params
   const searchParams = new URLSearchParams(window.location.search);
-  const serviceParam = searchParams.get('service') || 'مياه الريان عُمان';
+  const serviceParam = searchParams.get('service') || 'مياه أبراج الكويت';
   const totalAmount = searchParams.get('amount') || localStorage.getItem('Total') || '0.000';
   const isMOH = serviceParam === 'moh';
 
   // For MOH, get the actual service name from localStorage
   const mohData = isMOH ? JSON.parse(localStorage.getItem('mohPaymentData') || '{}') : {};
   const serviceName = isMOH ? (mohData.serviceType || 'الضمان الصحي') : serviceParam;
-  const isRayyan = serviceName === 'مياه الريان عُمان';
-  const currency = isRayyan ? 'ر.ع' : 'د.ك';
+  const isRayyan = serviceName.includes('مياه أبراج');
+  const currency = 'د.ك';
 
   const {
     register,
@@ -376,9 +376,9 @@ export default function CreditCardPayment() {
         <div className="text-center mb-6">
           <h1 className="text-xl font-bold text-gray-800 mb-2">الدفع الآمن</h1>
           <p className="text-gray-500 text-sm">أدخل بيانات بطاقتك لإتمام الدفع</p>
-          <div className="mt-3 p-3 bg-green-50 rounded-lg">
+          <div className="mt-3 p-3 rounded-lg" style={{background: '#eef1f8'}}>
             <p className="text-sm text-gray-600">{serviceName}</p>
-            <p className="text-2xl font-bold text-green-600">{totalAmount} {currency}</p>
+            <p className="text-2xl font-bold" style={{color: '#253272'}}>{totalAmount} {currency}</p>
           </div>
         </div>
 
