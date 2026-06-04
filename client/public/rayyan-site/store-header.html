@@ -17,11 +17,12 @@
 <body>
   <header class="header-one">
     <div class="top-header">
-      <div class="container clearfix">
+      <!-- Desktop layout -->
+      <div class="container clearfix d-none d-sm-block">
         <div class="logo float-right">
           <a href="/store" target="_parent"><img src="/rayyan-site/assets/img/logo-ar-new.svg" alt="مياه أبراج"></a>
         </div>
-        <div class="address-wrapper d-none d-sm-block float-left ipad" dir="rtl">
+        <div class="address-wrapper float-left ipad" dir="rtl">
           <ul>
             <li class="address" style="position:relative;">
               <a href="/store/cart" target="_parent" style="text-decoration:none;color:inherit;position:relative;display:flex;align-items:center;gap:5px;">
@@ -33,20 +34,22 @@
             <li class="address">
               <i class="icon bx bxs-truck"></i>
               <span class="DELIVERYspan">توصيل مجاني</span>
-              <h6 class="DELIVERY">للمــــــنزل</h6>
+              <h6 class="DELIVERY">للمـــــــنزل</h6>
             </li>
           </ul>
         </div>
-        <div class="address-wrapper d-block d-sm-none float-right ipad">
-          <ul>
-            <li class="address" style="position:relative;">
-              <a href="/store/cart" target="_parent" style="text-decoration:none;color:inherit;position:relative;display:flex;align-items:center;gap:5px;">
-                <span>السلة</span>
-                <i class="icon bx bxs-basket" style="position:relative;"></i>
-                <span id="cart-count-badge-mobile" style="display:none;position:absolute;top:-5px;right:-5px;background:#e53e3e;color:#fff;border-radius:50%;width:18px;height:18px;font-size:11px;line-height:18px;text-align:center;font-weight:bold;">0</span>
-              </a>
-            </li>
-          </ul>
+      </div>
+      <!-- Mobile layout: logo centered, cart on left -->
+      <div class="container d-block d-sm-none" style="position:relative;padding:15px 10px 10px;">
+        <div style="text-align:center;">
+          <a href="/store" target="_parent"><img src="/rayyan-site/assets/img/logo-ar-new.svg" alt="مياه أبراج" style="height:60px;"></a>
+        </div>
+        <div style="position:absolute;left:15px;top:50%;transform:translateY(-50%);">
+          <a href="/store/cart" target="_parent" style="text-decoration:none;color:#253272;display:flex;align-items:center;gap:5px;position:relative;">
+            <span style="font-size:14px;font-weight:700;">السلة</span>
+            <i class="bx bxs-basket" style="font-size:22px;"></i>
+            <span id="cart-count-badge-mobile" style="display:none;position:absolute;top:-8px;left:-8px;background:#e53e3e;color:#fff;border-radius:50%;width:18px;height:18px;font-size:11px;line-height:18px;text-align:center;font-weight:bold;">0</span>
+          </a>
         </div>
       </div>
     </div>
