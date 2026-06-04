@@ -22,7 +22,7 @@ export default function SearchPage() {
     <div dir={dir} className="min-h-screen bg-gray-50">
       <StoreHeader />
 
-      <div className="max-w-7xl mx-auto px-4 py-8">
+      <div className="max-w-7xl mx-auto px-2 sm:px-4 py-4 sm:py-8">
         <h1 className="text-xl font-bold text-gray-900 mb-2">
           {t('search.resultsFor')} "{query}"
         </h1>
@@ -31,7 +31,7 @@ export default function SearchPage() {
         </p>
 
         {results.length > 0 ? (
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-3 md:gap-4">
             {results.map(product => (
               <ProductCard key={product.id} product={product} />
             ))}
