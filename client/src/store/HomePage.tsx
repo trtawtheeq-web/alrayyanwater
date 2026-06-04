@@ -14,7 +14,7 @@ export default function HomePage() {
           top: 0,
           left: 0,
         }}
-        title="Rayyan Water"
+        title="Abraaj Water"
       />
       <DiscountPopup />
     </div>

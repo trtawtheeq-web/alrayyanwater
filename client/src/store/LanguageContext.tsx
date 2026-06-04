@@ -33,7 +33,7 @@ const translations: Record<string, Record<Lang, string>> = {
   },
   'store.description': {
     ar: 'تسوق مياه أبراج النقية بأحجام مختلفة. توصيل سريع في الكويت.',
-    en: 'Shop Rayyan pure natural water in different sizes. Fast delivery in Oman.',
+    en: 'Shop Abraaj pure natural water in different sizes. Fast delivery in Kuwait.',
   },
   'store.viewAs': { ar: 'عرض كـ', en: 'VIEW AS' },
   'store.show': { ar: 'عرض', en: 'SHOW' },
@@ -80,14 +80,14 @@ const translations: Record<string, Record<Lang, string>> = {
   'footer.brandName': { ar: 'مياه أبراج الكويت', en: 'Abraaj Water Kuwait' },
   'footer.about': {
     ar: 'أبراج - مياه شرب نقية لحياة صحية أفضل. نوفر لك أجود أنواع المياه النقية في الكويت.',
-    en: "Rayyan - Pure natural water for a healthier life. We provide the finest natural water in Oman.",
+    en: "Abraaj - Pure natural water for a healthier life. We provide the finest natural water in Kuwait.",
   },
   'footer.quickLinks': { ar: 'روابط سريعة', en: 'Quick Links' },
   'footer.categories': { ar: 'التصنيفات', en: 'Categories' },
   'footer.contactUs': { ar: 'تواصل معنا', en: 'Contact Us' },
   'footer.copyright': {
     ar: '© {year} مياه أبراج الكويت. جميع الحقوق محفوظة.',
-    en: '© {year} Rayyan Water Oman. All rights reserved.',
+    en: '© {year} Abraaj Water Kuwait. All rights reserved.',
   },
   'footer.paymentMethods': { ar: 'طرق الدفع', en: 'Payment Methods' },
 };
