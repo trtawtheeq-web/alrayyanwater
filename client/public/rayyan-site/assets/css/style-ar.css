@@ -253,16 +253,15 @@ border: 2px solid #000;
   margin-bottom: -42px;
 }
 
-/* Hide slimmenu collapser on desktop */
+/* Hide slimmenu collapser on desktop - !important overrides jQuery .show() inline style */
 .menu-collapser {
-  display: none;
+  display: none !important;
 }
 @media (max-width: 991px) {
   .menu-collapser {
-    display: block;
+    display: block !important;
   }
 }
-
 .header-one .theme-menu-wrapper .bg-wrapper {
   background: #253272;
   position: relative;

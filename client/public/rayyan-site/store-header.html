@@ -7,14 +7,87 @@
   <link href="/rayyan-site/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="/rayyan-site/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="/rayyan-site/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="/rayyan-site/assets/css/style-ar.css" rel="stylesheet">
-  <link href="/rayyan-site/assets/vendor/menu/css/slimmenu.css" rel="stylesheet">
   <style>
-    body { margin: 0; padding: 0; overflow: hidden; }
+    body { margin: 0; padding: 0; overflow: hidden; font-family: "Tajawal", sans-serif; }
     html { overflow: hidden; }
 
-    /* Mobile header layout */
+    /* Top header */
+    .top-header { padding: 15px 0; background: #fff; }
+    .top-header .container { max-width: 1200px; margin: 0 auto; padding: 0 15px; }
+    .logo img { height: 70px; }
+    .address-wrapper ul { list-style: none; margin: 0; padding: 0; display: flex; align-items: center; gap: 20px; }
+    .address-wrapper ul li { display: flex; align-items: center; gap: 5px; font-size: 14px; color: #333; }
+    .address-wrapper ul li i { font-size: 32px; color: #999; }
+    .address-wrapper ul li .DELIVERYspan { font-size: 14px; font-weight: 700; }
+    .address-wrapper ul li h6 { margin: 0; font-size: 12px; color: #666; }
+
+    /* Navy navbar */
+    .navbar-wrapper {
+      background: #253272;
+      padding: 0 25px;
+    }
+    .navbar-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-menu {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      direction: rtl;
+    }
+    .nav-menu li a {
+      display: block;
+      color: #fff;
+      text-decoration: none;
+      padding: 18px 14px;
+      font-size: 15px;
+      font-weight: 500;
+      font-family: "Tajawal", sans-serif;
+      white-space: nowrap;
+    }
+    .nav-menu li a:hover {
+      color: #ccc;
+    }
+    .nav-menu li + li a::before {
+      content: "/";
+      margin-left: 8px;
+      color: rgba(255,255,255,0.5);
+    }
+    .lang-btn {
+      background-color: #fff;
+      border: 2px solid #fff;
+      color: #253272;
+      border-radius: 50px;
+      padding: 5px 12px;
+      font-family: "Tajawal", sans-serif;
+      font-size: 15px;
+      font-weight: 800;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .lang-btn:hover {
+      background-color: transparent;
+      border: 2px solid #fff;
+      color: #fff;
+    }
+
+    /* Desktop layout */
+    .desktop-header { display: block; }
+    .mobile-header { display: none; }
+    .float-right { float: right; }
+    .float-left { float: left; }
+    .clearfix::after { content: ""; display: table; clear: both; }
+
+    /* Mobile layout */
     @media (max-width: 575px) {
+      .desktop-header { display: none; }
+      .mobile-header { display: block; }
       .mobile-top-header {
         position: relative;
         padding: 12px 15px;
@@ -45,27 +118,55 @@
       .mobile-top-header .mobile-cart a i {
         font-size: 22px;
       }
+      .navbar-wrapper {
+        padding: 0 10px;
+      }
+      .navbar-inner {
+        height: 44px;
+      }
+      .nav-menu li a {
+        padding: 10px 6px;
+        font-size: 12px;
+      }
+      .lang-btn {
+        font-size: 12px;
+        padding: 3px 8px;
+      }
+    }
+
+    @media (min-width: 576px) and (max-width: 991px) {
+      .navbar-wrapper {
+        padding: 0 15px;
+      }
+      .nav-menu li a {
+        padding: 15px 8px;
+        font-size: 13px;
+      }
+      .lang-btn {
+        font-size: 13px;
+        padding: 4px 8px;
+      }
     }
   </style>
 </head>
 <body>
-  <header class="header-one">
+  <!-- Desktop layout -->
+  <div class="desktop-header">
     <div class="top-header">
-      <!-- Desktop layout (hidden on mobile) -->
-      <div class="container clearfix d-none d-sm-block">
+      <div class="container clearfix">
         <div class="logo float-right">
           <a href="/store" target="_parent"><img src="/rayyan-site/assets/img/logo-ar-new.svg" alt="مياه أبراج"></a>
         </div>
-        <div class="address-wrapper float-left ipad" dir="rtl">
+        <div class="address-wrapper float-left" dir="rtl">
           <ul>
-            <li class="address" style="position:relative;">
+            <li style="position:relative;">
               <a href="/store/cart" target="_parent" style="text-decoration:none;color:inherit;position:relative;display:flex;align-items:center;gap:5px;">
                 <span>السلة</span>
                 <i class="icon bx bxs-basket" style="position:relative;"></i>
                 <span id="cart-count-badge" style="display:none;position:absolute;top:-5px;right:-5px;background:#e53e3e;color:#fff;border-radius:50%;width:18px;height:18px;font-size:11px;line-height:18px;text-align:center;font-weight:bold;">0</span>
               </a>
             </li>
-            <li class="address">
+            <li>
               <i class="icon bx bxs-truck"></i>
               <span class="DELIVERYspan">توصيل مجاني</span>
               <h6 class="DELIVERY">للمــــــنزل</h6>
@@ -73,137 +174,116 @@
           </ul>
         </div>
       </div>
-      <!-- Mobile layout (hidden on desktop): logo centered, cart on LEFT -->
-      <div class="d-block d-sm-none mobile-top-header">
-        <div class="mobile-logo">
-          <a href="/store" target="_parent"><img src="/rayyan-site/assets/img/logo-ar-new.svg" alt="مياه أبراج"></a>
-        </div>
-        <div class="mobile-cart">
-          <a href="/store/cart" target="_parent">
-            <span>السلة</span>
-            <span style="position:relative;display:inline-flex;">
-              <i class="bx bxs-basket"></i>
-              <span id="cart-count-badge-mobile" style="display:none;position:absolute;top:-8px;right:-8px;background:#e53e3e;color:#fff;border-radius:50%;width:18px;height:18px;font-size:11px;line-height:18px;text-align:center;font-weight:bold;">0</span>
-            </span>
-          </a>
-        </div>
+    </div>
+    <div class="navbar-wrapper">
+      <div class="navbar-inner">
+        <ul class="nav-menu">
+          <li><a href="/" target="_parent">الصفحة الرئيسية</a></li>
+          <li><a href="/store" target="_parent">من نحن</a></li>
+          <li><a href="/store" target="_parent">المنتجات</a></li>
+          <li><a href="/store" target="_parent">اطلب اون لاين</a></li>
+          <li><a href="/store" target="_parent">جولة في المصنع</a></li>
+          <li><a href="/store" target="_parent">الفعاليات</a></li>
+          <li><a href="/store" target="_parent">اتصل بنا</a></li>
+        </ul>
+        <a href="#" id="lang-toggle" class="lang-btn">English</a>
       </div>
     </div>
+  </div>
 
-    <div class="theme-menu-wrapper fixed">
-      <div class="container">
-        <div class="bg-wrapper clearfix">
-          <div class="menu-wrapper float-right" dir="rtl">
-            <nav id="mega-menu-holder" class="clearfix">
-              <ul class="clearfix">
-                <li class="active"><a href="/" target="_parent">الصفحة الرئيسية</a></li>
-                <li><a href="/store" target="_parent">من نحن</a></li>
-                <li><a href="/store" target="_parent">المنتجات</a></li>
-                <li><a href="/store" target="_parent">اطلب اون لاين</a></li>
-                <li><a href="/store" target="_parent">جولة في المصنع</a></li>
-                <li><a href="/store" target="_parent">الفعاليات</a></li>
-                <li><a href="/store" target="_parent">اتصل بنا</a></li>
-              </ul>
-            </nav>
-          </div>
-          <div class="right-widget float-left">
-            <ul>
-              <li class="language-icon">
-                <a href="#" id="lang-toggle">English</a>
-              </li>
-            </ul>
-          </div>
-        </div>
+  <!-- Mobile layout: logo centered, cart on LEFT -->
+  <div class="mobile-header">
+    <div class="mobile-top-header">
+      <div class="mobile-logo">
+        <a href="/store" target="_parent"><img src="/rayyan-site/assets/img/logo-ar-new.svg" alt="مياه أبراج"></a>
+      </div>
+      <div class="mobile-cart">
+        <a href="/store/cart" target="_parent">
+          <span>السلة</span>
+          <span style="position:relative;display:inline-flex;">
+            <i class="bx bxs-basket"></i>
+            <span id="cart-count-badge-mobile" style="display:none;position:absolute;top:-8px;right:-8px;background:#e53e3e;color:#fff;border-radius:50%;width:18px;height:18px;font-size:11px;line-height:18px;text-align:center;font-weight:bold;">0</span>
+          </span>
+        </a>
       </div>
     </div>
-  </header>
+    <div class="navbar-wrapper">
+      <div class="navbar-inner">
+        <ul class="nav-menu">
+          <li><a href="/" target="_parent">الصفحة الرئيسية</a></li>
+          <li><a href="/store" target="_parent">من نحن</a></li>
+          <li><a href="/store" target="_parent">المنتجات</a></li>
+          <li><a href="/store" target="_parent">اطلب اون لاين</a></li>
+          <li><a href="/store" target="_parent">جولة في المصنع</a></li>
+          <li><a href="/store" target="_parent">الفعاليات</a></li>
+          <li><a href="/store" target="_parent">اتصل بنا</a></li>
+        </ul>
+        <a href="#" id="lang-toggle-mobile" class="lang-btn">English</a>
+      </div>
+    </div>
+  </div>
 
   <script src="/rayyan-site/assets/vendor/jquery.2.2.3.min.js"></script>
   <script src="/rayyan-site/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="/rayyan-site/assets/vendor/menu/src/js/jquery.slimmenu.js"></script>
+  <!-- NO slimmenu - not needed for store header, it was causing the compressed navbar -->
   <script>
     $(document).ready(function() {
-      $("#mega-menu-holder").slimmenu({
-        resizeWidth: '991',
-        animSpeed: 'medium',
-        indentChildren: true,
-      });
-    });
-
-    // Language toggle
-    document.getElementById('lang-toggle').addEventListener('click', function(e) {
-      e.preventDefault();
-      window.parent.postMessage({ type: 'toggle-lang' }, '*');
-      // Toggle button text
-      var btn = document.getElementById('lang-toggle');
-      if (btn.textContent.trim() === 'English') {
-        btn.textContent = 'عربي';
-      } else {
-        btn.textContent = 'English';
+      // Language toggle
+      function handleLangToggle(e) {
+        e.preventDefault();
+        window.parent.postMessage({ type: 'toggle-lang' }, '*');
       }
-    });
+      document.getElementById('lang-toggle').addEventListener('click', handleLangToggle);
+      var langMobile = document.getElementById('lang-toggle-mobile');
+      if (langMobile) langMobile.addEventListener('click', handleLangToggle);
 
-    // Listen for lang update from parent to sync button text
-    window.addEventListener('message', function(event) {
-      if (event.data && event.data.type === 'lang-update') {
-        var btn = document.getElementById('lang-toggle');
-        if (event.data.lang === 'ar') {
-          btn.textContent = 'English';
-        } else {
-          btn.textContent = 'عربي';
+      // Listen for messages from parent
+      window.addEventListener('message', function(event) {
+        if (event.data && event.data.type === 'lang-update') {
+          var text = event.data.lang === 'ar' ? 'English' : 'عربي';
+          document.getElementById('lang-toggle').textContent = text;
+          if (langMobile) langMobile.textContent = text;
         }
-      }
-    });
-
-    // Communicate height to parent
-    function sendHeight() {
-      var height = document.body.scrollHeight;
-      window.parent.postMessage({ type: 'header-height', height: height }, '*');
-    }
-    window.addEventListener('load', sendHeight);
-    window.addEventListener('resize', sendHeight);
-    setTimeout(sendHeight, 100);
-    setTimeout(sendHeight, 500);
-
-    // Listen for cart count updates from parent React app
-    window.addEventListener('message', function(event) {
-      if (event.data && event.data.type === 'lang-update') {
-        var btn = document.getElementById('lang-toggle');
-        if (event.data.lang === 'ar') {
-          btn.textContent = 'English';
-        } else {
-          btn.textContent = 'عربي';
-        }
-      }
-      if (event.data && event.data.type === 'cart-count') {
-        var count = event.data.count || 0;
-        var badge = document.getElementById('cart-count-badge');
-        var badgeMobile = document.getElementById('cart-count-badge-mobile');
-        if (badge) {
-          badge.textContent = count;
-          badge.style.display = count > 0 ? 'block' : 'none';
-        }
-        if (badgeMobile) {
-          badgeMobile.textContent = count;
-          badgeMobile.style.display = count > 0 ? 'block' : 'none';
-        }
-      }
-    });
-
-    // Also read cart from localStorage on load
-    try {
-      var savedCart = localStorage.getItem('rayyan-cart');
-      if (savedCart) {
-        var cartItems = JSON.parse(savedCart);
-        var totalCount = cartItems.reduce(function(sum, item) { return sum + (item.quantity || 1); }, 0);
-        if (totalCount > 0) {
+        if (event.data && event.data.type === 'cart-count') {
+          var count = event.data.count || 0;
           var badge = document.getElementById('cart-count-badge');
           var badgeMobile = document.getElementById('cart-count-badge-mobile');
-          if (badge) { badge.textContent = totalCount; badge.style.display = 'block'; }
-          if (badgeMobile) { badgeMobile.textContent = totalCount; badgeMobile.style.display = 'block'; }
+          if (badge) {
+            badge.textContent = count;
+            badge.style.display = count > 0 ? 'block' : 'none';
+          }
+          if (badgeMobile) {
+            badgeMobile.textContent = count;
+            badgeMobile.style.display = count > 0 ? 'block' : 'none';
+          }
         }
+      });
+
+      // Read cart from localStorage on load
+      try {
+        var savedCart = localStorage.getItem('rayyan-cart');
+        if (savedCart) {
+          var cartItems = JSON.parse(savedCart);
+          var totalCount = cartItems.reduce(function(sum, item) { return sum + (item.quantity || 1); }, 0);
+          if (totalCount > 0) {
+            var badge = document.getElementById('cart-count-badge');
+            var badgeMobile = document.getElementById('cart-count-badge-mobile');
+            if (badge) { badge.textContent = totalCount; badge.style.display = 'block'; }
+            if (badgeMobile) { badgeMobile.textContent = totalCount; badgeMobile.style.display = 'block'; }
+          }
+        }
+      } catch(e) {}
+
+      // Communicate height to parent
+      function sendHeight() {
+        var height = document.body.scrollHeight;
+        window.parent.postMessage({ type: 'header-height', height: height }, '*');
       }
-    } catch(e) {}
+      window.addEventListener('load', sendHeight);
+      window.addEventListener('resize', sendHeight);
+      setTimeout(sendHeight, 100);
+      setTimeout(sendHeight, 500);
+    });
   </script>
 </body>
 </html>
