@@ -76,6 +76,14 @@
       background-color: #253272;
       color: #fff;
     }
+    /* Override style-ar.css: remove hero negative top that overlaps navbar */
+    #hero {
+      top: 0 !important;
+    }
+    /* Kill any leftover theme-menu-wrapper styles from style-ar.css */
+    .header-one .theme-menu-wrapper {
+      display: none !important;
+    }
     @media (max-width: 991px) {
       .nav-menu { display: none; }
     }
