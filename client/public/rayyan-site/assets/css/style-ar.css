@@ -268,6 +268,9 @@ border: 2px solid #000;
   background: #253272;
   position: relative;
   padding-left: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .language-icon {
@@ -282,11 +285,10 @@ border: 2px solid #000;
   border: 2px solid #fff;
   color:#253272;
   border-radius: 50px;
-  padding: 5px;
+  padding: 5px 10px;
   display: block;
-  padding: 5px 10px 5px 10px;
   margin-left: 15px;
-  margin-top: 20px;
+  margin-top: 0;
   font-family: "Tajawal", sans-serif;
   font-size: 17px;
   font-weight: 800;
