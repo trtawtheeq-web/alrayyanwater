@@ -81,7 +81,7 @@
 
 // ------------------------------ Theme Menu 
 var menu= $("#mega-menu-holder");
-  if(menu.length) {
+  if(menu.length && typeof menu.slimmenu === 'function') {
     menu.slimmenu({
       resizeWidth: '991',
       animSpeed:'medium',
