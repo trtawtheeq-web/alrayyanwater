@@ -22,6 +22,20 @@
 
   <!-- Template Main CSS File -->
   <link href="/rayyan-site/assets/css/style-ar.css" rel="stylesheet">
+  <style>
+    /* Nav items display - replaces slimmenu.css rules */
+    #mega-menu-holder { width: auto; margin: 0; padding: 0; list-style-type: none; }
+    #mega-menu-holder li { position: relative; display: inline-block; vertical-align: middle; }
+    #mega-menu-holder > ul > li > a { position: relative; padding: 20px 12px; display: block; font-weight: 700; font-size: 15px; color: #a3b0cc; transition: all .3s linear; text-decoration: none; }
+    #mega-menu-holder > ul > li > a:before { content: '/'; line-height: 60px; position: absolute; right: 0; top: 0; color: #a3b0cc; }
+    #mega-menu-holder > ul > li:last-child > a:before { display: inline !important; }
+    #mega-menu-holder > ul > li:first-child > a:before { display: none !important; }
+    #mega-menu-holder > ul > li.active > a,
+    #mega-menu-holder > ul > li:hover > a { color: #fff; }
+    @media (max-width: 991px) {
+      #mega-menu-holder { display: none; }
+    }
+  </style>
 </head>
 
 <body>
