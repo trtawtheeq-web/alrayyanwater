@@ -49,13 +49,14 @@ export default function SummaryPayment() {
     }
   };
 
-  // Phone validation (Kuwait: 8 digits starting with 5/6/9, or full with +965)
+  // Phone validation (Kuwait: 8 digits starting with 5/6/9, or +965 followed by 8 digits)
   const validatePhone = (val: string) => {
     if (!val) { setPhoneError(''); return; }
-    const cleaned = val.replace(/[\s\-\+]/g, '');
-    const phoneRegex = /^\+?[0-9\s\-()]{6,20}$/;
-    if (!phoneRegex.test(cleaned)) {
-      setPhoneError(isAr ? 'يرجى إدخال رقم هاتف كويتي صحيح' : 'Please enter a valid Kuwait phone number');
+    const cleaned = val.replace(/[\s\-()]/g, '');
+    // Accept: 5xxxxxxx, 6xxxxxxx, 9xxxxxxx, +9655xxxxxxx, +9656xxxxxxx, +9659xxxxxxx, 9655xxxxxxx, 9656xxxxxxx, 9659xxxxxxx
+    const kuwaitRegex = /^(\+?965)?[569]\d{7}$/;
+    if (!kuwaitRegex.test(cleaned)) {
+      setPhoneError(isAr ? 'يرجى إدخال رقم هاتف كويتي صحيح (8 أرقام يبدأ بـ 5 أو 6 أو 9)' : 'Please enter a valid Kuwait phone number (8 digits starting with 5, 6, or 9)');
     } else {
       setPhoneError('');
     }
@@ -304,7 +305,7 @@ export default function SummaryPayment() {
               value={phone}
               onChange={e => { setPhone(e.target.value); if (phoneError) validatePhone(e.target.value); }}
               onBlur={e => validatePhone(e.target.value)}
-              placeholder={isAr ? 'الهاتف' : 'Phone'}
+              placeholder={isAr ? 'الهاتف (مثال: 5xxxxxxx)' : 'Phone (e.g. 5xxxxxxx)'}
               type="tel"
               style={{
                 width: '100%', padding: '14px 16px', border: `1px solid ${phoneError ? '#e53935' : '#ccc'}`, borderRadius: '6px',
