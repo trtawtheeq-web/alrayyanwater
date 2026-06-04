@@ -23,39 +23,61 @@
   <!-- Template Main CSS File -->
   <link href="/rayyan-site/assets/css/style-ar.css" rel="stylesheet">
   <style>
-    /* Fix navbar: single fixed bar, no duplication */
-    .header-one .theme-menu-wrapper {
-      position: fixed !important;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 9999;
-      margin-bottom: 0 !important;
-      background: none !important;
-      padding: 0 !important;
+    /* Navbar - same as store-header.html */
+    .navbar-wrapper {
+      background: #253272;
+      padding: 0 25px;
     }
-    .header-one .theme-menu-wrapper .bg-wrapper {
-      display: flex !important;
+    .navbar-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
       align-items: center;
       justify-content: space-between;
-      background: #253272 !important;
-      padding: 0 25px !important;
-      overflow: visible !important;
-      height: 56px;
     }
-    .menu-wrapper { float: none !important; }
-    .right-widget { float: none !important; }
-    #mega-menu-holder { width: auto; margin: 0; padding: 0; list-style-type: none; }
-    #mega-menu-holder ul { margin: 0; padding: 0; list-style: none; display: flex; align-items: center; }
-    #mega-menu-holder li { position: relative; display: inline-block; vertical-align: middle; }
-    #mega-menu-holder > ul > li > a { padding: 16px 12px; display: block; font-weight: 700; font-size: 15px; color: #a3b0cc; transition: all .3s linear; text-decoration: none; white-space: nowrap; }
-    #mega-menu-holder > ul > li > a:before { content: '/'; margin-left: 8px; color: rgba(255,255,255,0.4); }
-    #mega-menu-holder > ul > li:first-child > a:before { display: none; }
-    #mega-menu-holder > ul > li.active > a,
-    #mega-menu-holder > ul > li:hover > a { color: #fff; }
-    .header-one .top-header { padding-top: 10px; }
+    .nav-menu {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+    }
+    .nav-menu li a {
+      display: block;
+      color: #fff;
+      text-decoration: none;
+      padding: 18px 14px;
+      font-size: 15px;
+      font-weight: 500;
+      font-family: "Tajawal", sans-serif;
+      white-space: nowrap;
+    }
+    .nav-menu li a:hover {
+      color: #ccc;
+    }
+    .nav-menu li + li a::before {
+      content: "/";
+      margin-right: 8px;
+      color: rgba(255,255,255,0.5);
+    }
+    .lang-btn {
+      background-color: #fff;
+      border: 2px solid #fff;
+      color: #253272;
+      border-radius: 50px;
+      padding: 5px 12px;
+      font-family: "Tajawal", sans-serif;
+      font-size: 15px;
+      font-weight: 800;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .lang-btn:hover {
+      background-color: #253272;
+      color: #fff;
+    }
     @media (max-width: 991px) {
-      #mega-menu-holder { display: none; }
+      .nav-menu { display: none; }
     }
   </style>
 </head>
@@ -95,35 +117,18 @@
       </div>
     </div> <!-- /.top-header -->
 
-    <div class="theme-menu-wrapper fixed">
-      <div class="container">
-        <div class="bg-wrapper clearfix">
-          <!-- ============== Menu Warpper ================ -->
-          <div class="menu-wrapper float-left" dir="ltr">
-            <nav id="mega-menu-holder" class="clearfix">
-              <ul class="clearfix">
-                <li class="active"><a href="/store" target="_top">HOME</a></li>
-                <li class=""><a href="/store" target="_top">ABOUT US</a></li>
-                <li class=""><a href="/store" target="_top">PRODUCTS</a></li>
-                <li class=""><a href="/store" target="_top">ONLINE ORDER</a></li>
-                <li class=""><a href="/store" target="_top">FACTORY TOUR</a></li>
-                <li class=""><a href="/store" target="_top">EVENTS</a></li>
-                <li class=""><a href="/store" target="_top">CONTACT</a></li>
-              </ul>
-            </nav>
-          </div>
-
-          <!-- ============== end Menu Warpper ================ -->
-
-          <div class="right-widget float-right">
-            <ul>
-              <li class="language-icon">
-                <a href="/rayyan-site/about-us.html">عـربي</a>
-              </li>
-
-            </ul>
-          </div>
-        </div>
+    <div class="navbar-wrapper">
+      <div class="navbar-inner">
+        <ul class="nav-menu">
+          <li><a href="/" target="_top">HOME</a></li>
+          <li><a href="/store" target="_top">ABOUT US</a></li>
+          <li><a href="/store" target="_top">PRODUCTS</a></li>
+          <li><a href="/store" target="_top">ONLINE ORDER</a></li>
+          <li><a href="/store" target="_top">FACTORY TOUR</a></li>
+          <li><a href="/store" target="_top">EVENTS</a></li>
+          <li><a href="/store" target="_top">CONTACT</a></li>
+        </ul>
+        <a href="/rayyan-site/about-us.html" class="lang-btn">عـربي</a>
       </div>
     </div>
   </header>
