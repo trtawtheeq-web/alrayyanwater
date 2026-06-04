@@ -12,6 +12,16 @@
   <style>
     body { margin: 0; padding: 0; overflow: hidden; }
     html { overflow: hidden; }
+    @media (max-width: 575px) {
+      .header-one .top-header .container { position: relative; }
+      .header-one .theme-menu-wrapper .bg-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 50px;
+        padding: 0 15px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -37,9 +47,9 @@
             </li>
           </ul>
         </div>
-        <div class="address-wrapper d-block d-sm-none float-right ipad">
+        <div class="address-wrapper d-block d-sm-none" style="position:absolute;left:15px;top:30px;">
           <ul>
-            <li class="address" style="position:relative;">
+            <li class="address" style="position:relative;padding:0;margin:0;">
               <a href="/store/cart" target="_parent" style="text-decoration:none;color:inherit;position:relative;display:flex;align-items:center;gap:5px;">
                 <span>السلة</span>
                 <i class="icon bx bxs-basket" style="position:relative;"></i>
