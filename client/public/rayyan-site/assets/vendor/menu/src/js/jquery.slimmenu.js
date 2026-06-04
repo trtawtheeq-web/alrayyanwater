@@ -40,6 +40,11 @@
 
             $menu.before($collapser);
             $menuCollapser = $menu.prev('.menu-collapser');
+            // Hide collapser immediately on desktop to prevent flash of second bar
+            var initWidth = window.innerWidth || $(window).width();
+            if (initWidth > parseInt(options.resizeWidth)) {
+              $menuCollapser.hide();
+            }
 
             $menu.on('click', '.sub-toggle', function (e) {
                 e.preventDefault();
