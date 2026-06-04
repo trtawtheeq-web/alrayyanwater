@@ -254,6 +254,16 @@ border: 2px solid #000;
   margin-bottom: -42px;
 }
 
+/* Hide slimmenu collapser on desktop */
+.menu-collapser {
+  display: none;
+}
+@media (max-width: 991px) {
+  .menu-collapser {
+    display: block;
+  }
+}
+
 .header-one .theme-menu-wrapper .bg-wrapper {
   background: #253272;
   position: relative;
