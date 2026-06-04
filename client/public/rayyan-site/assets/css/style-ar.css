@@ -359,14 +359,37 @@ border: 2px solid #000;
 @media (max-width: 575px) {
   .header-one .theme-menu-wrapper {
     background: #253272;
+    margin-bottom: 0;
+  }
+  .header-one .theme-menu-wrapper .bg-wrapper {
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    background: #253272;
   }
   .collapse-button {
     padding-left: 0px;
-
   }
-  
   .ipad {
-  padding-left: 0px;
+    padding-left: 0px;
+  }
+  .header-one .top-header {
+    padding-top: 15px;
+    padding-bottom: 5px;
+  }
+  .header-one .top-header .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .header-one .top-header .logo {
+    width: auto;
+    flex: 1;
+    text-align: center;
+    margin-bottom: 5px;
   }
 }
 
