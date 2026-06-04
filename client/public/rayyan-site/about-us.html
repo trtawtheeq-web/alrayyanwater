@@ -86,7 +86,19 @@
       display: none !important;
     }
     @media (max-width: 991px) {
-      .nav-menu { display: none; }
+      .navbar-inner {
+        flex-wrap: wrap;
+      }
+      .nav-menu {
+        width: 100%;
+        overflow-x: auto;
+        justify-content: flex-start;
+        padding: 0;
+      }
+      .nav-menu li a {
+        padding: 12px 8px;
+        font-size: 13px;
+      }
     }
   </style>
 </head>
