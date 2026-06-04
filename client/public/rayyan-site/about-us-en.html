@@ -23,15 +23,37 @@
   <!-- Template Main CSS File -->
   <link href="/rayyan-site/assets/css/style-ar.css" rel="stylesheet">
   <style>
-    /* Nav items display - replaces slimmenu.css rules */
+    /* Fix navbar: single fixed bar, no duplication */
+    .header-one .theme-menu-wrapper {
+      position: fixed !important;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 9999;
+      margin-bottom: 0 !important;
+      background: none !important;
+      padding: 0 !important;
+    }
+    .header-one .theme-menu-wrapper .bg-wrapper {
+      display: flex !important;
+      align-items: center;
+      justify-content: space-between;
+      background: #253272 !important;
+      padding: 0 25px !important;
+      overflow: visible !important;
+      height: 56px;
+    }
+    .menu-wrapper { float: none !important; }
+    .right-widget { float: none !important; }
     #mega-menu-holder { width: auto; margin: 0; padding: 0; list-style-type: none; }
+    #mega-menu-holder ul { margin: 0; padding: 0; list-style: none; display: flex; align-items: center; }
     #mega-menu-holder li { position: relative; display: inline-block; vertical-align: middle; }
-    #mega-menu-holder > ul > li > a { position: relative; padding: 20px 12px; display: block; font-weight: 700; font-size: 15px; color: #a3b0cc; transition: all .3s linear; text-decoration: none; }
-    #mega-menu-holder > ul > li > a:before { content: '/'; line-height: 60px; position: absolute; right: 0; top: 0; color: #a3b0cc; }
-    #mega-menu-holder > ul > li:last-child > a:before { display: inline !important; }
-    #mega-menu-holder > ul > li:first-child > a:before { display: none !important; }
+    #mega-menu-holder > ul > li > a { padding: 16px 12px; display: block; font-weight: 700; font-size: 15px; color: #a3b0cc; transition: all .3s linear; text-decoration: none; white-space: nowrap; }
+    #mega-menu-holder > ul > li > a:before { content: '/'; margin-left: 8px; color: rgba(255,255,255,0.4); }
+    #mega-menu-holder > ul > li:first-child > a:before { display: none; }
     #mega-menu-holder > ul > li.active > a,
     #mega-menu-holder > ul > li:hover > a { color: #fff; }
+    .header-one .top-header { padding-top: 10px; }
     @media (max-width: 991px) {
       #mega-menu-holder { display: none; }
     }
